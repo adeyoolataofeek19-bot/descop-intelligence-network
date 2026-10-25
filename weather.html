@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b1d">
+    <meta name="description" content="DESCOP Weather — weather conditions, forecasts, rainfall and wind updates from around the world.">
+    <title>Weather & Forecasts | DESCOP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="weather">
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-brand">DESCOP<span>.</span></div>
+        <div class="loader-line"></div>
+        <p>Preparing your forecast...</p>
+    </div>
+
+    <div class="ambient" aria-hidden="true"></div>
+
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span class="live-indicator">
+                <span class="live-dot"></span>
+                WEATHER INTELLIGENCE
+            </span>
+            <span class="announcement-date" id="currentDate">Global weather updates</span>
+        </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container header-main">
+
+            <a href="index.html" class="brand" aria-label="DESCOP home">
+                <span class="brand-symbol">D</span>
+                <span class="brand-copy">
+                    <strong>DESCOP<span>.</span></strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <form class="header-search" id="searchForm" role="search">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search news, topics..."
+                    aria-label="Search news and topics"
+                >
+                <button type="submit" aria-label="Submit search">↗</button>
+            </form>
+
+            <div class="header-actions">
+                <a href="saved.html" class="header-icon-button" aria-label="Saved articles">
+                    ♧
+                    <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a href="login.html" class="login-button">Sign in <span>↗</span></a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+
+        <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="world.html" class="nav-link">World</a>
+                <a href="africa.html" class="nav-link">Africa</a>
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+                <a href="business.html" class="nav-link">Business</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="entertainment.html" class="nav-link">Entertainment</a>
+                <a href="sports.html" class="nav-link">Sports</a>
+                <a href="crypto.html" class="nav-link">Crypto</a>
+                <a href="weather.html" class="nav-link active" aria-current="page">Weather</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breaking-bar">
+        <div class="container breaking-inner">
+            <span class="breaking-label">WEATHER DESK</span>
+            <div class="breaking-track-window">
+                <div class="breaking-track" id="breakingNewsTrack">
+                    <span>Live weather conditions and forecasts</span>
+                    <span>Search any city to explore local weather</span>
+                    <span>Monitor temperature, wind and rainfall</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- WEATHER PAGE INTRO -->
+        <section class="category-hero section-spacing">
+            <div class="container">
+
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Weather</span>
+                </div>
+
+                <div class="category-hero-content">
+                    <div>
+                        <span class="section-eyebrow">
+                            <span class="live-dot"></span>
+                            WEATHER INTELLIGENCE
+                        </span>
+
+                        <h1 class="category-hero-heading">
+                            Understand the<br>
+                            <span class="gold-text">world around you.</span>
+                        </h1>
+
+                        <p>
+                            Explore current conditions, five-day forecasts,
+                            rainfall probabilities and wind conditions for
+                            cities around the world.
+                        </p>
+                    </div>
+
+                    <div class="category-number" aria-hidden="true">WX</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CITY SEARCH -->
+        <section class="section-spacing weather-search-section">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">LOCATION SEARCH</span>
+                        <h2 class="section-title">Find your forecast<span>.</span></h2>
+                        <p class="section-subtitle">
+                            Search by city to view its latest available weather data.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="weather-search-form" id="weatherSearchForm">
+                    <label for="weatherCitySearch">Enter a city</label>
+
+                    <div class="weather-search-controls">
+                        <input
+                            type="search"
+                            id="weatherCitySearch"
+                            name="city"
+                            placeholder="Try Abuja, Lagos, London or Tokyo"
+                            value="Abuja"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <button type="submit" class="primary-button" id="weatherSearchButton">
+                            Search forecast <span>↗</span>
+                        </button>
+                    </div>
+
+                    <p class="weather-search-hint">
+                        Weather information is retrieved from Open-Meteo when connected.
+                    </p>
+                </form>
+
+                <div class="weather-status-panel" id="weatherStatus" role="status" aria-live="polite">
+                    <span class="status-indicator"></span>
+                    <span>Preparing weather data...</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CURRENT CONDITIONS -->
+        <section class="section-spacing">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">CURRENT CONDITIONS</span>
+                        <h2 class="section-title">
+                            Weather right now<span>.</span>
+                        </h2>
+                        <p class="section-subtitle" id="weatherLocationLabel">
+                            Abuja, Nigeria
+                        </p>
+                    </div>
+
+                    <span class="data-source-label" id="weatherUpdatedAt">
+                        Awaiting weather data
+                    </span>
+                </div>
+
+                <div class="weather-current-grid">
+
+                    <article class="weather-current-card weather-main-card">
+                        <div class="weather-card-top">
+                            <div>
+                                <span class="weather-card-label">CURRENT TEMPERATURE</span>
+                                <h3 id="weatherCurrentCity">Abuja</h3>
+                            </div>
+
+                            <span class="weather-condition-icon" id="weatherCurrentIcon" aria-hidden="true">
+                                ☁
+                            </span>
+                        </div>
+
+                        <div class="weather-temperature-row">
+                            <strong id="weatherCurrentTemp">--°</strong>
+                            <div>
+                                <p id="weatherCurrentCondition">Waiting for data</p>
+                                <span id="weatherFeelsLike">Feels like --°</span>
+                            </div>
+                        </div>
+
+                        <div class="weather-high-low">
+                            <span>
+                                <small>Today's high</small>
+                                <strong id="weatherTodayHigh">--°</strong>
+                            </span>
+
+                            <span>
+                                <small>Today's low</small>
+                                <strong id="weatherTodayLow">--°</strong>
+                            </span>
+
+                            <span>
+                                <small>Day / night</small>
+                                <strong id="weatherDayNight">--</strong>
+                            </span>
+                        </div>
+
+                        <p class="weather-card-footnote">
+                            Temperatures are displayed in Celsius.
+                        </p>
+                    </article>
+
+                    <article class="weather-current-card weather-metric-card">
+                        <span class="weather-metric-icon" aria-hidden="true">◉</span>
+                        <span class="weather-card-label">HUMIDITY</span>
+                        <strong id="weatherHumidity">--%</strong>
+                        <p>Relative humidity in the air</p>
+                        <div class="weather-meter">
+                            <span id="weatherHumidityMeter"></span>
+                        </div>
+                    </article>
+
+                    <article class="weather-current-card weather-metric-card">
+                        <span class="weather-metric-icon" aria-hidden="true">➤</span>
+                        <span class="weather-card-label">WIND SPEED</span>
+                        <strong id="weatherWindSpeed">-- <small>km/h</small></strong>
+                        <p>Current wind conditions</p>
+                        <div class="weather-meter">
+                            <span id="weatherWindMeter"></span>
+                        </div>
+                    </article>
+
+                    <article class="weather-current-card weather-metric-card">
+                        <span class="weather-metric-icon" aria-hidden="true">◌</span>
+                        <span class="weather-card-label">PRECIPITATION</span>
+                        <strong id="weatherPrecipitation">-- <small>mm</small></strong>
+                        <p>Reported current precipitation</p>
+                        <div class="weather-meter">
+                            <span id="weatherRainMeter"></span>
+                        </div>
+                    </article>
+
+                    <article class="weather-current-card weather-metric-card">
+                        <span class="weather-metric-icon" aria-hidden="true">⌁</span>
+                        <span class="weather-card-label">FEELS LIKE</span>
+                        <strong id="weatherApparentTemp">--°</strong>
+                        <p>Apparent temperature outdoors</p>
+                        <div class="weather-meter">
+                            <span id="weatherFeelsMeter"></span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FIVE-DAY FORECAST -->
+        <section class="section-spacing">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">PLAN AHEAD</span>
+                        <h2 class="section-title">Five-day forecast<span>.</span></h2>
+                        <p class="section-subtitle">
+                            Check expected conditions and temperature ranges.
+                        </p>
+                    </div>
+
+                    <span class="forecast-period-badge">5 DAYS</span>
+                </div>
+
+                <div class="forecast-panel">
+                    <div class="forecast-panel-header">
+                        <div>
+                            <h3>Upcoming conditions</h3>
+                            <p>Daily forecast for your selected city</p>
+                        </div>
+
+                        <span class="forecast-timezone" id="weatherTimezone">
+                            Local time
+                        </span>
+                    </div>
+
+                    <div class="forecast-list" id="weatherForecastList">
+
+                        <article class="forecast-day">
+                            <div class="forecast-day-name">
+                                <strong>Today</strong>
+                                <span>Forecast pending</span>
+                            </div>
+                            <span class="forecast-day-icon" aria-hidden="true">☁</span>
+                            <span class="forecast-day-condition">Loading</span>
+                            <div class="forecast-temperature-range">
+                                <strong>--°</strong>
+                                <span class="forecast-temperature-track">
+                                    <span></span>
+                                </span>
+                                <strong>--°</strong>
+                            </div>
+                            <span class="forecast-rain">Rain --%</span>
+                        </article>
+
+                    </div>
+
+                    <p class="forecast-disclaimer">
+                        Forecasts are estimates and may change as new weather data becomes available.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WEATHER DETAILS -->
+        <section class="section-spacing">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">ATMOSPHERIC DETAILS</span>
+                        <h2 class="section-title">Beyond temperature<span>.</span></h2>
+                        <p class="section-subtitle">
+                            Additional conditions to help you plan your day.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="weather-details-grid">
+
+                    <article class="weather-detail-card">
+                        <div class="weather-detail-heading">
+                            <span class="weather-detail-icon" aria-hidden="true">☂</span>
+                            <span>RAIN PROBABILITY</span>
+                        </div>
+                        <strong id="weatherRainProbability">--%</strong>
+                        <p>Chance of precipitation in the forecast.</p>
+                    </article>
+
+                    <article class="weather-detail-card">
+                        <div class="weather-detail-heading">
+                            <span class="weather-detail-icon" aria-hidden="true">↗</span>
+                            <span>WIND DIRECTION</span>
+                        </div>
+                        <strong id="weatherWindDirection">--</strong>
+                        <p id="weatherWindDirectionDescription">
+                            Wind direction information will appear here.
+                        </p>
+                    </article>
+
+                    <article class="weather-detail-card">
+                        <div class="weather-detail-heading">
+                            <span class="weather-detail-icon" aria-hidden="true">⌖</span>
+                            <span>COORDINATES</span>
+                        </div>
+                        <strong class="weather-coordinate-value" id="weatherCoordinates">--, --</strong>
+                        <p>Approximate geographic coordinates of the selected city.</p>
+                    </article>
+
+                    <article class="weather-detail-card">
+                        <div class="weather-detail-heading">
+                            <span class="weather-detail-icon" aria-hidden="true">◷</span>
+                            <span>LOCAL TIME</span>
+                        </div>
+                        <strong id="weatherLocalTime">--:--</strong>
+                        <p id="weatherLocalDate">Local date will appear here.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WEATHER GUIDANCE -->
+        <section class="section-spacing">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">WEATHER KNOWLEDGE</span>
+                        <h2 class="section-title">Know what the forecast means<span>.</span></h2>
+                        <p class="section-subtitle">
+                            Quick explanations for interpreting weather conditions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="weather-guides-grid">
+
+                    <article class="weather-guide-card">
+                        <span class="weather-guide-number">01</span>
+                        <h3>Temperature</h3>
+                        <p>
+                            The temperature describes how warm or cold the air is.
+                            The feels-like value also considers other environmental factors.
+                        </p>
+                    </article>
+
+                    <article class="weather-guide-card">
+                        <span class="weather-guide-number">02</span>
+                        <h3>Humidity</h3>
+                        <p>
+                            Relative humidity measures how much moisture the air contains
+                            compared with the maximum it could hold at that temperature.
+                        </p>
+                    </article>
+
+                    <article class="weather-guide-card">
+                        <span class="weather-guide-number">03</span>
+                        <h3>Rain probability</h3>
+                        <p>
+                            A precipitation probability indicates the chance of precipitation
+                            during the forecast period, not the percentage of the day it will rain.
+                        </p>
+                    </article>
+
+                    <article class="weather-guide-card">
+                        <span class="weather-guide-number">04</span>
+                        <h3>Wind speed</h3>
+                        <p>
+                            Wind speed describes how quickly air moves. Strong winds can affect
+                            travel, outdoor activities and local conditions.
+                        </p>
+     </article>            </div>
+        </div>
+    </section>
+
+    <!-- WEATHER SAFETY -->
+    <section class="editorial-section section-spacing" id="weather-safety">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">PREPAREDNESS</span>
+                    <h2 class="section-title">Weather safety<span>.</span></h2>
+                </div>
+            </div>
+
+            <div class="editorial-grid">
+                <article class="editorial-card">
+                    <span class="card-category">Heavy Rain</span>
+                    <h3>Stay alert during intense rainfall</h3>
+                    <p>
+                        Monitor local forecasts, avoid flooded roads and never walk or drive
+                        through fast-moving floodwater.
+                    </p>
+                </article>
+
+                <article class="editorial-card">
+                    <span class="card-category">Extreme Heat</span>
+                    <h3>Protect yourself from high temperatures</h3>
+                    <p>
+                        Drink water regularly, limit strenuous outdoor activities during peak
+                        heat and seek shade when possible.
+                    </p>
+                </article>
+
+                <article class="editorial-card">
+                    <span class="card-category">Thunderstorms</span>
+                    <h3>Take precautions during storms</h3>
+                    <p>
+                        Move indoors when thunder approaches and avoid exposed areas, isolated
+                        trees and open fields.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST WEATHER COVERAGE -->
+    <section class="news-section section-spacing" id="weatherNews">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">LATEST UPDATES</span>
+                    <h2 class="section-title">Weather coverage<span>.</span></h2>
+                    <p class="section-description">
+                        Forecast developments, climate reports and significant weather events.
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-grid" id="weatherNewsGrid">
+                <article class="news-card">
+                    <div class="news-card-image image-placeholder">
+                        <span>01</span>
+                    </div>
+                    <div class="news-card-body">
+                        <span class="card-category">Forecasts</span>
+                        <h3>Understanding changing weather conditions</h3>
+                        <p>
+                            Follow forecast updates and learn how changing conditions may
+                            affect daily activities.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image image-placeholder">
+                        <span>02</span>
+                    </div>
+                    <div class="news-card-body">
+                        <span class="card-category">Climate</span>
+                        <h3>Climate trends and their local impact</h3>
+                        <p>
+                            Explore reporting on rainfall patterns, temperature changes
+                            and environmental developments.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image image-placeholder">
+                        <span>03</span>
+                    </div>
+                    <div class="news-card-body">
+                        <span class="card-category">Preparedness</span>
+                        <h3>Preparing communities for severe weather</h3>
+                        <p>
+                            Discover practical approaches to weather awareness and
+                            community preparedness.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section section-spacing">
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="section-eyebrow">STAY INFORMED</span>
+                <h2>Get the bigger picture.</h2>
+                <p>
+                    Follow important developments across weather, climate and global affairs.
+                </p>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <label class="sr-only" for="newsletterEmail">Email address</label>
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">D</span>
+                <span class="logo-text">DESCOP<span>.</span></span>
+            </a>
+            <p>
+                A modern intelligence platform covering global affairs, African
+                developments, business, technology and digital markets.
+            </p>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>Explore</h3>
+            <a href="world.html">World News</a>
+            <a href="africa.html">Africa</a>
+            <a href="nigeria.html">Nigeria</a>
+            <a href="business.html">Business</a>
+            <a href="technology.html">Technology</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>Discover</h3>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="sports.html">Sports</a>
+            <a href="crypto.html">Crypto</a>
+            <a href="weather.html">Weather</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>Your Account</h3>
+            <a href="login.html">Log In</a>
+            <a href="register.html">Create Account</a>
+            <a href="saved.html">Saved Articles</a>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <p>&copy; 2026 DESCOP Intelligence Network. All rights reserved.</p>
+        <a href="index.html">Back to top ↑</a>
+    </div>
+</footer>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+>
+    ↑
+</button>
+
+</body>
+</html>

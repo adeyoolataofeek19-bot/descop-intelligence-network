@@ -1,0 +1,705 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+    <meta name="description" content="DESCOP Advanced Intelligence Terminal — cryptocurrency and technology market analysis."><title>Advanced Terminal | DESCOP Intelligence Network</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="terminal.css">
+
+<script src="https://unpkg.com/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
+<script src="terminal.js" defer></script>
+
+</head><body data-page="terminal">
+    <!-- TERMINAL HEADER --><header class="site-header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+            <span class="brand-mark">D</span>
+
+            <span class="brand-text">
+                <strong>DESCOP</strong>
+                <small>INTELLIGENCE NETWORK</small>
+            </span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="world.html">World</a>
+            <a href="business.html">Business</a>
+            <a href="technology.html">Technology</a>
+            <a href="crypto.html">Crypto</a>
+            <a href="#terminal-markets" class="active">Advanced Terminal</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- TERMINAL INTRODUCTION -->
+<main class="container terminal-main">
+
+    <section class="terminal-hero section-spacing">
+
+        <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            DESCOP MARKET INTELLIGENCE
+        </div>
+
+        <h1 class="section-title">
+            Advanced <span>Intelligence Terminal</span>
+        </h1>
+
+        <p class="section-description">
+            Explore cryptocurrency markets, technical indicators,
+            price movements, and technology-sector performance.
+        </p>
+
+        <div class="terminal-status">
+            <span class="terminal-status-dot"></span>
+            <span id="terminalConnectionStatus">INITIALIZING MARKET DATA</span>
+        </div>
+
+    </section>
+    </section>
+
+<!-- TERMINAL CONTROL BAR -->
+<section class="terminal-controls-section">
+    <div class="terminal-controls-heading">
+        <div>
+            <span class="section-eyebrow">CONTROL CENTER</span>
+            <h2>Terminal Controls</h2>
+            <p>Manage market-data refresh and connection updates.</p>
+        </div>
+
+        <span id="terminalAutoRefreshStatus" class="terminal-status-badge">
+            Auto-refresh ON
+        </span>
+    </div>
+
+    <div class="terminal-controls-bar">
+        <button
+            type="button"
+            id="terminalRefreshButton"
+            class="terminal-control-button"
+        >
+            ↻ Refresh Data
+        </button>
+
+        <label class="terminal-auto-refresh-control">
+            <input type="checkbox" id="terminalAutoRefresh" checked>
+            <span>Automatic refresh</span>
+        </label>
+
+        <span id="terminalLastUpdated" class="terminal-last-updated">
+            Waiting for market data...
+        </span>
+    </div>
+</section>
+
+<!-- MARKET OVERVIEW -->
+    <!-- GLOBAL MARKET OVERVIEW -->    <section class="market-section section-spacing" id="terminal-markets">
+
+        <div class="section-header">
+            <div>
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    GLOBAL MARKET DATA
+                </div>
+
+                <h2 class="section-title">Market Overview</h2>
+
+                <p class="section-description">
+                    Monitor key cryptocurrency market metrics in one place.
+                </p>
+            </div>
+
+            <span class="market-status-badge">
+                <span class="status-dot"></span>
+                <span id="overviewDataStatus">CONNECTING</span>
+            </span>
+        </div>
+
+        <div class="market-overview-grid">
+
+            <article class="market-stat-card">
+                <span class="stat-label">TOTAL MARKET CAP</span>
+                <h3 id="terminalMarketCap">Loading...</h3>
+                <p id="terminalMarketCapChange">--</p>
+            </article>
+
+            <article class="market-stat-card">
+                <span class="stat-label">24H TRADING VOLUME</span>
+                <h3 id="terminalMarketVolume">Loading...</h3>
+                <p>Global cryptocurrency volume</p>
+            </article>
+
+            <article class="market-stat-card">
+                <span class="stat-label">BTC DOMINANCE</span>
+                <h3 id="terminalBtcDominance">Loading...</h3>
+                <p>Bitcoin share of total market cap</p>
+            </article>
+
+            <article class="market-stat-card">
+                <span class="stat-label">BITCOIN PRICE</span>
+                <h3 id="terminalBtcPrice">Loading...</h3>
+                <p id="terminalBtcChange">--</p>
+            </article>
+
+        </div>
+
+    </section>
+    <!-- ADVANCED CRYPTO INTELLIGENCE -->    <section class="crypto-terminal-section section-spacing" id="crypto-analysis">
+
+        <div class="section-header">
+            <div>
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    ADVANCED DIGITAL ASSET ANALYSIS
+                </div>
+
+                <h2 class="section-title">Crypto Intelligence</h2>
+
+                <p class="section-description">
+                    Interactive charts and technical market analysis.
+                </p>
+            </div>
+        </div>
+
+        <!-- ASSET SELECTOR -->
+        <div class="terminal-asset-toolbar">
+
+            <div class="terminal-asset-info">
+                <label for="terminalAssetSelect">SELECT ASSET</label>
+
+                <select id="terminalAssetSelect">
+                    <option value="bitcoin">Bitcoin (BTC)</option>
+                    <option value="ethereum">Ethereum (ETH)</option>
+                    <option value="solana">Solana (SOL)</option>
+                </select>
+            </div>
+
+            <div class="terminal-current-price">
+                <span id="selectedAssetSymbol">BTC / USD</span>
+                <h3 id="selectedAssetPrice">Loading...</h3>
+                <span id="selectedAssetChange">Waiting for market data</span>
+            </div>
+
+        </div>
+
+        <!-- CHART PANEL -->
+        <div class="terminal-chart-panel">
+
+            <div class="terminal-chart-header">
+
+                <div>
+                    <span class="chart-market-label">MARKET CHART</span>
+                    <h3 id="chartAssetTitle">BITCOIN / USD</h3>
+                </div>
+
+                <div class="chart-mode-controls">
+                    <button
+                        type="button"
+                        class="chart-mode-btn active"
+                        data-chart-mode="candles"
+                    >
+                        Candles
+                    </button>
+
+                    <button
+                        type="button"
+                        class="chart-mode-btn"
+                        data-chart-mode="line"
+                    >
+                        Line
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- TIMEFRAME CONTROLS -->
+            <div class="terminal-timeframes">
+
+                <button type="button" class="timeframe-btn active" data-timeframe="1">
+                    1D
+                </button>
+
+                <button type="button" class="timeframe-btn" data-timeframe="7">
+                    7D
+                </button>
+
+                <button type="button" class="timeframe-btn" data-timeframe="30">
+                    30D
+                </button>
+
+                <button type="button" class="timeframe-btn" data-timeframe="90">
+                    90D
+                </button>
+
+            </div>
+
+            <!-- TECHNICAL INDICATOR CONTROLS -->
+            <div class="terminal-indicator-controls">
+
+                <label>
+                    <input type="checkbox" id="toggleEMA20" checked>
+                    <span>EMA 20</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" id="toggleEMA50" checked>
+                    <span>EMA 50</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" id="toggleVolume" checked>
+                    <span>Volume</span>
+                </label>
+
+            </div>
+
+            <!-- MAIN INTERACTIVE CHART -->
+            <div
+                id="terminalPriceChart"
+                class="terminal-price-chart"
+                role="img"
+                aria-label="Interactive cryptocurrency price chart"
+            ></div>
+
+            <p id="terminalChartStatus" class="chart-status" aria-live="polite">
+                Waiting for historical market data...
+            </p>
+
+        </div>
+
+    </section>
+    <!-- TECHNICAL INDICATORS -->    <section class="technical-indicators-section section-spacing" id="technical-indicators">
+
+        <div class="section-header">
+            <div>
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    TECHNICAL INTELLIGENCE
+                </div>
+
+                <h2 class="section-title">Technical Indicators</h2>
+
+                <p class="section-description">
+                    Examine trading volume, momentum, and trend strength.
+                </p>
+            </div>
+        </div>
+
+        <!-- VOLUME -->
+        <article class="terminal-indicator-panel">
+
+            <div class="indicator-panel-header">
+                <div>
+                    <h3>Trading Volume</h3>
+                    <p>Historical market activity</p>
+                </div>
+
+                <span class="indicator-tag">VOLUME</span>
+            </div>
+
+            <div
+                id="terminalVolumeChart"
+                class="terminal-indicator-chart"
+                role="img"
+                aria-label="Cryptocurrency trading volume chart"
+            ></div>
+
+            <p id="terminalVolumeStatus" class="chart-status">
+                Waiting for volume data...
+            </p>
+
+        </article>
+
+
+        <!-- RSI -->
+        <article class="terminal-indicator-panel">
+
+            <div class="indicator-panel-header">
+                <div>
+                    <h3>Relative Strength Index</h3>
+                    <p>RSI · 14-period momentum indicator</p>
+                </div>
+
+                <span class="indicator-tag">RSI (14)</span>
+            </div>
+
+            <div class="indicator-scale">
+                <span>Overbought reference: 70</span>
+                <span>Oversold reference: 30</span>
+            </div>
+
+            <div
+                id="terminalRSIChart"
+                class="terminal-indicator-chart"
+                role="img"
+                aria-label="Relative Strength Index chart"
+            ></div>
+
+            <div class="indicator-reading">
+                <span>Current RSI</span>
+                <strong id="terminalRSIValue">--</strong>
+                <span id="terminalRSISignal">Awaiting data</span>
+            </div>
+
+        </article>
+
+
+        <!-- MACD -->
+        <article class="terminal-indicator-panel">
+
+            <div class="indicator-panel-header">
+                <div>
+                    <h3>Moving Average Convergence Divergence</h3>
+                    <p>Momentum and trend-change analysis</p>
+                </div>
+
+                <span class="indicator-tag">MACD (12, 26, 9)</span>
+            </div>
+
+            <div
+                id="terminalMACDChart"
+                class="terminal-indicator-chart"
+                role="img"
+                aria-label="MACD indicator chart"
+            ></div>
+
+            <div class="indicator-reading">
+                <span>MACD Signal</span>
+                <strong id="terminalMACDValue">--</strong>
+                <span id="terminalMACDSignal">Awaiting data</span>
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- TECHNICAL ANALYSIS SUMMARY -->
+    <section class="terminal-analysis-section section-spacing" id="market-signals">
+
+        <div class="section-header">
+            <div>
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    MARKET SIGNALS
+                </div>
+
+                <h2 class="section-title">Technical Analysis</h2>
+
+                <p class="section-description">
+                    A concise summary of calculated technical indicators.
+                </p>
+            </div>
+        </div>
+
+        <div class="terminal-analysis-grid">
+
+            <article class="terminal-analysis-card">
+                <span class="analysis-card-label">MOMENTUM</span>
+                <h3 id="analysisRSI">Calculating...</h3>
+                <p id="analysisRSIDescription">
+                    RSI analysis will appear when sufficient data is available.
+                </p>
+            </article>
+
+            <article class="terminal-analysis-card">
+                <span class="analysis-card-label">TREND</span>
+                <h3 id="analysisMACD">Calculating...</h3>
+                <p id="analysisMACDDescription">
+                    MACD analysis will appear when sufficient data is available.
+                </p>
+            </article>
+
+            <article class="terminal-analysis-card">
+                <span class="analysis-card-label">PRICE DIRECTION</span>
+                <h3 id="analysisTrend">Analyzing...</h3>
+                <p id="analysisTrendDescription">
+                    Trend analysis will appear when historical data is available.
+                </p>
+            </article>
+
+        </div>
+
+        <p class="terminal-disclaimer">
+            Technical indicators are based on historical data and may produce false signals.
+            They are not guaranteed predictions or financial advice.
+        </p>
+
+    </section>
+    <!-- TECHNOLOGY INTELLIGENCE -->    <section class="technology-intelligence-section section-spacing" id="technology-analysis">
+
+        <div class="section-header">
+            <div>
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    GLOBAL TECHNOLOGY MARKETS
+                </div>
+
+                <h2 class="section-title">Technology Intelligence</h2>
+
+                <p class="section-description">
+                    Track major technology companies, sector trends,
+                    and technology-market performance.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- TECHNOLOGY STOCKS -->
+        <div class="technology-stock-grid">
+
+            <article class="technology-stock-card">
+                <span class="technology-stock-symbol">AAPL</span>
+                <h3>Apple</h3>
+                <strong id="techAAPL">Awaiting data</strong>
+                <p id="techAAPLChange">--</p>
+            </article>
+
+            <article class="technology-stock-card">
+                <span class="technology-stock-symbol">MSFT</span>
+                <h3>Microsoft</h3>
+                <strong id="techMSFT">Awaiting data</strong>
+                <p id="techMSFTChange">--</p>
+            </article>
+
+            <article class="technology-stock-card">
+                <span class="technology-stock-symbol">NVDA</span>
+                <h3>NVIDIA</h3>
+                <strong id="techNVDA">Awaiting data</strong>
+                <p id="techNVDAChange">--</p>
+            </article>
+
+            <article class="technology-stock-card">
+                <span class="technology-stock-symbol">GOOGL</span>
+                <h3>Alphabet</h3>
+                <strong id="techGOOGL">Awaiting data</strong>
+                <p id="techGOOGLChange">--</p>
+            </article>
+
+        </div>
+
+
+        <!-- TECHNOLOGY MARKET CHART -->
+        <div class="technology-market-panel">
+
+            <div class="technology-market-header">
+                <div>
+                    <span class="chart-market-label">SECTOR ANALYSIS</span>
+                    <h3>Technology Market Performance</h3>
+                </div>
+
+                <span class="technology-market-badge">
+                    TECH INTELLIGENCE
+                </span>
+            </div>
+
+            <div class="technology-market-controls">
+
+                <label for="technologyAssetSelect">SELECT COMPANY</label>
+
+                <select id="technologyAssetSelect">
+                    <option value="AAPL">Apple (AAPL)</option>
+                    <option value="MSFT">Microsoft (MSFT)</option>
+                    <option value="NVDA">NVIDIA (NVDA)</option>
+                    <option value="GOOGL">Alphabet (GOOGL)</option>
+                </select>
+
+                <label for="technologyTimeframe">PERIOD</label>
+
+                <select id="technologyTimeframe">
+                    <option value="1D">1 Day</option>
+                    <option value="5D">5 Days</option>
+                    <option value="1M">1 Month</option>
+                    <option value="6M">6 Months</option>
+                    <option value="1Y">1 Year</option>
+                </select>
+
+            </div>
+
+            <div
+                id="technologyMarketChart"
+                class="technology-market-chart"
+                role="img"
+                aria-label="Technology stock price history chart"
+            ></div>
+
+            <p id="technologyChartStatus" class="chart-status" aria-live="polite">
+                Technology market data requires a compatible stock-market data provider.
+            </p>
+
+        </div>
+
+
+        <!-- TECHNOLOGY SECTOR TOPICS -->
+        <div class="technology-topics-grid">
+
+            <article class="technology-topic-card">
+                <span class="topic-number">01</span>
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Monitor AI infrastructure, model development,
+                    enterprise adoption, and industry competition.
+                </p>
+                <span class="topic-status">INDUSTRY TRACKING</span>
+            </article>
+
+            <article class="technology-topic-card">
+                <span class="topic-number">02</span>
+                <h3>Semiconductors</h3>
+                <p>
+                    Examine chipmakers, processor demand,
+                    data-centre hardware, and semiconductor trends.
+                </p>
+                <span class="topic-status">SECTOR TRACKING</span>
+            </article>
+
+            <article class="technology-topic-card">
+                <span class="topic-number">03</span>
+                <h3>Cloud Computing</h3>
+                <p>
+                    Follow cloud infrastructure, enterprise services,
+                    and major platform developments.
+                </p>
+                <span class="topic-status">INDUSTRY TRACKING</span>
+            </article>
+
+            <article class="technology-topic-card">
+                <span class="topic-number">04</span>
+                <h3>Cybersecurity</h3>
+                <p>
+                    Explore security-sector companies, cyber threats,
+                    and technology risk developments.
+                </p>
+                <span class="topic-status">INDUSTRY TRACKING</span>
+            </article>
+
+        </div>
+
+    </section>
+    <!-- MARKET WATCHLIST -->
+        <section class="terminal-watchlist-section section-spacing" id="market-watchlist">
+
+            <div class="section-header">
+                <div>
+                    <div class="section-eyebrow">
+                        <span class="eyebrow-line"></span>
+                        PERSONAL MARKET TRACKER
+                    </div>
+
+                    <h2 class="section-title">Market Watchlist</h2>
+
+                    <p class="section-description">
+                        Keep track of selected digital assets and their latest prices.
+                    </p>
+                </div>
+            </div>
+
+            <div class="terminal-watchlist-panel">
+
+                <div class="watchlist-header">
+                    <span>ASSET</span>
+                    <span>PRICE (USD)</span>
+                    <span>24H CHANGE</span>
+                </div>
+
+                <div class="watchlist-row">
+                    <div class="watchlist-asset">
+                        <span class="watchlist-coin-icon">₿</span>
+                        <div>
+                            <strong>Bitcoin</strong>
+                            <small>BTC</small>
+                        </div>
+                    </div>
+
+                    <strong id="watchBTCPrice">Loading...</strong>
+                    <span id="watchBTCChange">--</span>
+                </div>
+
+                <div class="watchlist-row">
+                    <div class="watchlist-asset">
+                        <span class="watchlist-coin-icon">Ξ</span>
+                        <div>
+                            <strong>Ethereum</strong>
+                            <small>ETH</small>
+                        </div>
+                    </div>
+
+                    <strong id="watchETHPrice">Loading...</strong>
+                    <span id="watchETHChange">--</span>
+                </div>
+
+                <div class="watchlist-row">
+                    <div class="watchlist-asset">
+                        <span class="watchlist-coin-icon">◎</span>
+                        <div>
+                            <strong>Solana</strong>
+                            <small>SOL</small>
+                        </div>
+                    </div>
+
+                    <strong id="watchSOLPrice">Loading...</strong>
+                    <span id="watchSOLChange">--</span>
+                </div>
+
+                <p id="watchlistStatus" class="chart-status" aria-live="polite">
+                    Connecting to cryptocurrency market data...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TERMINAL FOOTER -->
+        <section class="terminal-footer-panel">
+
+            <div class="terminal-footer-brand">
+                <span class="brand-mark">D</span>
+
+                <div>
+                    <strong>DESCOP INTELLIGENCE NETWORK</strong>
+                    <p>Market data. Technical analysis. Technology intelligence.</p>
+                </div>
+            </div>
+
+            <div class="terminal-footer-links">
+                <a href="index.html">Main Website</a>
+                <a href="crypto.html">Crypto News</a>
+                <a href="technology.html">Technology News</a>
+                <a href="#terminal-markets">Back to Top ↑</a>
+            </div>
+
+            <p class="terminal-footer-note">
+                Market information may be delayed or incomplete. Technical analysis
+                is informational and should not be treated as guaranteed predictions
+                or financial advice.
+            </p>
+
+            <p class="terminal-copyright">
+                © <span id="terminalCurrentYear">2026</span> DESCOP Intelligence Network.
+                All rights reserved.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

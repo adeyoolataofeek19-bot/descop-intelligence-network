@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+
+    <title>Business & Markets | DESCOP Intelligence Network</title>
+
+    <meta name="description" content="Explore business news, financial markets, economic policy, entrepreneurship, energy and global trade with DESCOP Intelligence Network.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="business" id="top">
+
+    <!-- LOADING SCREEN -->
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-content">
+            <div class="brand-symbol">D</div>
+            <span>DESCOP</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <div class="announcement-message">
+                <span class="live-indicator"></span>
+                <span>BUSINESS & MARKETS DESK</span>
+            </div>
+
+            <div class="announcement-date" id="currentDate">
+                Business Intelligence
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-main">
+
+            <a class="brand" href="index.html" aria-label="DESCOP homepage">
+                <span class="brand-symbol">D</span>
+
+                <span class="brand-copy">
+                    <strong>DESCOP</strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <form class="header-search" id="searchForm" role="search">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    name="q"
+                    placeholder="Search business news..."
+                    aria-label="Search business news"
+                >
+
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="header-actions">
+                <a class="header-icon-button"
+                   href="saved.html"
+                   aria-label="Saved articles">
+                    ♡ <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a class="login-button" href="login.html">Sign in</a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="mainNavigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="main-navigation" id="mainNavigation">
+            <div class="container nav-inner">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="world.html">World</a>
+                <a class="nav-link" href="africa.html">Africa</a>
+                <a class="nav-link" href="nigeria.html">Nigeria</a>
+                <a class="nav-link active" href="business.html"
+                   aria-current="page">Business</a>
+                <a class="nav-link" href="technology.html">Technology</a>
+                <a class="nav-link" href="entertainment.html">Entertainment</a>
+                <a class="nav-link" href="sports.html">Sports</a>
+                <a class="nav-link" href="crypto.html">Crypto</a>
+                <a class="nav-link" href="weather.html">Weather</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BREAKING BUSINESS NEWS -->
+    <section class="breaking-bar" aria-label="Business news ticker">
+        <div class="container breaking-inner">
+            <span class="breaking-label">MARKET BRIEFING</span>
+
+            <div class="breaking-track-window">
+                <div class="breaking-track" id="breakingNewsTrack">
+                    <span>Business intelligence and market developments.</span>
+                    <span>Live market data integration is pending.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PART 2 CONTINUES BELOW -->
+        <!-- BUSINESS HERO -->
+    <main>
+
+        <section class="business-hero section-spacing">
+            <div class="container business-hero-grid">
+
+                <div class="business-hero-content">
+                    <span class="section-eyebrow">
+                        THE BUSINESS DESK
+                    </span>
+
+                    <h1>
+                        Money moves.<br>
+                        <span>We explain why.</span>
+                    </h1>
+
+                    <p>
+                        Stay informed on financial markets, corporate
+                        power, economic policy, entrepreneurship and
+                        the decisions shaping Africa's business future.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#latest" class="button button-primary">
+                            Explore Business News
+                        </a>
+
+                        <a href="#market-overview"
+                           class="button button-secondary">
+                            Market Overview
+                        </a>
+                    </div>
+
+                    <div class="hero-trust-row">
+                        <span>MARKETS</span>
+                        <span>ECONOMY</span>
+                        <span>ENTERPRISE</span>
+                        <span>ENERGY</span>
+                    </div>
+                </div>
+
+                <div class="business-hero-visual">
+                    <div class="hero-visual-glow"></div>
+
+                    <div class="market-visual-card">
+                        <span class="visual-card-label">
+                            BUSINESS INTELLIGENCE
+                        </span>
+
+                        <div class="visual-chart">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="visual-card-bottom">
+                            <div>
+                                <small>OUR FOCUS</small>
+                                <strong>Markets & Growth</strong>
+                            </div>
+
+                            <span class="visual-card-mark">D.</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-market-tag tag-one">
+                        <span>01</span>
+                        Corporate News
+                    </div>
+
+                    <div class="floating-market-tag tag-two">
+                        <span>02</span>
+                        Economic Trends
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BUSINESS TOPIC NAVIGATION -->
+        <section class="business-topic-section">
+            <div class="container">
+
+                <div class="business-topic-heading">
+                    <span class="section-eyebrow">EXPLORE THE DESK</span>
+                    <h2>Business, <span>by category.</span></h2>
+                </div>
+
+                <div class="business-topic-grid">
+
+                    <a href="#market-overview" class="business-topic-card">
+                        <span class="topic-number">01</span>
+                        <span class="topic-icon">◈</span>
+                        <strong>Market Overview</strong>
+                        <small>Market indicators and trends</small>
+                    </a>
+
+                    <a href="#companies" class="business-topic-card">
+                        <span class="topic-number">02</span>
+                        <span class="topic-icon">▦</span>
+                        <strong>Companies</strong>
+                        <small>Corporate moves and leadership</small>
+                    </a>
+
+                    <a href="#entrepreneurship" class="business-topic-card">
+                        <span class="topic-number">03</span>
+                        <span class="topic-icon">↗</span>
+                        <strong>Startups</strong>
+                        <small>Founders, innovation and funding</small>
+                    </a>
+
+                    <a href="#economy" class="business-topic-card">
+                        <span class="topic-number">04</span>
+                        <span class="topic-icon">⌁</span>
+                        <strong>Economy</strong>
+                        <small>Inflation, trade and public policy</small>
+                    </a>
+
+                    <a href="#energy" class="business-topic-card">
+                        <span class="topic-number">05</span>
+                        <span class="topic-icon">ϟ</span>
+                        <strong>Energy</strong>
+                        <small>Oil, gas and power developments</small>
+                    </a>
+
+                    <a href="#analysis" class="business-topic-card">
+                        <span class="topic-number">06</span>
+                        <span class="topic-icon">⌘</span>
+                        <strong>Analysis</strong>
+                        <small>Context behind the headlines</small>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 3 CONTINUES BELOW -->
+                <!-- MARKET OVERVIEW -->
+        <section class="news-section section-spacing"
+                 id="market-overview">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">
+                            FINANCIAL SNAPSHOT
+                        </span>
+
+                        <h2>Markets <span>Overview.</span></h2>
+
+                        <p class="section-subtitle">
+                            Track the indicators shaping business
+                            decisions and economic activity.
+                        </p>
+                    </div>
+
+                    <span class="market-status">
+                        <span class="status-dot"></span>
+                        DATA STATUS: DEMO
+                    </span>
+                </div>
+
+                <div class="market-overview-grid">
+
+                    <article class="market-overview-card">
+                        <span class="market-card-icon">₦</span>
+                        <span class="market-card-label">
+                            NIGERIAN ECONOMY
+                        </span>
+                        <h3>NGX Market</h3>
+                        <p>
+                            Follow Nigerian equities, listed companies
+                            and stock market developments.
+                        </p>
+                        <a href="#markets" class="text-link">
+                            Explore markets →
+                        </a>
+                    </article>
+
+                    <article class="market-overview-card">
+                        <span class="market-card-icon">$</span>
+                        <span class="market-card-label">
+                            GLOBAL FINANCE
+                        </span>
+                        <h3>Global Markets</h3>
+                        <p>
+                            Monitor international equities, currencies
+                            and major financial developments.
+                        </p>
+                        <a href="#markets" class="text-link">
+                            Global coverage →
+                        </a>
+                    </article>
+
+                    <article class="market-overview-card">
+                        <span class="market-card-icon">↗</span>
+                        <span class="market-card-label">
+                            BUSINESS OUTLOOK
+                        </span>
+                        <h3>Economic Trends</h3>
+                        <p>
+                            Understand inflation, interest rates,
+                            investment conditions and growth.
+                        </p>
+                        <a href="#economy" class="text-link">
+                            Explore the economy →
+                        </a>
+                    </article>
+
+                </div>
+
+                <p class="market-disclaimer">
+                    Note: These are editorial categories, not live
+                    financial quotes. Verified market data will require
+                    a connected data provider.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- LATEST BUSINESS NEWS -->
+        <section class="news-section section-spacing" id="latest">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">
+                            THE LATEST
+                        </span>
+
+                        <h2>Business <span>News.</span></h2>
+
+                        <p class="section-subtitle">
+                            Explore coverage of markets, companies,
+                            startups, the economy and energy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NEWS FILTERS -->
+                <div class="news-filters" id="newsFilters">
+                    <button class="filter-button active"
+                            type="button"
+                            data-filter="all">
+                        All Stories
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-filter="markets">
+                        Markets
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-filter="companies">
+                        Companies
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-filter="startups">
+                        Startups
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-filter="economy">
+                        Economy
+                    </button>
+
+                    <button class="filter-button"
+                            type="button"
+                            data-filter="energy">
+                        Energy
+                    </button>
+                </div>
+
+                <!-- JAVASCRIPT WILL LOAD STORY CARDS HERE -->
+                <div class="news-grid"
+                     id="latestGrid"
+                     data-category="business"
+                     aria-live="polite">
+
+                    <article class="news-card">
+                        <div class="news-card-image">
+                            <span>BUSINESS</span>
+                        </div>
+
+                        <div class="news-card-content">
+                            <span class="news-category">
+                                BUSINESS INTELLIGENCE
+                            </span>
+
+                            <h3>
+                                Business coverage is being prepared
+                            </h3>
+
+                            <p>
+                                This section will display business
+                                stories as the news system is connected.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="load-more-wrapper">
+                    <button class="button button-secondary"
+                            type="button"
+                            id="loadMoreNews">
+                        Load More Stories
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PART 4 CONTINUES BELOW -->
+                <!-- COMPANIES & CORPORATE NEWS -->
+        <section class="editorial-section section-spacing" id="companies">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">CORPORATE WATCH</span>
+                        <h2>Inside <span>Business.</span></h2>
+                        <p class="section-subtitle">
+                            Company strategy, leadership, competition
+                            and the forces reshaping industries.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="editorial-layout">
+
+                    <article class="editorial-feature">
+                        <div class="editorial-feature-visual">
+                            <span class="feature-label">CORPORATE STRATEGY</span>
+                            <div class="feature-visual-symbol">D.</div>
+                        </div>
+
+                        <div class="editorial-feature-content">
+                            <span class="section-eyebrow">THE BIG PICTURE</span>
+
+                            <h3>
+                                How corporate strategy shapes the
+                                future of African businesses
+                            </h3>
+
+                            <p>
+                                Examine how companies respond to
+                                competition, changing consumer demand,
+                                technology and economic uncertainty.
+                            </p>
+
+                            <a href="article.html" class="text-link">
+                                Explore the topic →
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="editorial-list">
+
+                        <article class="editorial-list-item">
+                            <span class="list-number">01</span>
+                            <div>
+                                <span class="news-category">LEADERSHIP</span>
+                                <h3>Executive decisions and business growth</h3>
+                                <p>
+                                    Explore leadership, strategy and
+                                    organisational performance.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-number">02</span>
+                            <div>
+                                <span class="news-category">COMPETITION</span>
+                                <h3>How companies compete for market share</h3>
+                                <p>
+                                    Understand pricing, innovation and
+                                    changing customer expectations.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-number">03</span>
+                            <div>
+                                <span class="news-category">INDUSTRY</span>
+                                <h3>Business expansion across Africa</h3>
+                                <p>
+                                    Examine regional trade, investment
+                                    and opportunities for growth.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARKETS & FINANCE -->
+        <section class="editorial-section section-spacing" id="markets">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">MARKETS & FINANCE</span>
+                        <h2>Follow the <span>Money.</span></h2>
+                        <p class="section-subtitle">
+                            Understand investments, financial systems,
+                            capital markets and business funding.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-grid">
+
+                    <article class="finance-card">
+                        <span class="finance-card-number">01 / EQUITIES</span>
+                        <h3>Stock Markets</h3>
+                        <p>
+                            Learn about listed companies, share prices,
+                            market movements and investor sentiment.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Read more →
+                        </a>
+                    </article>
+
+                    <article class="finance-card">
+                        <span class="finance-card-number">02 / CURRENCY</span>
+                        <h3>Foreign Exchange</h3>
+                        <p>
+                            Explore exchange-rate movements and their
+                            effects on imports, exports and consumers.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Read more →
+                        </a>
+                    </article>
+
+                    <article class="finance-card">
+                        <span class="finance-card-number">03 / INVESTMENT</span>
+                        <h3>Capital & Funding</h3>
+                        <p>
+                            Follow investment trends, business financing
+                            and access to capital.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Read more →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 5 CONTINUES BELOW -->
+                <!-- ENTREPRENEURSHIP & STARTUPS -->
+        <section class="editorial-section section-spacing"
+                 id="entrepreneurship">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">FOUNDERS & INNOVATION</span>
+                        <h2>Ideas Into <span>Enterprise.</span></h2>
+                        <p class="section-subtitle">
+                            Discover startup strategies, funding,
+                            innovation and the challenges facing founders.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="startup-grid">
+
+                    <article class="startup-card">
+                        <span class="startup-card-icon">↗</span>
+                        <span class="news-category">STARTUP BASICS</span>
+                        <h3>Building a Sustainable Business</h3>
+                        <p>
+                            Learn about business models, customer
+                            research, pricing and long-term planning.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore →
+                        </a>
+                    </article>
+
+                    <article class="startup-card">
+                        <span class="startup-card-icon">◇</span>
+                        <span class="news-category">FUNDING</span>
+                        <h3>Understanding Startup Capital</h3>
+                        <p>
+                            Explore bootstrapping, angel investors,
+                            venture capital and business loans.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore →
+                        </a>
+                    </article>
+
+                    <article class="startup-card">
+                        <span class="startup-card-icon">⌘</span>
+                        <span class="news-category">INNOVATION</span>
+                        <h3>Technology and New Opportunities</h3>
+                        <p>
+                            Examine how digital tools create new
+                            products, services and markets.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ECONOMY & POLICY -->
+        <section class="editorial-section section-spacing" id="economy">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">ECONOMICS & POLICY</span>
+                        <h2>The Economy <span>Explained.</span></h2>
+                        <p class="section-subtitle">
+                            Understand the economic forces affecting
+                            households, businesses and governments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="economy-grid">
+
+                    <article class="economy-card">
+                        <span class="economy-card-label">01 / PRICES</span>
+                        <h3>Inflation & Cost of Living</h3>
+                        <p>
+                            Explore changing prices, purchasing power,
+                            household spending and business costs.
+                        </p>
+                    </article>
+
+                    <article class="economy-card">
+                        <span class="economy-card-label">02 / TRADE</span>
+                        <h3>Imports & Exports</h3>
+                        <p>
+                            Follow international trade, supply chains,
+                            tariffs and regional commerce.
+                        </p>
+                    </article>
+
+                    <article class="economy-card">
+                        <span class="economy-card-label">03 / POLICY</span>
+                        <h3>Interest Rates & Government Decisions</h3>
+                        <p>
+                            Understand how fiscal and monetary policies
+                            can influence credit, investment and growth.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ENERGY & NATURAL RESOURCES -->
+        <section class="editorial-section section-spacing" id="energy">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">ENERGY & RESOURCES</span>
+                        <h2>Powering <span>the Economy.</span></h2>
+                        <p class="section-subtitle">
+                            Follow oil, gas, electricity, renewable
+                            energy and the industries built around them.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="energy-grid">
+
+                    <article class="energy-card">
+                        <span class="energy-card-icon">ϟ</span>
+                        <h3>Oil & Gas</h3>
+                        <p>
+                            Industry developments, production,
+                            investment and global energy markets.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore coverage →
+                        </a>
+                    </article>
+
+                    <article class="energy-card">
+                        <span class="energy-card-icon">⚡</span>
+                        <h3>Electricity & Power</h3>
+                        <p>
+                            Power supply, infrastructure, electricity
+                            markets and energy access.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore coverage →
+                        </a>
+                    </article>
+
+                    <article class="energy-card">
+                        <span class="energy-card-icon">♻</span>
+                        <h3>Renewable Energy</h3>
+                        <p>
+                            Solar, wind, clean-energy investment and
+                            the transition to sustainable power.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore coverage →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 6 CONTINUES BELOW -->
+                <!-- BUSINESS ANALYSIS -->
+        <section class="editorial-section section-spacing" id="analysis">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">BEYOND THE HEADLINES</span>
+                        <h2>Business <span>Analysis.</span></h2>
+                        <p class="section-subtitle">
+                            Explore the context, risks and opportunities
+                            behind important business developments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="analysis-grid">
+
+                    <article class="analysis-card">
+                        <span class="analysis-number">01</span>
+                        <span class="news-category">MARKET INSIGHT</span>
+                        <h3>What Drives Market Movements?</h3>
+                        <p>
+                            Explore how economic data, investor
+                            expectations and company performance
+                            influence financial markets.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore analysis →
+                        </a>
+                    </article>
+
+                    <article class="analysis-card">
+                        <span class="analysis-number">02</span>
+                        <span class="news-category">AFRICA OUTLOOK</span>
+                        <h3>Opportunities in African Markets</h3>
+                        <p>
+                            Examine regional trade, infrastructure,
+                            technology and investment opportunities.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore analysis →
+                        </a>
+                    </article>
+
+                    <article class="analysis-card">
+                        <span class="analysis-number">03</span>
+                        <span class="news-category">BUSINESS STRATEGY</span>
+                        <h3>Managing Risk in Uncertain Times</h3>
+                        <p>
+                            Understand business planning, changing
+                            costs, competition and financial resilience.
+                        </p>
+                        <a href="article.html" class="text-link">
+                            Explore analysis →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section section-spacing" id="newsletter">
+            <div class="container">
+
+                <div class="newsletter-panel">
+                    <div class="newsletter-content">
+                        <span class="section-eyebrow">
+                            THE DESCOP BRIEFING
+                        </span>
+
+                        <h2>Business news.<br><span>Without the noise.</span></h2>
+
+                        <p>
+                            Get business developments, market insights
+                            and economic coverage in one briefing.
+                        </p>
+                    </div>
+
+                    <form class="newsletter-form" id="newsletterForm">
+                        <label for="newsletterEmail">
+                            Email address
+                        </label>
+
+                        <div class="newsletter-input-group">
+                            <input
+                                type="email"
+                                id="newsletterEmail"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <button type="submit">
+                                Subscribe →
+                            </button>
+                        </div>
+
+                        <p id="newsletterFeedback" aria-live="polite">
+                            Subscription functionality will be connected
+                            when the backend is ready.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-symbol">D</span>
+
+                        <span class="brand-copy">
+                            <strong>DESCOP</strong>
+                            <small>INTELLIGENCE NETWORK</small>
+                        </span>
+                    </a>
+
+                    <p>
+                        News, context and intelligence for a
+                        changing world.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <a href="world.html">World</a>
+                    <a href="africa.html">Africa</a>
+                    <a href="nigeria.html">Nigeria</a>
+                    <a href="business.html">Business</a>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Discover</h3>
+                    <a href="technology.html">Technology</a>
+                    <a href="entertainment.html">Entertainment</a>
+                    <a href="sports.html">Sports</a>
+                    <a href="crypto.html">Crypto</a>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Your Account</h3>
+                    <a href="saved.html">Saved Stories</a>
+                    <a href="login.html">Sign In</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="currentYear"></span>
+                    DESCOP Intelligence Network.
+                    All rights reserved.
+                </p>
+
+                <a href="#top">Back to top ↑</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button
+        class="scroll-to-top"
+        id="scrollToTop"
+        type="button"
+        aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <!-- BUSINESS PAGE JAVASCRIPT -->
+    <script src="app.js" defer></script>
+
+</body>
+</html>

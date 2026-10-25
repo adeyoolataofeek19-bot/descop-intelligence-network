@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b1d">
+    <meta name="description" content="View and manage your saved articles on DESCOP Intelligence Network.">
+
+    <title>Saved Articles | DESCOP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="saved">
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-brand">DESCOP<span>.</span></div>
+        <div class="loader-line"></div>
+        <p>Loading your library...</p>
+    </div>
+
+    <div class="ambient" aria-hidden="true"></div>
+
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span class="live-indicator">
+                <span class="live-dot"></span>
+                YOUR PERSONAL LIBRARY
+            </span>
+            <span class="announcement-date" id="currentDate">Saved Articles</span>
+        </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container header-main">
+
+            <a href="index.html" class="brand" aria-label="DESCOP home">
+                <span class="brand-symbol">D</span>
+                <span class="brand-copy">
+                    <strong>DESCOP<span>.</span></strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <form class="header-search" id="searchForm" role="search">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search news, topics..."
+                    aria-label="Search news and topics"
+                >
+                <button type="submit" aria-label="Submit search">↗</button>
+            </form>
+
+            <div class="header-actions">
+                <a href="saved.html" class="header-icon-button active" aria-label="Saved articles" aria-current="page">
+                    ♧
+                    <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a href="login.html" class="login-button">Sign in <span>↗</span></a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+
+        <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="world.html" class="nav-link">World</a>
+                <a href="africa.html" class="nav-link">Africa</a>
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+                <a href="business.html" class="nav-link">Business</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="entertainment.html" class="nav-link">Entertainment</a>
+                <a href="sports.html" class="nav-link">Sports</a>
+                <a href="crypto.html" class="nav-link">Crypto</a>
+                <a href="weather.html" class="nav-link">Weather</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breaking-bar">
+        <div class="container breaking-inner">
+            <span class="breaking-label">YOUR LIBRARY</span>
+
+            <div class="breaking-track-window">
+                <div class="breaking-track" id="breakingNewsTrack">
+                    <span>Keep important stories close</span>
+                    <span>Your saved articles in one place</span>
+                    <span>Return to your reading whenever you want</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="category-hero section-spacing">
+            <div class="container">
+
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Saved Articles</span>
+                </div>
+
+                <div class="category-hero-content">
+                    <div>
+                        <span class="section-eyebrow">YOUR PERSONAL LIBRARY</span>
+
+                        <h1 class="category-hero-heading">
+                            Stories worth<br>
+                            <span class="gold-text">keeping.</span>
+                        </h1>
+
+                        <p>
+                            Save important reports, revisit useful analysis and
+                            keep the stories that matter to you in one place.
+                        </p>
+
+                        <div class="saved-page-actions">
+                            <a href="index.html" class="primary-button">
+                                Explore the newsroom <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="category-number" aria-hidden="true">SV</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SAVED ARTICLE LIBRARY -->
+        <section class="section-spacing">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">BOOKMARK COLLECTION</span>
+                        <h2 class="section-title">Your saved stories<span>.</span></h2>
+                        <p class="section-subtitle">
+                            Articles you bookmark while exploring DESCOP.
+                        </p>
+                    </div>
+
+                    <div class="saved-library-count">
+                        <span id="savedArticleCount">0</span>
+                        <span>saved articles</span>
+                    </div>
+                </div>
+
+                <!-- FILTER AND SORT CONTROLS -->
+                <div class="saved-toolbar">
+
+                    <div class="saved-filter-group" role="group" aria-label="Filter saved articles">
+                        <button
+                            type="button"
+                            class="filter-button active"
+                            data-saved-filter="all"
+                            aria-pressed="true"
+                        >
+                            All saved
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-saved-filter="world"
+                            aria-pressed="false"
+                        >
+                            World
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-saved-filter="africa"
+                            aria-pressed="false"
+                        >
+                            Africa
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-saved-filter="nigeria"
+                            aria-pressed="false"
+                        >
+                            Nigeria
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-saved-filter="business"
+                            aria-pressed="false"
+                        >
+                            Business
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-saved-filter="technology"
+                            aria-pressed="false"
+                        >
+                            Technology
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-saved-filter="crypto"
+                            aria-pressed="false"
+                        >
+                            Crypto
+                        </button>
+                    </div>
+
+                    <div class="saved-sort-control">
+                        <label for="savedSort">Sort by</label>
+
+                        <select id="savedSort" name="sort">
+                            <option value="newest">Recently saved</option>
+                            <option value="oldest">Oldest saved</option>
+                            <option value="title">Title A–Z</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- SAVED ARTICLES ARE RENDERED HERE BY app.js -->
+                <div
+                    class="news-grid saved-articles-grid"
+                    id="savedArticlesGrid"
+                    aria-live="polite"
+                    aria-busy="true"
+                >
+                    <article class="news-card-loading" aria-label="Loading saved articles">
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                    </article>
+                </div>
+
+                <!-- EMPTY LIBRARY STATE -->
+                <div class="saved-empty-state" id="savedEmptyState" hidden>
+                    <div class="saved-empty-icon" aria-hidden="true">♧</div>
+
+                    <span class="section-eyebrow">NOTHING SAVED YET</span>
+
+                    <h3>Your reading list starts here.</h3>
+
+                    <p>
+                        When you find an article worth keeping, tap its save
+                        button. It will appear in this library.
+                    </p>
+
+                    <a href="index.html" class="primary-button">
+                        Discover stories <span>↗</span>
+                    </a>
+                </div>
+
+                <!-- FILTER EMPTY STATE -->
+                <div class="saved-filter-empty" id="savedFilterEmpty" hidden>
+                    <h3>No saved stories in this category.</h3>
+                    <p>Try another category or view all your saved articles.</p>
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="showAllSavedButton"
+                    >
+                        Show all saved
+                    </button>
+                </div>
+
+                <!-- CLEAR LIBRARY CONTROL -->
+                <div class="saved-library-footer" id="savedLibraryFooter" hidden>
+                    <p>
+                        Your reading list is stored locally in this browser
+                        until account-based syncing is implemented.
+                    </p>
+
+                    <button type="button" class="secondary-button" id="clearSavedArticlesButton">
+                        Clear saved articles
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- READING TIPS -->
+        <section class="section-spacing">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-eyebrow">READ SMARTER</span>
+                        <h2 class="section-title">Build your own briefing<span>.</span></h2>
+                        <p class="section-subtitle">
+                            A few simple ways to make your personal library more useful.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="editorial-feature-grid">
+
+                    <article class="editorial-feature-card">
+                        <div class="editorial-visual">
+                            <span class="editorial-visual-number">01</span>
+                            <span class="editorial-visual-symbol" aria-hidden="true">◎</span>
+                        </div>
+
+                        <div class="editorial-feature-body">
+                            <span class="section-eyebrow">ORGANISE</span>
+                            <h3>Follow the topics that matter.</h3>
+                            <p>
+                                Save reports about your interests so you can
+                                revisit related coverage more easily.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-feature-card">
+                        <div class="editorial-visual">
+                            <span class="editorial-visual-number">02</span>
+                            <span class="editorial-visual-symbol" aria-hidden="true">◷</span>
+                        </div>
+
+                        <div class="editorial-feature-body">
+                            <span class="section-eyebrow">REVISIT</span>
+                            <h3>Return to important analysis.</h3>
+                            <p>
+                                Keep useful explanations and reports available
+                                for a second read when you need them.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-feature-card">
+                        <div class="editorial-visual">
+                            <span class="editorial-visual-number">03</span>
+                            <span class="editorial-visual-symbol" aria-hidden="true">↗</span>
+                        </div>
+
+                        <div class="editorial-feature-body">
+                            <span class="section-eyebrow">STAY INFORMED</span>
+                            <h3>Explore beyond one headline.</h3>
+                            <p>
+                                Combine reporting from different sections to
+                                build a broader understanding of events.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section section-spacing">
+            <div class="container">
+                <div class="newsletter-panel">
+
+                    <div class="newsletter-copy">
+                        <span class="section-eyebrow">THE DESCOP BRIEFING</span>
+
+                        <h2>Stay informed.<br><span class="gold-text">Stay ahead.</span></h2>
+
+                        <p>
+                            Get important developments and intelligence updates
+                            in one concise briefing.
+                        </p>
+                    </div>
+
+                    <form class="newsletter-form" id="newsletterForm">
+                        <label for="newsletterEmail">Your email address</label>
+
+                        <div class="newsletter-input-group">
+                            <input
+                                type="email"
+                                id="newsletterEmail"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <button type="submit">
+                                Subscribe <span>↗</span>
+                            </button>
+                        </div>
+
+                        <p id="newsletterMessage" aria-live="polite">
+                            No spam. Just the important stories.
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand-column">
+                    <a href="index.html" class="brand" aria-label="DESCOP home">
+                        <span class="brand-symbol">D</span>
+
+                        <span class="brand-copy">
+                            <strong>DESCOP<span>.</span></strong>
+                            <small>INTELLIGENCE NETWORK</small>
+                        </span>
+                    </a>
+
+                    <p>
+                        A modern intelligence platform covering global affairs,
+                        African developments, business, technology and digital markets.
+                    </p>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3>Explore</h3>
+                    <a href="world.html">World News</a>
+                    <a href="africa.html">Africa</a>
+                    <a href="nigeria.html">Nigeria</a>
+                    <a href="business.html">Business</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3>Discover</h3>
+                    <a href="technology.html">Technology</a>
+                    <a href="entertainment.html">Entertainment</a>
+                    <a href="sports.html">Sports</a>
+                    <a href="crypto.html">Cryptocurrency</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3>Your DESCOP</h3>
+                    <a href="weather.html">Weather</a>
+                    <a href="saved.html">Saved Articles</a>
+                    <a href="login.html">Sign In</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="footerYear">2026</span> DESCOP Intelligence Network.</p>
+                <p>Built for clarity. Designed for insight.</p>
+                <a href="index.html">Back to top ↑</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+</body>
+</html>

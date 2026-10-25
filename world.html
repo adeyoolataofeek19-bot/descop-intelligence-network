@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+
+    <meta name="description"
+        content="Explore international news, world affairs, geopolitics, diplomacy and global developments with DESCOP Intelligence Network.">
+
+    <title>World News | DESCOP Intelligence Network</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Load JavaScript only once -->
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="world" id="top">
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">D<span>.</span></div>
+        <div class="loader-line"></div>
+        <p>LOADING WORLD INTELLIGENCE</p>
+    </div>
+
+    <!-- AMBIENT BACKGROUND EFFECTS -->
+    <div class="ambient ambient-purple"></div>
+    <div class="ambient ambient-gold"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+
+            <span class="live-indicator"></span>
+
+            <span class="announcement-label">
+                DESCOP INTELLIGENCE
+            </span>
+
+            <span class="announcement-divider">/</span>
+
+            <span class="announcement-text">
+                Global perspectives. Independent thinking.
+            </span>
+
+            <span class="announcement-date" id="currentDate"></span>
+
+        </div>
+    </div>
+
+    <!-- SITE HEADER -->
+    <header class="site-header" id="siteHeader">
+
+        <div class="container header-main">
+
+            <!-- BRAND -->
+            <a href="index.html" class="brand"
+                aria-label="DESCOP homepage">
+
+                <span class="brand-symbol">D<span>.</span></span>
+
+                <span class="brand-copy">
+                    <strong>DESCOP</strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+
+            </a>
+
+            <!-- SEARCH -->
+            <form class="header-search" id="searchForm" role="search">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search international news..."
+                    aria-label="Search DESCOP"
+                >
+
+                <button type="submit">Search</button>
+
+            </form>
+
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+
+                <a href="saved.html"
+                    class="header-icon-button"
+                    aria-label="Saved articles">
+
+                    ♡ <span class="saved-count" id="savedCount">0</span>
+
+                </a>
+
+                <a href="login.html" class="login-button">
+                    Sign in <span>↗</span>
+                </a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="main-navigation"
+            id="mainNavigation"
+            aria-label="Main navigation">
+
+            <div class="container nav-inner">
+
+                <a href="index.html" class="nav-link">Home</a>
+
+                <a href="world.html"
+                    class="nav-link active"
+                    aria-current="page">World</a>
+
+                <a href="africa.html" class="nav-link">Africa</a>
+
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+
+                <a href="business.html" class="nav-link">Business</a>
+
+                <a href="technology.html" class="nav-link">Technology</a>
+
+                <a href="entertainment.html"
+                    class="nav-link">Entertainment</a>
+
+                <a href="sports.html" class="nav-link">Sports</a>
+
+                <a href="crypto.html"
+                    class="nav-link crypto-nav-link">
+                    Crypto <span>↗</span>
+                </a>
+
+                <a href="weather.html" class="nav-link">Weather</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- BREAKING NEWS TICKER -->
+    <section class="breaking-bar" aria-label="World news ticker">
+
+        <div class="container breaking-inner">
+
+            <span class="breaking-label">
+                <span class="breaking-pulse"></span>
+                WORLD WATCH
+            </span>
+
+            <div class="breaking-track-window">
+
+                <div class="breaking-track" id="breakingNewsTrack">
+
+                    <span>
+                        Loading international headlines...
+                    </span>
+
+                </div>
+
+            </div>
+
+            <a href="#worldLatest" class="breaking-more">
+                Latest stories <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- WORLD HERO -->
+        <section class="category-hero section-spacing">
+
+            <div class="container">
+
+                <div class="breadcrumb">
+
+                    <a href="index.html">Home</a>
+
+                    <span>/</span>
+
+                    <span>World</span>
+
+                </div>
+
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    INTERNATIONAL AFFAIRS &amp; GLOBAL DEVELOPMENTS
+                </div>
+
+                <div class="category-hero-heading">
+
+                    <div>
+
+                        <h1>
+                            The world,<br>
+                            <span class="gradient-text">
+                                in perspective.
+                            </span>
+                        </h1>
+
+                        <p class="category-hero-description">
+                            Understand the forces shaping nations, economies,
+                            diplomacy and everyday life. Follow international
+                            developments through context, analysis and reporting.
+                        </p>
+
+                    </div>
+
+                    <div class="category-number">
+
+                        <span>DESCOP SECTION</span>
+
+                        <strong>01<span>/</span>09</strong>
+
+                        <small>WORLD INTELLIGENCE</small>
+
+                    </div>
+
+                </div>
+
+                <!-- WORLD TOPIC NAVIGATION -->
+                <div class="topic-navigation">
+
+                    <a href="#worldLatest"
+                        class="topic-link active">Latest</a>
+
+                    <a href="#worldPolitics"
+                        class="topic-link">Politics</a>
+
+                    <a href="#worldDiplomacy"
+                        class="topic-link">Diplomacy</a>
+
+                    <a href="#worldEconomy"
+                        class="topic-link">Global economy</a>
+
+                    <a href="#worldSecurity"
+                        class="topic-link">Security</a>
+
+                    <a href="#worldEnvironment"
+                        class="topic-link">Science &amp; environment</a>
+
+                    <a href="#worldAnalysis"
+                        class="topic-link">Analysis</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LEAD STORY -->
+        <section class="world-lead-section">
+
+            <div class="container">
+
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    THE GLOBAL PICTURE
+                </div>
+
+                <div class="world-lead-grid">
+
+                    <!-- MAIN LEAD CARD -->
+                    <article class="world-lead-card">
+
+                        <div class="world-lead-visual">
+
+                            <div class="visual-grid"></div>
+
+                            <div class="world-map-decoration">
+                                WORLD
+                            </div>
+
+                            <div class="world-lead-glow"></div>
+
+                            <span class="visual-coordinate coordinate-one">
+                                GLOBAL AFFAIRS
+                            </span>
+
+                            <span class="visual-coordinate coordinate-two">
+                                INTERNATIONAL DESK
+                            </span>
+
+                            <div class="world-globe-symbol">◎</div>
+
+                            <div class="visual-caption">
+                                GLOBAL DEVELOPMENTS
+                            </div>
+
+                        </div>
+
+                        <div class="world-lead-content">
+
+                            <div class="article-meta">
+
+                                <span class="category-tag">WORLD</span>
+
+                                <span class="meta-separator">•</span>
+
+                                <span>LEAD COVERAGE</span>
+
+                            </div>
+
+                            <h2 id="worldLeadHeadline">
+                                Understanding the decisions and developments
+                                reshaping the international landscape.
+                            </h2>
+
+                            <p id="worldLeadSummary">
+                                Explore major international stories, diplomatic
+                                developments, geopolitical shifts and the
+                                connections between events across regions.
+                            </p>
+
+                            <a href="#worldLatest" class="gold-button">
+                                Explore world coverage <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- GLOBAL BRIEFING SIDEBAR -->
+                    <aside class="world-lead-sidebar">
+
+                        <div class="sidebar-heading">
+
+                            <h2>Global briefing</h2>
+
+                            <span>WORLD DESK</span>
+
+                        </div>
+
+                        <article class="briefing-item">
+
+                            <span class="briefing-number">01</span>
+
+                            <div>
+
+                                <span class="briefing-category">
+                                    DIPLOMACY
+                                </span>
+
+                                <h3>
+                                    <a href="#worldDiplomacy">
+                                        International relations and the search
+                                        for common ground.
+                                    </a>
+                                </h3>
+
+                                <p>Diplomacy · Global affairs</p>
+
+                            </div>
+
+                        </article>
+
+                        <article class="briefing-item">
+
+                            <span class="briefing-number">02</span>
+
+                            <div>
+
+                                <span class="briefing-category">
+                                    ECONOMY
+                                </span>
+
+                                <h3>
+                                    <a href="#worldEconomy">
+                                        Economic decisions and their effects
+                                        across borders.
+                                    </a>
+                                </h3>
+
+                                <p>Economics · Policy</p>
+
+                            </div>
+
+                        </article>
+
+                        <article class="briefing-item">
+
+                            <span class="briefing-number">03</span>
+
+                            <div>
+
+                                <span class="briefing-category">
+                                    SECURITY
+                                </span>
+
+                                <h3>
+                                    <a href="#worldSecurity">
+                                        The changing landscape of global security.
+                                    </a>
+                                </h3>
+
+                                <p>Security · International affairs</p>
+
+                            </div>
+
+                        </article>
+
+                        <a href="#worldLatest"
+                            class="sidebar-bottom-link">
+                            Discover all coverage <span>→</span>
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- END OF PART 1 -->
+                <!-- LATEST WORLD STORIES -->
+        <section class="news-section section-spacing" id="worldLatest">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            THE LATEST
+                        </div>
+
+                        <h2 class="section-title">
+                            Around the <span class="gradient-text">world.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            International headlines, global developments and
+                            stories shaping our understanding of the world.
+                        </p>
+                    </div>
+
+                    <span class="section-live-label">
+                        <span class="live-indicator"></span>
+                        WORLD DESK
+                    </span>
+
+                </div>
+
+                <!-- STORY FILTERS -->
+                <div class="news-filter-bar" id="worldNewsFilters">
+
+                    <button
+                        type="button"
+                        class="filter-button active"
+                        data-world-filter="all"
+                        aria-pressed="true">
+                        All stories
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-world-filter="politics"
+                        aria-pressed="false">
+                        Politics
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-world-filter="diplomacy"
+                        aria-pressed="false">
+                        Diplomacy
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-world-filter="economy"
+                        aria-pressed="false">
+                        Economy
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-world-filter="security"
+                        aria-pressed="false">
+                        Security
+                    </button>
+
+                </div>
+
+                <!-- JAVASCRIPT WILL POPULATE THIS GRID -->
+                <div
+                    class="news-grid"
+                    id="worldNewsGrid"
+                    data-category="world">
+
+                    <article class="news-card news-card-loading">
+
+                        <div class="news-card-image image-placeholder">
+                            <span>01</span>
+                        </div>
+
+                        <div class="news-card-body">
+                            <span class="skeleton-line skeleton-short"></span>
+                            <span class="skeleton-line skeleton-long"></span>
+                            <span class="skeleton-line skeleton-medium"></span>
+                            <p>Loading world coverage...</p>
+                        </div>
+
+                    </article>
+
+                    <article class="news-card news-card-loading">
+
+                        <div class="news-card-image image-placeholder">
+                            <span>02</span>
+                        </div>
+
+                        <div class="news-card-body">
+                            <span class="skeleton-line skeleton-short"></span>
+                            <span class="skeleton-line skeleton-long"></span>
+                            <span class="skeleton-line skeleton-medium"></span>
+                            <p>Loading world coverage...</p>
+                        </div>
+
+                    </article>
+
+                    <article class="news-card news-card-loading">
+
+                        <div class="news-card-image image-placeholder">
+                            <span>03</span>
+                        </div>
+
+                        <div class="news-card-body">
+                            <span class="skeleton-line skeleton-short"></span>
+                            <span class="skeleton-line skeleton-long"></span>
+                            <span class="skeleton-line skeleton-medium"></span>
+                            <p>Loading world coverage...</p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="section-bottom-action">
+
+                    <button
+                        type="button"
+                        class="outline-button"
+                        id="loadMoreWorldNews">
+                        Load more stories <span>↓</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WORLD POLITICS -->
+        <section
+            class="editorial-section section-spacing"
+            id="worldPolitics">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            POWER &amp; GOVERNANCE
+                        </div>
+
+                        <h2 class="section-title">
+                            World <span class="gold-text">politics.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Governments, elections, public policy and political
+                            change across the international landscape.
+                        </p>
+
+                    </div>
+
+                    <span class="editorial-index">SECTION / 01</span>
+
+                </div>
+
+                <div class="editorial-feature-grid">
+
+                    <article class="editorial-feature-card">
+
+                        <div class="editorial-visual editorial-visual-politics">
+
+                            <span class="editorial-visual-label">
+                                POLITICAL DESK
+                            </span>
+
+                            <div class="editorial-visual-symbol">§</div>
+
+                            <span class="editorial-visual-number">01</span>
+
+                        </div>
+
+                        <div class="editorial-feature-body">
+
+                            <span class="category-tag">GOVERNANCE</span>
+
+                            <h3>
+                                <a href="#worldLatest">
+                                    How government decisions shape international
+                                    relationships and domestic priorities.
+                                </a>
+                            </h3>
+
+                            <p>
+                                Follow policy debates, elections, leadership
+                                changes and political choices affecting
+                                communities around the world.
+                            </p>
+
+                            <a href="#worldLatest" class="text-link">
+                                Explore related coverage <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <div class="editorial-list">
+
+                        <article class="editorial-list-item">
+
+                            <span class="list-item-index">A</span>
+
+                            <div>
+                                <span class="briefing-category">ELECTIONS</span>
+
+                                <h3>
+                                    Voting, political campaigns and democratic
+                                    participation.
+                                </h3>
+
+                                <p>International political coverage</p>
+                            </div>
+
+                        </article>
+
+                        <article class="editorial-list-item">
+
+                            <span class="list-item-index">B</span>
+
+                            <div>
+                                <span class="briefing-category">POLICY</span>
+
+                                <h3>
+                                    Public policy and its effects on citizens
+                                    and businesses.
+                                </h3>
+
+                                <p>Governance and public affairs</p>
+                            </div>
+
+                        </article>
+
+                        <article class="editorial-list-item">
+
+                            <span class="list-item-index">C</span>
+
+                            <div>
+                                <span class="briefing-category">LEADERSHIP</span>
+
+                                <h3>
+                                    Leadership decisions and the changing
+                                    political landscape.
+                                </h3>
+
+                                <p>Global leadership</p>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIPLOMACY -->
+        <section
+            class="editorial-section section-spacing"
+            id="worldDiplomacy">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            GLOBAL RELATIONS
+                        </div>
+
+                        <h2 class="section-title">
+                            Diplomacy &amp; world affairs<span>.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Explore international negotiations, strategic
+                            partnerships and diplomatic developments shaping
+                            global relations.
+                        </p>
+
+                    </div>
+
+                    <span class="editorial-index">SECTION / 02</span>
+
+                </div>
+
+                <div class="editorial-grid">
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">
+                            International Relations
+                        </span>
+
+                        <h3>
+                            How diplomacy shapes relations between nations
+                        </h3>
+
+                        <p>
+                            Examine how dialogue, negotiations and international
+                            agreements influence cooperation and help resolve
+                            disputes.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">
+                            Global Cooperation
+                        </span>
+
+                        <h3>
+                            Working together on shared international challenges
+                        </h3>
+
+                        <p>
+                            Countries and international organisations collaborate
+                            on security, trade, public health and climate change.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">Geopolitics</span>
+
+                        <h3>
+                            Strategic partnerships in a changing world
+                        </h3>
+
+                        <p>
+                            Understand how alliances, economic interests and
+                            regional priorities influence international decisions.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GLOBAL ECONOMY -->
+        <section
+            class="editorial-section section-spacing"
+            id="worldEconomy">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            TRADE &amp; MARKETS
+                        </div>
+
+                        <h2 class="section-title">
+                            The global <span class="gold-text">economy.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Follow international trade, economic policy and
+                            developments affecting businesses and households.
+                        </p>
+
+                    </div>
+
+                    <span class="editorial-index">SECTION / 03</span>
+
+                </div>
+
+                <div class="editorial-grid">
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">
+                            International Trade
+                        </span>
+
+                        <h3>
+                            Trade agreements and cross-border commerce
+                        </h3>
+
+                        <p>
+                            Explore how tariffs, trade agreements and supply
+                            chains influence the movement of goods and services
+                            between countries.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">Economic Policy</span>
+
+                        <h3>
+                            Inflation, interest rates and global growth
+                        </h3>
+
+                        <p>
+                            Understand economic decisions affecting prices,
+                            investment, employment and household purchasing power.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">Emerging Markets</span>
+
+                        <h3>
+                            New opportunities across developing economies
+                        </h3>
+
+                        <p>
+                            Discover how infrastructure, technology and
+                            investment influence economic development worldwide.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GLOBAL SECURITY -->
+        <section
+            class="editorial-section section-spacing"
+            id="worldSecurity">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            PEACE &amp; STABILITY
+                        </div>
+
+                        <h2 class="section-title">
+                            Global <span class="gold-text">security.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Examine international security, conflict prevention,
+                            humanitarian concerns and efforts to maintain peace.
+                        </p>
+
+                    </div>
+
+                    <span class="editorial-index">SECTION / 04</span>
+
+                </div>
+
+                <div class="editorial-grid">
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">
+                            International Security
+                        </span>
+
+                        <h3>
+                            Security cooperation across national borders
+                        </h3>
+
+                        <p>
+                            Explore how countries cooperate on shared security
+                            challenges and regional stability.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">
+                            Conflict &amp; Peace
+                        </span>
+
+                        <h3>
+                            Diplomacy, mediation and conflict prevention
+                        </h3>
+
+                        <p>
+                            Understand negotiation efforts, peace initiatives
+                            and the challenges involved in resolving disputes.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="editorial-card">
+
+                        <span class="card-category">
+                            Humanitarian Affairs
+                        </span>
+
+                        <h3>
+                            The international response to humanitarian crises
+                        </h3>
+
+                        <p>
+                            Follow relief efforts, displacement concerns and
+                            cooperation aimed at supporting affected communities.
+                        </p>
+
+                        <a href="#worldLatest" class="text-link">
+                            Explore coverage <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCIENCE & ENVIRONMENT -->
+        <section
+            class="editorial-section section-spacing"
+            id="worldEnvironment">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            PLANET &amp; DISCOVERY
+                        </div>
+
+                        <h2 class="section-title">
+                            Science &amp; <span class="gold-text">environment.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Discover scientific advances, environmental
+                            challenges and developments influencing the planet.
+                        </p>
+
+                    </div>
+
+              <!-- WORLD NEWSLETTER -->
+        <section class="newsletter-section section-spacing" id="worldNewsletter">
+
+            <div class="container">
+
+                <div class="newsletter-content">
+
+                    <span class="section-eyebrow">
+                        THE BIGGER PICTURE
+                    </span>
+
+                    <h2>
+                        Stay informed. See beyond borders.
+                    </h2>
+
+                    <p>
+                        Get updates on world affairs, international business
+                        and major developments shaping the future.
+                    </p>
+
+                    <form
+                        class="newsletter-form"
+                        id="newsletterForm"
+                    >
+
+                        <label
+                            class="sr-only"
+                            for="newsletterEmail"
+                        >
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                    <p class="newsletter-note">
+                        Stay connected with international developments.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <!-- FOOTER BRAND -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-mark">D</span>
+
+                    <span class="logo-text">
+                        DESCOP<span>.</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    A modern intelligence platform covering global affairs,
+                    African developments, business, technology and digital markets.
+                </p>
+
+            </div>
+
+
+            <!-- EXPLORE LINKS -->
+            <div class="footer-links-column">
+
+                <h3>Explore</h3>
+
+                <a href="world.html">World News</a>
+                <a href="africa.html">Africa</a>
+                <a href="nigeria.html">Nigeria</a>
+                <a href="business.html">Business</a>
+                <a href="technology.html">Technology</a>
+
+            </div>
+
+
+            <!-- MORE COVERAGE -->
+            <div class="footer-links-column">
+
+                <h3>More Coverage</h3>
+
+                <a href="entertainment.html">Entertainment</a>
+                <a href="sports.html">Sports</a>
+                <a href="crypto.html">Crypto</a>
+                <a href="weather.html">Weather</a>
+
+            </div>
+
+
+            <!-- ACCOUNT LINKS -->
+            <div class="footer-links-column">
+
+                <h3>Your Account</h3>
+
+                <a href="login.html">Log In</a>
+                <a href="register.html">Create Account</a>
+                <a href="saved.html">Saved Articles</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="container footer-bottom">
+
+            <p>
+                &copy; 2026 DESCOP Intelligence Network.
+                All rights reserved.
+            </p>
+
+            <a href="#top">
+                Back to top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- NOTIFICATION CONTAINER -->
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+        aria-atomic="true"
+    ></div>
+
+
+    <!-- BACK-TO-TOP BUTTON -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+</body>
+</html>

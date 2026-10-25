@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b1d">
+    <meta name="description" content="Read in-depth reporting, analysis and breaking stories on DESCOP Intelligence Network.">
+
+    <title>Article | DESCOP Intelligence Network</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="article">
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-brand">DESCOP<span>.</span></div>
+        <div class="loader-line"></div>
+        <p>Loading your story...</p>
+    </div>
+
+    <div class="ambient" aria-hidden="true"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span class="live-indicator">
+                <span class="live-dot"></span>
+                THE DESCOP NEWSROOM
+            </span>
+            <span class="announcement-date" id="currentDate">Independent intelligence</span>
+        </div>
+    </div>
+
+    <!-- SITE HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-main">
+
+            <a href="index.html" class="brand" aria-label="DESCOP home">
+                <span class="brand-symbol">D</span>
+                <span class="brand-copy">
+                    <strong>DESCOP<span>.</span></strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <form class="header-search" id="searchForm" role="search">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search news, topics..."
+                    aria-label="Search news and topics"
+                >
+                <button type="submit" aria-label="Submit search">↗</button>
+            </form>
+
+            <div class="header-actions">
+                <a href="saved.html" class="header-icon-button" aria-label="Saved articles">
+                    ♧
+                    <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a href="login.html" class="login-button">Sign in <span>↗</span></a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+
+        <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="world.html" class="nav-link">World</a>
+                <a href="africa.html" class="nav-link">Africa</a>
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+                <a href="business.html" class="nav-link">Business</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="entertainment.html" class="nav-link">Entertainment</a>
+                <a href="sports.html" class="nav-link">Sports</a>
+                <a href="crypto.html" class="nav-link">Crypto</a>
+                <a href="weather.html" class="nav-link">Weather</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BREAKING NEWS BAR -->
+    <div class="breaking-bar">
+        <div class="container breaking-inner">
+            <span class="breaking-label">LATEST</span>
+
+            <div class="breaking-track-window">
+                <div class="breaking-track" id="breakingNewsTrack">
+                    <span>Read the full story on DESCOP</span>
+                    <span>Explore context, reactions and analysis</span>
+                    <span>Stay informed with DESCOP Intelligence Network</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ARTICLE INTRODUCTION -->
+        <section class="article-intro-section section-spacing">
+            <div class="container">
+
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="world.html" id="articleBreadcrumbCategory">News</a>
+                    <span>/</span>
+                    <span>Full Article</span>
+                </div>
+
+                <div class="article-heading-wrap">
+
+                    <div class="article-category-row">
+                        <span class="article-category-tag" id="articleCategory">FEATURED STORY</span>
+                        <span class="article-reading-time" id="articleReadingTime">Reading time varies</span>
+                    </div>
+
+                    <h1 class="article-title" id="articleTitle">
+                        The stories shaping our world deserve a closer look.
+                    </h1>
+
+                    <p class="article-standfirst" id="articleStandfirst">
+                        Explore the details, context and wider implications behind
+                        the developments that matter.
+                    </p>
+
+                    <div class="article-byline">
+
+                        <div class="article-author-avatar" id="articleAuthorAvatar" aria-hidden="true">
+                            D
+                        </div>
+
+                        <div class="article-author-details">
+                            <strong id="articleAuthor">DESCOP Editorial Desk</strong>
+                            <span id="articleAuthorRole">Editorial team</span>
+                        </div>
+
+                        <div class="article-publication-details">
+                            <time id="articlePublishedDate" datetime="">
+                                Publication date unavailable
+                            </time>
+                            <span id="articleUpdatedDate">Updates shown when available</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ARTICLE FEATURE IMAGE -->
+        <section class="article-feature-section">
+            <div class="container">
+
+                <figure class="article-feature-figure">
+
+                    <div class="article-feature-image" id="articleFeatureImage">
+                        <div class="article-image-placeholder">
+                            <span class="article-image-placeholder-mark">D.</span>
+                            <p>DESCOP Editorial</p>
+                        </div>
+                    </div>
+
+                    <figcaption id="articleImageCaption">
+                        Editorial image or illustration. Image credits will be displayed when available.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- ARTICLE BODY AND SIDEBAR -->
+        <section class="section-spacing article-reading-section">
+            <div class="container">
+
+                <div class="article-layout">
+
+                    <!-- MAIN ARTICLE CONTENT -->
+                    <article class="article-main-content">
+
+                        <div class="article-toolbar">
+
+                            <div class="article-reaction-group" aria-label="Article reactions">
+
+                                <button
+                                    type="button"
+                                    class="article-reaction-button"
+                                    id="articleLikeButton"
+                                    data-reaction="like"
+                                    aria-pressed="false"
+                                >
+                                    <span aria-hidden="true">♡</span>
+                                    <span>Like</span>
+                                    <span class="reaction-count" id="articleLikeCount">0</span>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="article-reaction-button"
+                                    id="articleInsightfulButton"
+                                    data-reaction="insightful"
+                                    aria-pressed="false"
+                                >
+                                    <span aria-hidden="true">✦</span>
+                                    <span>Insightful</span>
+                                    <span class="reaction-count" id="articleInsightfulCount">0</span>
+                                </button>
+
+                            </div>
+
+                            <div class="article-action-group">
+
+                                <button
+                                    type="button"
+                                    class="article-action-button"
+                                    id="articleSaveButton"
+                                    aria-pressed="false"
+                                >
+                                    <span aria-hidden="true">♧</span>
+                                    <span id="articleSaveButtonText">Save</span>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="article-action-button"
+                                    id="articleShareButton"
+                                >
+                                    <span aria-hidden="true">↗</span>
+                                    <span>Share</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ARTICLE TABLE OF CONTENTS -->
+                        <nav class="article-table-of-contents" aria-label="Article contents">
+                            <details>
+                                <summary>In this article</summary>
+
+                                <ol id="articleContentsList">
+                                    <li>
+                                        <a href="#articleSectionOverview">Overview</a>
+                                    </li>
+                                    <li>
+                                        <a href="#articleSectionDetails">The details</a>
+                                    </li>
+                                    <li>
+                                        <a href="#articleSectionImplications">Why it matters</a>
+                                    </li>
+                                </ol>
+                            </details>
+                        </nav>
+
+                        <!-- DYNAMIC ARTICLE CONTENT -->
+                        <div class="article-body" id="articleBody">
+
+                            <section id="articleSectionOverview">
+                                <h2>Overview</h2>
+
+                                <p>
+                                    This article area is designed to display the full
+                                    story selected from the DESCOP newsroom.
+                                </p>
+
+                                <p>
+                                    The final article content, publication details and
+                                    supporting sources will be supplied by the article
+                                    data used by the website.
+                                </p>
+                            </section>
+
+                            <section id="articleSectionDetails">
+                                <h2>The details</h2>
+
+                                <p>
+                                    Important developments need context. This section
+                                    will present the main facts, relevant background
+                                    and the information readers need to understand
+                                    the subject.
+                                </p>
+                            </section>
+
+                            <section id="articleSectionImplications">
+                                <h2>Why it matters</h2>
+
+                                <p>
+                                    This section will explain the broader implications,
+                                    potential consequences and questions readers should
+                                    consider when evaluating the story.
+                                </p>
+                            </section>
+
+                        </div>
+
+                        <!-- ARTICLE TAGS -->
+                        <div class="article-tags-section">
+                            <h3>Topics</h3>
+
+                            <div class="article-tags" id="articleTags">
+                                <a href="world.html" class="article-tag">World</a>
+                                <a href="africa.html" class="article-tag">Africa</a>
+                                <a href="business.html" class="article-tag">Analysis</a>
+                            </div>
+                        </div>
+
+                        <!-- ARTICLE SOURCES -->
+                        <section class="article-sources-section" id="articleSourcesSection">
+                            <h3>Sources and references</h3>
+
+                            <p id="articleSourcesNote">
+                                Supporting sources will appear here when provided
+                                with the article.
+                            </p>
+
+                            <ol id="articleSourcesList">
+                                <li>
+                                    Source information has not yet been attached to this article.
+                                </li>
+                            </ol>
+                        </section>
+
+                        <!-- AUTHOR CARD -->
+                        <section class="article-author-card">
+
+                            <div class="article-author-avatar article-author-avatar-large" aria-hidden="true">
+                                D
+                            </div>
+
+                            <div>
+                                <span class="section-eyebrow">ABOUT THE AUTHOR</span>
+                                <h3 id="articleAuthorCardName">DESCOP Editorial Desk</h3>
+
+                                <p id="articleAuthorBio">
+                                    The DESCOP editorial team covers global developments,
+                                    African affairs, business, technology and digital markets.
+                                </p>
+
+                                <a href="index.html" class="text-link">
+                                    Explore more coverage <span>↗</span>
+                                </a>
+                            </div>
+
+                        </section>
+
+                    </article>
+
+                    <!-- ARTICLE SIDEBAR -->
+                    <aside class="article-sidebar">
+
+                        <section class="article-sidebar-card">
+                            <span class="section-eyebrow">STORY SNAPSHOT</span>
+                            <h2>At a glance<span>.</span></h2>
+
+                            <div class="article-fact-list" id="articleFactList">
+
+                                <div class="article-fact-item">
+                                    <span>Category</span>
+                                    <strong id="articleFactCategory">News</strong>
+                                </div>
+
+                                <div class="article-fact-item">
+                                    <span>Author</span>
+                                    <strong id="articleFactAuthor">DESCOP Desk</strong>
+                                </div>
+
+                                <div class="article-fact-item">
+                                    <span>Published</span>
+                                    <strong id="articleFactDate">Not available</strong>
+                                </div>
+
+                                <div class="article-fact-item">
+                                    <span>Reading time</span>
+                                    <strong id="articleFactReadingTime">Not available</strong>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="article-sidebar-card">
+                            <span class="section-eyebrow">JOIN THE DISCUSSION</span>
+                            <h2>Your perspective matters<span>.</span></h2>
+
+                            <p>
+                                Share a constructive opinion and engage with other
+                                readers in the comments below.
+                            </p>
+
+                            <a href="#articleComments" class="primary-button">
+                                View comments <span>↓</span>
+                            </a>
+                        </section>
+
+                        <section class="article-sidebar-card">
+                            <span class="section-eyebrow">KEEP READING</span>
+                            <h2>Related stories<span>.</span></h2>
+
+                            <div class="related-articles-list" id="relatedArticlesList">
+                                <p>
+                                    Related articles will appear here when available.
+                                </p>
+                            </div>
+                        </section>
+
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ARTICLE COMMENTS -->
+        <section class="section-spacing article-comments-section" id="articleComments">
+            <div class="container">
+
+                <div class="comments-layout">
+
+                    <div class="comments-main">
+
+                        <div class="section-header">
+                            <div>
+                                <span class="section-eyebrow">READER DISCUSSION</span>
+                                <h2 class="section-title">The conversation<span>.</span></h2>
+                                <p class="section-subtitle">
+                                    Share your perspective and respond respectfully to other readers.
+                                </p>
+                            </div>
+
+                            <span class="comments-count-badge" id="articleCommentsCount">
+                                0 comments
+                            </span>
+                        </div>
+
+                        <!-- COMMENT FORM -->
+                        <form class="article-comment-form" id="articleCommentForm">
+
+                            <div class="comment-form-heading">
+                                <div class="comment-avatar" aria-hidden="true">Y</div>
+
+                                <div>
+                                    <h3>Add to the discussion</h3>
+                                    <p>Keep your contribution relevant and respectful.</p>
+                                </div>
+                            </div>
+
+                            <label for="articleCommentName">Display name</label>
+
+                            <input
+                                type="text"
+                                id="articleCommentName"
+                                name="displayName"
+                                placeholder="
+                                Write your name"
+autocomplete="name"
+required
+>
+
+                        <label for="articleCommentText">Your comment</label>
+
+                        <textarea
+                            id="articleCommentText"
+                            name="comment"
+                            rows="5"
+                            placeholder="Share your thoughts on this article..."
+                            required
+                        ></textarea>
+
+                        <button type="submit" class="btn btn-primary">
+                            Post Comment
+                        </button>
+
+                        <p
+                            class="form-feedback"
+                            id="commentFormFeedback"
+                            aria-live="polite"
+                        ></p>
+
+                    </form>
+
+                </section>
+
+            </div>
+
+            <!-- ARTICLE SIDEBAR -->
+            <aside class="article-sidebar">
+
+                <section class="sidebar-panel">
+                    <span class="section-eyebrow">YOUR READING LIST</span>
+                    <h3>Save this story</h3>
+
+                    <p>
+                        Keep interesting articles in your personal
+                        reading list so you can return to them later.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        id="saveArticleButton"
+                        data-save-article
+                    >
+                        Save Article
+                    </button>
+                </section>
+
+                <section class="sidebar-panel">
+                    <span class="section-eyebrow">EXPLORE DESCOP</span>
+                    <h3>More coverage</h3>
+
+                    <div class="sidebar-links">
+                        <a href="world.html">World News <span>&rarr;</span></a>
+                        <a href="africa.html">Africa <span>&rarr;</span></a>
+                        <a href="nigeria.html">Nigeria <span>&rarr;</span></a>
+                        <a href="business.html">Business <span>&rarr;</span></a>
+                        <a href="technology.html">Technology <span>&rarr;</span></a>
+                        <a href="entertainment.html">Entertainment <span>&rarr;</span></a>
+                        <a href="sports.html">Sports <span>&rarr;</span></a>
+                    </div>
+                </section>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- RELATED ARTICLES -->
+<section class="section related-articles" id="relatedArticles">
+
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">KEEP EXPLORING</span>
+
+                <h2 class="section-title">
+                    Related <span class="gold-text">stories.</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Discover more stories and perspectives from DESCOP.
+                </p>
+            </div>
+
+            <a href="world.html" class="btn btn-outline">
+                Explore News <span aria-hidden="true">&rarr;</span>
+            </a>
+        </div>
+
+        <div class="news-grid" id="relatedNewsGrid">
+
+            <article class="news-card news-card-loading">
+                <div class="news-card-image image-placeholder">
+                    <span>01</span>
+                </div>
+
+                <div class="news-card-body">
+                    <span class="skeleton-line skeleton-short"></span>
+                    <span class="skeleton-line skeleton-medium"></span>
+                    <span class="skeleton-line skeleton-long"></span>
+                </div>
+            </article>
+
+            <article class="news-card news-card-loading">
+                <div class="news-card-image image-placeholder">
+                    <span>02</span>
+                </div>
+
+                <div class="news-card-body">
+                    <span class="skeleton-line skeleton-short"></span>
+                    <span class="skeleton-line skeleton-medium"></span>
+                    <span class="skeleton-line skeleton-long"></span>
+                </div>
+            </article>
+
+            <article class="news-card news-card-loading">
+                <div class="news-card-image image-placeholder">
+                    <span>03</span>
+                </div>
+
+                <div class="news-card-body">
+                    <span class="skeleton-line skeleton-short"></span>
+                    <span class="skeleton-line skeleton-medium"></span>
+                    <span class="skeleton-line skeleton-long"></span>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <a href="index.html" class="brand" aria-label="DESCOP Home">
+                    <span class="brand-mark">D</span>
+
+                    <span class="brand-text">
+                        DESCOP
+                        <small>INTELLIGENCE NETWORK</small>
+                    </span>
+                </a>
+
+                <p>
+                    Connecting the dots between today's headlines
+                    and tomorrow's world.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <a href="world.html">World</a>
+                <a href="africa.html">Africa</a>
+                <a href="nigeria.html">Nigeria</a>
+                <a href="business.html">Business</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Discover</h3>
+                <a href="technology.html">Technology</a>
+                <a href="entertainment.html">Entertainment</a>
+                <a href="sports.html">Sports</a>
+                <a href="crypto.html">Crypto</a>
+                <a href="weather.html">Weather</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Your DESCOP</h3>
+                <a href="saved.html">Saved Articles</a>
+                <a href="login.html">Sign In</a>
+                <a href="register.html">Create Account</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span>
+                DESCOP Intelligence Network. All rights reserved.
+            </p>
+
+            <a href="#top" class="footer-back-top">
+                Back to top &uarr;
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- TOAST NOTIFICATIONS -->
+<div
+    class="toast-container"
+    id="toastContainer"
+    aria-live="polite"
+    aria-atomic="true"
+></div>
+
+<!-- BACK TO TOP -->
+<button
+    class="scroll-to-top"
+    id="scrollToTop"
+    type="button"
+    aria-label="Scroll to top"
+>
+    &uarr;
+</button>
+
+<!-- JAVASCRIPT -->
+<script src="app.js" defer></script>
+
+</body>
+</html>

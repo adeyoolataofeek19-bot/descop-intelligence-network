@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+
+    <meta name="description" content="DESCOP Entertainment — music, movies, celebrity news, culture, and the stories shaping entertainment worldwide.">
+
+    <title>Entertainment | DESCOP Intelligence Network</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="entertainment">
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader" aria-label="Loading DESCOP">
+        <div class="brand-symbol">D</div>
+        <p>DESCOP <span>INTELLIGENCE NETWORK</span></p>
+    </div>
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+
+            <div class="announcement-left">
+                <span class="live-indicator"></span>
+                <span>DESCOP ENTERTAINMENT DESK</span>
+            </div>
+
+            <div class="announcement-date" id="currentDate">
+                Your daily entertainment briefing
+            </div>
+
+            <a href="index.html" class="announcement-link">
+                Main edition ↗
+            </a>
+
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-main">
+
+            <a href="index.html" class="brand" aria-label="DESCOP homepage">
+                <span class="brand-symbol">D</span>
+
+                <span class="brand-copy">
+                    <strong>DESCOP</strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <form class="header-search" id="searchForm" role="search">
+                <span aria-hidden="true">⌕</span>
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search entertainment, artists, stories..."
+                    aria-label="Search DESCOP"
+                >
+
+                <button type="submit" aria-label="Submit search">
+                    ↵
+                </button>
+            </form>
+
+            <div class="header-actions">
+
+                <a href="saved.html" class="header-icon-button" aria-label="Saved articles">
+                    ♡ <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a href="login.html" class="login-button">
+                    Sign in <span>↗</span>
+                </a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+            <div class="container nav-inner">
+
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="world.html" class="nav-link">World</a>
+                <a href="africa.html" class="nav-link">Africa</a>
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+                <a href="business.html" class="nav-link">Business</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+
+                <a href="entertainment.html"
+                   class="nav-link active"
+                   aria-current="page">Entertainment</a>
+
+                <a href="sports.html" class="nav-link">Sports</a>
+                <a href="crypto.html" class="nav-link">Crypto</a>
+                <a href="weather.html" class="nav-link">Weather</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- ENTERTAINMENT TICKER -->
+    <div class="breaking-bar">
+        <div class="container breaking-inner">
+
+            <span class="breaking-label">THE SPOTLIGHT</span>
+
+            <div class="breaking-track-window">
+                <div class="breaking-track" id="breakingNewsTrack">
+                    <span>Music</span>
+                    <span>Film and television</span>
+                    <span>Celebrity culture</span>
+                    <span>Afrobeats</span>
+                    <span>Arts and lifestyle</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ENTERTAINMENT HERO -->
+        <section class="category-hero section-spacing">
+            <div class="container">
+
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Entertainment</span>
+                </div>
+
+                <div class="category-hero-content">
+
+                    <div>
+                        <p class="section-eyebrow">
+                            <span></span> CULTURE • MUSIC • SCREEN
+                        </p>
+
+                        <h1 class="category-hero-heading">
+                            Culture moves.<br>
+                            <span>We follow.</span>
+                        </h1>
+
+                        <p class="section-subtitle">
+                            The people, sounds, films, and cultural moments
+                            shaping conversations across Africa and around
+                            the world.
+                        </p>
+                    </div>
+
+                    <div class="category-number">
+                        <span>SECTION</span>
+                        <strong>07</strong>
+                        <small>ENTERTAINMENT DESK</small>
+                    </div>
+
+                </div>
+
+                <div class="topic-navigation">
+                    <a href="#music" class="topic-link">Music <span>↗</span></a>
+                    <a href="#film" class="topic-link">Film & TV <span>↗</span></a>
+                    <a href="#celebrity" class="topic-link">Celebrity <span>↗</span></a>
+                    <a href="#afrobeats" class="topic-link">Afrobeats <span>↗</span></a>
+                    <a href="#culture" class="topic-link">Culture <span>↗</span></a>
+                    <a href="#analysis" class="topic-link">Reviews & Analysis <span>↗</span></a>
+                </div>
+
+            </div>
+        </section>
+
+<!-- PART 2 CONTINUES BELOW -->
+<!-- PART 2: FEATURED STORIES & LATEST ENTERTAINMENT -->
+
+<section class="world-lead-section section-spacing">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">THE ENTERTAINMENT DESK</span>
+                <h2>Inside the <span>Spotlight.</span></h2>
+                <p class="section-subtitle">
+                    The people, performances and creative movements
+                    shaping entertainment today.
+                </p>
+            </div>
+
+            <a href="#latest" class="text-link">
+                Explore Stories <span>→</span>
+            </a>
+        </div>
+
+        <div class="world-lead-grid">
+
+            <!-- MAIN FEATURE -->
+
+            <article class="world-lead-card">
+
+                <a href="#music"
+                   class="world-lead-visual"
+                   aria-label="Explore the changing music industry">
+
+                    <div class="visual-placeholder entertainment-visual">
+                        <span class="visual-category">MUSIC INDUSTRY</span>
+                        <span class="visual-symbol">♫</span>
+                        <span class="visual-caption">
+                            SOUND • CULTURE • INFLUENCE
+                        </span>
+                    </div>
+
+                </a>
+
+                <div class="world-lead-content">
+
+                    <div class="article-meta">
+                        <span class="category-label">FEATURE</span>
+                        <span>Entertainment Insight</span>
+                    </div>
+
+                    <h3>
+                        <a href="#music">
+                            How Music, Digital Platforms and Fan
+                            Communities Are Reshaping the Industry
+                        </a>
+                    </h3>
+
+                    <p>
+                        From independent artists to established stars,
+                        digital distribution is changing how music reaches
+                        audiences and how fans discover new sounds.
+                    </p>
+
+                    <a href="#music" class="text-link">
+                        Read the Feature <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+            <!-- SIDEBAR BRIEFINGS -->
+
+            <aside class="world-lead-sidebar">
+
+                <div class="sidebar-heading">
+                    <span class="section-eyebrow">THE CULTURE BRIEF</span>
+                    <h3>What's Shaping Entertainment</h3>
+                </div>
+
+                <article class="briefing-item">
+                    <span class="briefing-number">01</span>
+
+                    <div>
+                        <span class="category-label">AFROBEATS</span>
+
+                        <h4>
+                            <a href="#afrobeats">
+                                African Sounds and Their Global Influence
+                            </a>
+                        </h4>
+
+                        <p>
+                            Exploring the artists, sounds and collaborations
+                            carrying African music across borders.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="briefing-item">
+                    <span class="briefing-number">02</span>
+
+                    <div>
+                        <span class="category-label">FILM & TV</span>
+
+                        <h4>
+                            <a href="#film">
+                                Stories That Move Beyond the Screen
+                            </a>
+                        </h4>
+
+                        <p>
+                            A closer look at filmmaking, streaming culture
+                            and changing audience expectations.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="briefing-item">
+                    <span class="briefing-number">03</span>
+
+                    <div>
+                        <span class="category-label">CELEBRITY</span>
+
+                        <h4>
+                            <a href="#celebrity">
+                                Fame, Public Image and the Digital Era
+                            </a>
+                        </h4>
+
+                        <p>
+                            How public figures connect with audiences
+                            in an always-connected world.
+                        </p>
+                    </div>
+                </article>
+
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- LATEST ENTERTAINMENT STORIES -->
+
+<section class="news-section section-spacing" id="latest">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">FRESH PERSPECTIVES</span>
+                <h2>Latest <span>Stories.</span></h2>
+                <p class="section-subtitle">
+                    Discover stories across music, film, celebrity news
+                    and entertainment culture.
+                </p>
+            </div>
+        </div>
+
+        <!-- CATEGORY FILTERS -->
+
+        <div class="news-filter-bar" id="newsFilters">
+
+            <button type="button"
+                    class="filter-button active"
+                    data-filter="all"
+                    aria-pressed="true">
+                All Stories
+            </button>
+
+            <button type="button"
+                    class="filter-button"
+                    data-filter="music"
+                    aria-pressed="false">
+                Music
+            </button>
+
+            <button type="button"
+                    class="filter-button"
+                    data-filter="film"
+                    aria-pressed="false">
+                Film & TV
+            </button>
+
+            <button type="button"
+                    class="filter-button"
+                    data-filter="celebrity"
+                    aria-pressed="false">
+                Celebrity
+            </button>
+
+            <button type="button"
+                    class="filter-button"
+                    data-filter="culture"
+                    aria-pressed="false">
+                Culture
+            </button>
+
+        </div>
+
+        <!-- STORY GRID -->
+
+        <div class="news-grid" id="latestGrid">
+
+            <article class="news-card" data-category="music">
+
+                <a href="#music"
+                   class="news-card-image"
+                   aria-label="Read about independent music">
+
+                    <div class="visual-placeholder music-placeholder">
+                        <span>♫</span>
+                    </div>
+
+                </a>
+
+                <div class="news-card-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">MUSIC</span>
+                        <span>Industry</span>
+                    </div>
+
+                    <h3>
+                        <a href="#music">
+                            Independent Artists Are Building New Paths
+                            to Their Audiences
+                        </a>
+                    </h3>
+
+                    <p>
+                        Digital tools are giving emerging musicians
+                        more ways to release music and build communities.
+                    </p>
+
+                    <a href="#music" class="text-link">
+                        Explore Music <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <article class="news-card" data-category="film">
+
+                <a href="#film"
+                   class="news-card-image"
+                   aria-label="Read about film and television">
+
+                    <div class="visual-placeholder film-placeholder">
+                        <span>▶</span>
+                    </div>
+
+                </a>
+
+                <div class="news-card-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">FILM & TV</span>
+                        <span>Screen</span>
+                    </div>
+
+                    <h3>
+                        <a href="#film">
+                            What Makes a Screen Story Connect
+                            With Modern Audiences?
+                        </a>
+                    </h3>
+
+                    <p>
+                        Storytelling, memorable characters and cultural
+                        relevance continue to shape audience engagement.
+                    </p>
+
+                    <a href="#film" class="text-link">
+                        Explore Film <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <article class="news-card" data-category="celebrity">
+
+                <a href="#celebrity"
+                   class="news-card-image"
+                   aria-label="Read about celebrity culture">
+
+                    <div class="visual-placeholder celebrity-placeholder">
+                        <span>✦</span>
+                    </div>
+
+                </a>
+
+                <div class="news-card-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">CELEBRITY</span>
+                        <span>Public Image</span>
+                    </div>
+
+                    <h3>
+                        <a href="#celebrity">
+                            The Changing Relationship Between Stars
+                            and Their Fans
+                        </a>
+                    </h3>
+
+                    <p>
+                        Online communities have transformed how celebrities
+                        communicate, share updates and manage public image.
+                    </p>
+
+                    <a href="#celebrity" class="text-link">
+                        Explore Celebrity <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <article class="news-card" data-category="culture">
+
+                <a href="#culture"
+                   class="news-card-image"
+                   aria-label="Read about entertainment culture">
+
+                    <div class="visual-placeholder culture-placeholder">
+                        <span>◎</span>
+                    </div>
+
+                </a>
+
+                <div class="news-card-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">CULTURE</span>
+                        <span>Trends</span>
+                    </div>
+
+                    <h3>
+                        <a href="#culture">
+                            How Internet Culture Influences
+                            Entertainment Trends
+                        </a>
+                    </h3>
+
+                    <p>
+                        Memes, fan edits and online conversations can
+                        influence what people watch, listen to and share.
+                    </p>
+
+                    <a href="#culture" class="text-link">
+                        Explore Culture <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <article class="news-card" data-category="music">
+
+                <a href="#afrobeats"
+                   class="news-card-image"
+                   aria-label="Explore Afrobeats">
+
+                    <div class="visual-placeholder afrobeats-placeholder">
+                        <span>♫</span>
+                    </div>
+
+                </a>
+
+                <div class="news-card-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">AFROBEATS</span>
+                        <span>African Music</span>
+                    </div>
+
+                    <h3>
+                        <a href="#afrobeats">
+                            The Sounds and Collaborations Expanding
+                            African Music's Reach
+                        </a>
+                    </h3>
+
+                    <p>
+                        A look at musical experimentation, cross-border
+                        collaborations and the evolving Afrobeats scene.
+                    </p>
+
+                    <a href="#afrobeats" class="text-link">
+                        Explore Afrobeats <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <article class="news-card" data-category="culture">
+
+                <a href="#analysis"
+                   class="news-card-image"
+                   aria-label="Read entertainment analysis">
+
+                    <div class="visual-placeholder analysis-placeholder">
+                        <span>◈</span>
+                    </div>
+
+                </a>
+
+                <div class="news-card-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">ANALYSIS</span>
+                        <span>Commentary</span>
+                    </div>
+
+                    <h3>
+                        <a href="#analysis">
+                            Beyond the Hype: Understanding
+                            Entertainment Trends
+                        </a>
+                    </h3>
+
+                    <p>
+                        Looking beyond viral moments to understand
+                        the ideas and industries behind popular culture.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Read Analysis <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+        </div>
+
+        <div class="section-bottom-action">
+            <a href="#music" class="text-link">
+                Explore All Entertainment Topics <span>→</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- PART 3 CONTINUES BELOW -->
+<!-- PART 3: MUSIC & AFROBEATS -->
+
+<!-- MUSIC SECTION -->
+
+<section class="editorial-section section-spacing" id="music">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">SOUND & INDUSTRY</span>
+                <h2>Music <span>Spotlight.</span></h2>
+                <p class="section-subtitle">
+                    Discover artists, new sounds, music business insights
+                    and the movements shaping the global music scene.
+                </p>
+            </div>
+
+            <a href="#afrobeats" class="text-link">
+                Explore Afrobeats <span>→</span>
+            </a>
+        </div>
+
+        <div class="editorial-feature-grid">
+
+            <!-- MAIN MUSIC FEATURE -->
+
+            <article class="editorial-feature-card">
+
+                <a href="#afrobeats"
+                   class="editorial-feature-visual"
+                   aria-label="Explore the growth of African music">
+
+                    <div class="visual-placeholder music-feature-visual">
+                        <span class="visual-category">GLOBAL SOUND</span>
+                        <span class="visual-symbol">♫</span>
+                        <span class="visual-caption">
+                            MUSIC WITHOUT BORDERS
+                        </span>
+                    </div>
+
+                </a>
+
+                <div class="editorial-feature-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">MUSIC INDUSTRY</span>
+                        <span>Artist Development</span>
+                    </div>
+
+                    <h3>
+                        <a href="#afrobeats">
+                            The Independent Artist Era:
+                            Building a Career Beyond the Major Labels
+                        </a>
+                    </h3>
+
+                    <p>
+                        Streaming services, digital distribution and direct
+                        fan engagement have created new opportunities for
+                        independent musicians. But standing out still
+                        requires consistency, strategy and a distinctive sound.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Read Our Analysis <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+            <!-- MUSIC TOPIC LIST -->
+
+            <div class="editorial-list">
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">01</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">NEW MUSIC</span>
+
+                        <h3>
+                            <a href="#latest">
+                                Discovering Emerging Artists Before
+                                They Break Into the Mainstream
+                            </a>
+                        </h3>
+
+                        <p>
+                            How music discovery, playlists and fan
+                            recommendations help listeners find fresh talent.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">02</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">MUSIC BUSINESS</span>
+
+                        <h3>
+                            <a href="#analysis">
+                                Understanding Music Distribution
+                                in the Streaming Age
+                            </a>
+                        </h3>
+
+                        <p>
+                            A practical look at releasing music, reaching
+                            platforms and understanding digital royalties.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">03</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">PRODUCTION</span>
+
+                        <h3>
+                            <a href="#analysis">
+                                How Production Choices Shape
+                                an Artist's Signature Sound
+                            </a>
+                        </h3>
+
+                        <p>
+                            From rhythm and arrangement to mixing,
+                            production plays a major role in musical identity.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">04</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">FAN CULTURE</span>
+
+                        <h3>
+                            <a href="#culture">
+                                Why Music Communities Matter
+                                for Emerging Artists
+                            </a>
+                        </h3>
+
+                        <p>
+                            Loyal listeners can help songs travel through
+                            recommendations, discussions and shared playlists.
+                        </p>
+
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- AFROBEATS SECTION -->
+
+<section class="editorial-section section-spacing" id="afrobeats">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">AFRICAN SOUND • GLOBAL IMPACT</span>
+                <h2>The Afrobeats <span>Scene.</span></h2>
+                <p class="section-subtitle">
+                    Explore the sounds, creativity and cultural influence
+                    driving contemporary African music.
+                </p>
+            </div>
+        </div>
+
+        <div class="economy-topic-grid">
+
+            <!-- AFROBEATS TOPIC 1 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual afrobeats-visual">
+                    <span class="visual-symbol">♫</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">ARTISTS</span>
+
+                    <h3>
+                        <a href="#latest">
+                            New Voices and the Next Generation
+                        </a>
+                    </h3>
+
+                    <p>
+                        Discover how emerging African musicians are
+                        developing original sounds and finding audiences
+                        beyond their home markets.
+                    </p>
+
+                    <a href="#latest" class="text-link">
+                        Discover Artists <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <!-- AFROBEATS TOPIC 2 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual collaboration-visual">
+                    <span class="visual-symbol">∞</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">COLLABORATIONS</span>
+
+                    <h3>
+                        <a href="#analysis">
+                            When African Sounds Meet the World
+                        </a>
+                    </h3>
+
+                    <p>
+                        Cross-cultural collaborations connect different
+                        audiences while creating room for musical
+                        experimentation and exchange.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Explore Collaborations <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <!-- AFROBEATS TOPIC 3 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual music-business-visual">
+                    <span class="visual-symbol">◈</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">MUSIC BUSINESS</span>
+
+                    <h3>
+                        <a href="#analysis">
+                            Turning Music Releases Into Sustainable Careers
+                        </a>
+                    </h3>
+
+                    <p>
+                        Distribution, promotion, audience development
+                        and rights management all contribute to a
+                        musician's long-term prospects.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Understand the Industry <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+        </div>
+
+        <!-- AFROBEATS EDITORIAL NOTE -->
+
+        <div class="afrobeats-editorial-note">
+
+            <div class="editorial-note-mark">D</div>
+
+            <div class="editorial-note-content">
+
+                <span class="section-eyebrow">DESCOP MUSIC DESK</span>
+
+                <h3>
+                    African Music Deserves More Than a Trend Cycle.
+                </h3>
+
+                <p>
+                    Our coverage looks beyond viral moments to explore
+                    the artists, communities, creative decisions and
+                    business structures shaping African music.
+                </p>
+
+            </div>
+
+            <a href="#analysis" class="text-link">
+                Read More <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PART 4 CONTINUES BELOW -->
+<!-- PART 4: FILM, TELEVISION & CELEBRITY -->
+
+<!-- FILM AND TELEVISION SECTION -->
+
+<section class="editorial-section section-spacing" id="film">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">BEHIND THE SCREEN</span>
+                <h2>Film & <span>Television.</span></h2>
+                <p class="section-subtitle">
+                    Explore filmmaking, streaming, animation,
+                    storytelling and the future of screen entertainment.
+                </p>
+            </div>
+        </div>
+
+        <div class="editorial-feature-grid">
+
+            <article class="editorial-feature-card">
+
+                <a href="#analysis"
+                   class="editorial-feature-visual"
+                   aria-label="Explore modern screen storytelling">
+
+                    <div class="visual-placeholder film-feature-visual">
+                        <span class="visual-category">SCREEN CULTURE</span>
+                        <span class="visual-symbol">▶</span>
+                        <span class="visual-caption">
+                            STORIES THAT STAY WITH US
+                        </span>
+                    </div>
+
+                </a>
+
+                <div class="editorial-feature-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">FILM & TV</span>
+                        <span>Storytelling</span>
+                    </div>
+
+                    <h3>
+                        <a href="#analysis">
+                            Beyond Spectacle: Why Strong Storytelling
+                            Remains the Heart of Great Entertainment
+                        </a>
+                    </h3>
+
+                    <p>
+                        Impressive visuals can attract attention, but
+                        compelling characters, meaningful conflict and
+                        emotional depth are what make stories memorable.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Explore the Analysis <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <div class="editorial-list">
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">01</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">STREAMING</span>
+
+                        <h3>
+                            <a href="#culture">
+                                How Streaming Is Changing
+                                the Way Audiences Watch
+                            </a>
+                        </h3>
+
+                        <p>
+                            On-demand viewing has changed audience habits
+                            and created new competition for attention.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">02</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">ANIMATION</span>
+
+                        <h3>
+                            <a href="#analysis">
+                                The Art of Building Believable
+                                Animated Worlds
+                            </a>
+                        </h3>
+
+                        <p>
+                            Visual design, movement, sound and world-building
+                            work together to bring animated stories to life.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">03</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">FILMMAKING</span>
+
+                        <h3>
+                            <a href="#culture">
+                                How Local Stories Can Find
+                                International Audiences
+                            </a>
+                        </h3>
+
+                        <p>
+                            Distinctive settings, cultural perspectives
+                            and universal themes can help stories travel.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">04</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">REVIEWS</span>
+
+                        <h3>
+                            <a href="#analysis">
+                                Looking Beyond Ratings
+                                When Evaluating a Film
+                            </a>
+                        </h3>
+
+                        <p>
+                            Direction, performances, pacing and writing
+                            offer a deeper way to understand a production.
+                        </p>
+
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CELEBRITY AND CULTURE SECTION -->
+
+<section class="editorial-section section-spacing" id="celebrity">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">PEOPLE & PUBLIC LIFE</span>
+                <h2>Celebrity <span>Culture.</span></h2>
+                <p class="section-subtitle">
+                    Explore public figures, personal branding,
+                    entertainment personalities and fan communities.
+                </p>
+            </div>
+        </div>
+
+        <div class="economy-topic-grid">
+
+            <!-- CELEBRITY TOPIC 1 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual celebrity-profile-visual">
+                    <span class="visual-symbol">✦</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">PUBLIC IMAGE</span>
+
+                    <h3>
+                        <a href="#analysis">
+                            The Power of Personal Branding
+                        </a>
+                    </h3>
+
+                    <p>
+                        Public appearances, creative choices and online
+                        communication can shape how audiences perceive
+                        entertainment personalities.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Explore the Topic <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <!-- CELEBRITY TOPIC 2 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual fan-culture-visual">
+                    <span class="visual-symbol">◎</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">FAN COMMUNITIES</span>
+
+                    <h3>
+                        <a href="#culture">
+                            When Fans Become Part of the Story
+                        </a>
+                    </h3>
+
+                    <p>
+                        Fan communities contribute to discussions,
+                        celebrate creative work and influence the
+                        visibility of entertainment projects.
+                    </p>
+
+                    <a href="#culture" class="text-link">
+                        Explore Fan Culture <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <!-- CELEBRITY TOPIC 3 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual digital-fame-visual">
+                    <span class="visual-symbol">◇</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">DIGITAL LIFE</span>
+
+                    <h3>
+                        <a href="#analysis">
+                            Fame and Privacy in the Online Era
+                        </a>
+                    </h3>
+
+                    <p>
+                        Digital visibility creates opportunities for
+                        connection while raising questions about privacy,
+                        boundaries and public expectations.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Read the Analysis <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+        </div>
+
+        <!-- CELEBRITY EDITORIAL NOTE -->
+
+        <div class="afrobeats-editorial-note">
+
+            <div class="editorial-note-mark">D</div>
+
+            <div class="editorial-note-content">
+
+                <span class="section-eyebrow">PEOPLE BEHIND THE HEADLINES</span>
+
+                <h3>
+                    Every Public Image Has a Story Behind It.
+                </h3>
+
+                <p>
+                    DESCOP explores celebrity culture through creativity,
+                    career development, public influence and the relationship
+                    between entertainment figures and their audiences.
+                </p>
+
+            </div>
+
+            <a href="#culture" class="text-link">
+                Explore Culture <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PART 5 CONTINUES BELOW -->
+<!-- PART 5: CULTURE & ENTERTAINMENT ANALYSIS -->
+
+<!-- CULTURE SECTION -->
+
+<section class="editorial-section section-spacing" id="culture">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">TRENDS • IDENTITY • INFLUENCE</span>
+                <h2>Culture <span>Unfiltered.</span></h2>
+                <p class="section-subtitle">
+                    Exploring how entertainment shapes identity,
+                    influences conversations and connects communities.
+                </p>
+            </div>
+        </div>
+
+        <div class="editorial-feature-grid">
+
+            <article class="editorial-feature-card">
+
+                <a href="#analysis"
+                   class="editorial-feature-visual"
+                   aria-label="Explore popular culture">
+
+                    <div class="visual-placeholder culture-feature-visual">
+                        <span class="visual-category">POPULAR CULTURE</span>
+                        <span class="visual-symbol">◎</span>
+                        <span class="visual-caption">
+                            CULTURE IN MOTION
+                        </span>
+                    </div>
+
+                </a>
+
+                <div class="editorial-feature-body">
+
+                    <div class="article-meta">
+                        <span class="category-label">CULTURE</span>
+                        <span>Digital Communities</span>
+                    </div>
+
+                    <h3>
+                        <a href="#analysis">
+                            From Viral Moments to Lasting Movements:
+                            Understanding Internet Culture
+                        </a>
+                    </h3>
+
+                    <p>
+                        Online trends can introduce new artists, revive
+                        older works and bring communities together.
+                        Understanding their influence means looking
+                        beyond views and viral numbers.
+                    </p>
+
+                    <a href="#analysis" class="text-link">
+                        Read the Analysis <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <div class="editorial-list">
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">01</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">INTERNET CULTURE</span>
+
+                        <h3>
+                            <a href="#analysis">
+                                How Memes Become Part of Mainstream Culture
+                            </a>
+                        </h3>
+
+                        <p>
+                            Humour and shared online experiences can
+                            influence conversations across communities.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">02</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">FASHION</span>
+
+                        <h3>
+                            <a href="#celebrity">
+                                When Entertainment and Fashion Meet
+                            </a>
+                        </h3>
+
+                        <p>
+                            Music videos, red carpets and celebrity styling
+                            can introduce looks to wider audiences.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">03</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">AFRICAN CULTURE</span>
+
+                        <h3>
+                            <a href="#afrobeats">
+                                The Role of Entertainment in Sharing
+                                African Stories
+                            </a>
+                        </h3>
+
+                        <p>
+                            Music, film and creative expression offer
+                            different ways to explore African experiences.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <article class="editorial-list-item">
+
+                    <div class="editorial-list-number">04</div>
+
+                    <div class="editorial-list-content">
+
+                        <span class="category-label">FANDOM</span>
+
+                        <h3>
+                            <a href="#film">
+                                Why Fictional Worlds Inspire Real Communities
+                            </a>
+                        </h3>
+
+                        <p>
+                            Characters, fictional universes and shared
+                            interests can inspire discussions and creativity.
+                        </p>
+
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ANALYSIS AND REVIEWS SECTION -->
+
+<section class="editorial-section section-spacing" id="analysis">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <span class="section-eyebrow">BEYOND THE HEADLINES</span>
+                <h2>Analysis & <span>Perspectives.</span></h2>
+                <p class="section-subtitle">
+                    Thoughtful commentary on the creative industries,
+                    audience behaviour and entertainment business.
+                </p>
+            </div>
+        </div>
+
+        <div class="economy-topic-grid">
+
+            <!-- ANALYSIS 1 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual analysis-business-visual">
+                    <span class="visual-symbol">◈</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">INDUSTRY ANALYSIS</span>
+
+                    <h3>
+                        <a href="#music">
+                            The Business Behind the Music
+                        </a>
+                    </h3>
+
+                    <p>
+                        Explore distribution, promotion, streaming revenue
+                        and the decisions that shape an artist's career.
+                    </p>
+
+                    <a href="#music" class="text-link">
+                        Explore Music <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <!-- ANALYSIS 2 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual analysis-media-visual">
+                    <span class="visual-symbol">▶</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">MEDIA ANALYSIS</span>
+
+                    <h3>
+                        <a href="#film">
+                            How Streaming Platforms Compete for Attention
+                        </a>
+                    </h3>
+
+                    <p>
+                        Discover how content selection, audience habits
+                        and distribution models influence the screen industry.
+                    </p>
+
+                    <a href="#film" class="text-link">
+                        Explore Film & TV <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+
+            <!-- ANALYSIS 3 -->
+
+            <article class="economy-topic">
+
+                <div class="economy-topic-visual analysis-digital-visual">
+                    <span class="visual-symbol">✧</span>
+                </div>
+
+                <div class="economy-topic-content">
+
+                    <span class="category-label">DIGITAL CULTURE</span>
+
+                    <h3>
+                        <a href="#culture">
+                            Measuring Influence Beyond Viral Numbers
+                        </a>
+                    </h3>
+
+                    <p>
+                        Views and likes tell only part of the story.
+                        Audience loyalty, meaningful engagement and
+                        lasting impact also matter.
+                    </p>
+
+                    <a href="#culture" class="text-link">
+                        Explore Culture <span>→</span>
+                    </a>
+
+                </div>
+            </article>
+
+        </div>
+
+
+        <!-- EDITORIAL PRINCIPLES -->
+
+        <div class="entertainment-editorial-panel">
+
+            <div class="editorial-panel-heading">
+                <span class="section-eyebrow">OUR EDITORIAL APPROACH</span>
+
+                <h3>
+                    Entertainment Coverage With Context.
+                </h3>
+            </div>
+
+            <div class="editorial-principles-grid">
+
+                <div class="editorial-principle">
+                    <span class="principle-number">01</span>
+
+                    <h4>Context Matters</h4>
+
+                    <p>
+                        We aim to explain the ideas and developments
+                        behind the headlines.
+                    </p>
+                </div>
+
+                <div class="editorial-principle">
+                    <span class="principle-number">02</span>
+
+                    <h4>Creativity First</h4>
+
+                    <p>
+                        Artists, storytellers and creative communities
+                        deserve thoughtful coverage.
+                    </p>
+                </div>
+
+                <div class="editorial-principle">
+                    <span class="principle-number">03</span>
+
+                    <h4>Accuracy Counts</h4>
+
+                    <p>
+                        Reporting should distinguish verified information
+                        from opinion, speculation and rumour.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PART 6 CONTINUES BELOW -->
+<!-- PART 6: NEWSLETTER, FOOTER & PAGE END -->
+
+<!-- NEWSLETTER SECTION -->
+
+<section class="newsletter-section section-spacing" id="newsletter">
+    <div class="container">
+
+        <div class="newsletter-panel">
+
+            <div class="newsletter-copy">
+
+                <span class="section-eyebrow">
+                    THE DESCOP ENTERTAINMENT BRIEF
+                </span>
+
+                <h2>
+                    Stay Ahead of <span>the Culture.</span>
+                </h2>
+
+                <p>
+                    Get entertainment insights, music discoveries,
+                    film coverage and cultural perspectives delivered
+                    straight to your inbox.
+                </p>
+
+                <div class="newsletter-benefits">
+                    <span>✦ Music & Afrobeats</span>
+                    <span>✦ Film & Television</span>
+                    <span>✦ Culture & Analysis</span>
+                </div>
+
+            </div>
+
+            <form class="newsletter-form" id="newsletterForm">
+
+                <label for="newsletterEmail">
+                    Your email address
+                </label>
+
+                <div class="newsletter-input-group">
+
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        class="newsletter-input"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <button type="submit" class="button-primary">
+                        Subscribe <span>→</span>
+                    </button>
+
+                </div>
+
+                <p class="form-message" id="newsletterMessage" aria-live="polite">
+                    Subscription service is not connected yet.
+                </p>
+
+                <small>
+                    Stay informed. Unsubscribe whenever you choose.
+                </small>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ENTERTAINMENT FOOTER -->
+
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="brand"
+                   aria-label="DESCOP Intelligence Network Home">
+
+                    <span class="brand-mark">D</span>
+
+                    <span class="brand-text">
+                        DESCOP
+                        <small>INTELLIGENCE NETWORK</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Stories, perspectives and insights across
+                    entertainment, technology, business and global culture.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="#newsletter"
+                       aria-label="Subscribe to DESCOP updates">
+                        Updates
+                    </a>
+
+                    <a href="#music"
+                       aria-label="Explore music coverage">
+                        Music
+                    </a>
+
+                    <a href="#culture"
+                       aria-label="Explore culture coverage">
+                        Culture
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENTERTAINMENT LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Entertainment</h3>
+
+                <ul>
+                    <li><a href="#latest">Latest Stories</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#afrobeats">Afrobeats</a></li>
+                    <li><a href="#film">Film & TV</a></li>
+                    <li><a href="#celebrity">Celebrity</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- DISCOVER LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Discover</h3>
+
+                <ul>
+                    <li><a href="#culture">Culture</a></li>
+                    <li><a href="#analysis">Analysis</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="index.html">Homepage</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- NETWORK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Our Network</h3>
+
+                <ul>
+                    <li><a href="nigeria.html">Nigeria</a></li>
+                    <li><a href="world.html">World News</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear">2026</span>
+                DESCOP Intelligence Network. All rights reserved.
+            </p>
+
+            <div class="footer-legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- TOAST NOTIFICATIONS -->
+
+<div
+    class="toast-container"
+    id="toastContainer"
+    aria-live="polite"
+    aria-atomic="true">
+</div>
+
+
+<!-- BACK TO TOP -->
+
+<button
+    type="button"
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top">
+    ↑
+</button>
+
+
+</main>
+
+</body>
+</html>

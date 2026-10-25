@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search | DESCOP Intelligence Network</title>
+
+    <meta name="description"
+          content="Search news, markets, technology and global analysis on DESCOP Intelligence Network.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="search" id="top">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">D</span>
+                <span class="logo-text">
+                    DESCOP
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <form id="searchForm" class="header-search">
+                <input
+                    type="search"
+                    id="siteSearch"
+                    name="q"
+                    placeholder="Search news, markets, technology..."
+                    aria-label="Search DESCOP"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" aria-label="Submit search">
+                    Search
+                </button>
+            </form>
+
+            <a href="index.html" class="header-home-link">
+                Home
+            </a>
+
+        </div>
+    </header>
+
+    <main class="search-page">
+
+        <!-- SEARCH INTRO -->
+        <section class="search-hero">
+            <div class="container">
+
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    DESCOP DISCOVERY
+                </div>
+
+                <h1 class="section-title">
+                    Search Intelligence.
+                </h1>
+
+                <p>
+                    Explore news, financial markets, technology and global affairs.
+                </p>
+
+                <form id="resultsSearchForm" class="search-main-form">
+                    <input
+                        type="search"
+                        id="resultsSearchInput"
+                        name="q"
+                        placeholder="What are you looking for?"
+                        aria-label="Search news and analysis"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit">Search</button>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- SEARCH RESULTS -->
+        <section class="search-results-section">
+            <div class="container">
+
+                <div class="search-results-heading">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            SEARCH RESULTS
+                        </div>
+
+                        <h2 id="searchResultsTitle">
+                            Explore the latest coverage
+                        </h2>
+
+                        <p id="searchResultsSummary" aria-live="polite">
+                            Enter a keyword to search.
+                        </p>
+                    </div>
+
+                    <div class="search-sort-control">
+                        <label for="searchSort">Sort by</label>
+
+                        <select id="searchSort">
+                            <option value="relevance">Relevance</option>
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- CATEGORY FILTERS -->
+                <nav
+                    id="searchCategoryFilters"
+                    class="search-category-filters"
+                    aria-label="Filter search results by category"
+                >
+                    <button type="button" class="active" data-search-category="all">
+                        All
+                    </button>
+
+                    <button type="button" data-search-category="world">
+                        World
+                    </button>
+
+                    <button type="button" data-search-category="nigeria">
+                        Nigeria
+                    </button>
+
+                    <button type="button" data-search-category="markets">
+                        Markets
+                    </button>
+
+                    <button type="button" data-search-category="technology">
+                        Technology
+                    </button>
+
+                    <button type="button" data-search-category="crypto">
+                        Crypto
+                    </button>
+                </nav>
+
+                <!-- RESULTS GRID -->
+                <div
+                    id="searchResultsGrid"
+                    class="search-results-grid"
+                    aria-live="polite"
+                >
+                </div>
+
+                <div
+                    id="searchEmptyState"
+                    class="search-empty-state"
+                    hidden
+                >
+                    <h3>No matching stories found.</h3>
+
+                    <p>
+                        Try another keyword or choose a different category.
+                    </p>
+                </div>
+
+                <div
+                    id="searchLoadingState"
+                    class="search-loading-state"
+                    hidden
+                >
+                    Searching DESCOP...
+                </div>
+
+                <div class="search-load-more-wrapper">
+                    <button
+                        type="button"
+                        id="searchLoadMore"
+                        hidden
+                    >
+                        Load More Stories
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; <span id="currentYear"></span>
+                DESCOP Intelligence Network.
+                Independent intelligence. Informed decisions.
+            </p>
+        </div>
+    </footer>
+
+    <div id="toastContainer" aria-live="polite"></div>
+
+    <button
+        id="scrollToTop"
+        type="button"
+        aria-label="Scroll to top"
+    >
+        ↑
+    </button>
+
+</body>
+</html>

@@ -1,0 +1,1315 @@
+/* =========================================
+   DESCOP ADVANCED TERMINAL
+   PART 1 — FOUNDATION
+========================================= */
+
+.terminal-main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.terminal-main section {
+    scroll-margin-top: 100px;
+}
+
+.terminal-hero {
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 35px;
+}
+
+.terminal-hero .section-title {
+    max-width: 850px;
+    margin-top: 18px;
+    line-height: 1.15;
+}
+
+.terminal-hero .section-title span {
+    color: #d8ad62;
+}
+
+.terminal-hero .section-description {
+    max-width: 700px;
+    margin-top: 18px;
+    line-height: 1.8;
+}
+
+.terminal-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 10px 15px;
+    border: 1px solid rgba(216, 173, 98, 0.25);
+    border-radius: 6px;
+    background: rgba(216, 173, 98, 0.06);
+    color: #d8ad62;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.terminal-status-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #d8ad62;
+    box-shadow: 0 0 10px rgba(216, 173, 98, 0.6);
+}
+
+.terminal-main .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.terminal-main .section-description {
+    line-height: 1.7;
+}
+
+.terminal-main .section-title {
+    margin-top: 10px;
+}
+
+.terminal-main .section-eyebrow {
+    letter-spacing: 2px;
+}
+
+.terminal-main button,
+.terminal-main select {
+    font: inherit;
+}
+
+.terminal-main button {
+    cursor: pointer;
+}
+
+.terminal-main select {
+    max-width: 100%;
+    outline: none;
+}
+
+.terminal-main button:focus-visible,
+.terminal-main select:focus-visible,
+.terminal-main a:focus-visible,
+.terminal-main input:focus-visible {
+    outline: 2px solid #d8ad62;
+    outline-offset: 3px;
+}
+
+.terminal-main .chart-status {
+    margin-top: 14px;
+    color: #a8a0b5;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.terminal-main .market-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 9px 12px;
+    border: 1px solid rgba(216, 173, 98, 0.2);
+    border-radius: 5px;
+    color: #d8ad62;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.terminal-main .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #d8ad62;
+}
+
+/* Consistent transitions */
+
+.terminal-main .market-stat-card,
+.terminal-main .terminal-indicator-panel,
+.terminal-main .terminal-analysis-card,
+.terminal-main .technology-stock-card,
+.terminal-main .technology-topic-card {
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.terminal-main .market-stat-card:hover,
+.terminal-main .terminal-analysis-card:hover,
+.terminal-main .technology-stock-card:hover,
+.terminal-main .technology-topic-card:hover {
+    transform: translateY(-3px);
+}
+/* =========================================
+   PART 2 — MARKET OVERVIEW
+========================================= */
+
+.market-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.terminal-main .market-stat-card {
+    min-width: 0;
+    padding: 23px 20px;
+    border: 1px solid rgba(216, 173, 98, 0.16);
+    border-radius: 10px;
+    background: linear-gradient(
+        145deg,
+        rgba(37, 27, 49, 0.96),
+        rgba(19, 14, 28, 0.98)
+    );
+}
+
+.terminal-main .market-stat-card:hover {
+    border-color: rgba(216, 173, 98, 0.48);
+}
+
+.terminal-main .stat-label {
+    display: block;
+    margin-bottom: 18px;
+    color: #a8a0b5;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.terminal-main .market-stat-card h3 {
+    margin: 0;
+    color: #f5f1fa;
+    font-size: clamp(19px, 2vw, 27px);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.terminal-main .market-stat-card p {
+    margin: 12px 0 0;
+    color: #a8a0b5;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   PART 2 — ASSET TOOLBAR
+========================================= */
+
+.terminal-asset-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    padding: 22px;
+    border: 1px solid rgba(216, 173, 98, 0.18);
+    border-radius: 10px;
+    background: rgba(24, 18, 34, 0.9);
+}
+
+.terminal-asset-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 170px;
+}
+
+.terminal-asset-info label,
+.technology-market-controls label {
+    color: #a8a0b5;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.terminal-asset-info select,
+.technology-market-controls select {
+    min-height: 42px;
+    padding: 10px 35px 10px 12px;
+    border: 1px solid rgba(216, 173, 98, 0.25);
+    border-radius: 6px;
+    background: #191323;
+    color: #f5f1fa;
+    cursor: pointer;
+}
+
+.terminal-asset-info select option,
+.technology-market-controls select option {
+    background: #191323;
+    color: #f5f1fa;
+}
+
+.terminal-current-price {
+    text-align: right;
+}
+
+.terminal-current-price > span:first-child {
+    display: block;
+    margin-bottom: 8px;
+    color: #a8a0b5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.terminal-current-price h3 {
+    margin: 0;
+    color: #f5f1fa;
+    font-size: clamp(23px, 3vw, 34px);
+    overflow-wrap: anywhere;
+}
+
+#selectedAssetChange {
+    display: inline-block;
+    margin-top: 8px;
+    color: #a8a0b5;
+    font-size: 12px;
+}
+
+/* =========================================
+   PART 2 — MAIN CHART PANEL
+========================================= */
+
+.terminal-chart-panel,
+.technology-market-panel {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid rgba(216, 173, 98, 0.18);
+    border-radius: 10px;
+    background: linear-gradient(
+        145deg,
+        rgba(29, 22, 40, 0.98),
+        rgba(16, 11, 24, 0.99)
+    );
+}
+
+.terminal-chart-header,
+.technology-market-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.chart-market-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #d8ad62;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.terminal-chart-header h3,
+.technology-market-header h3 {
+    margin: 0;
+    color: #f5f1fa;
+    font-size: 19px;
+}
+
+.chart-mode-controls {
+    display: flex;
+    gap: 6px;
+    padding: 4px;
+    border: 1px solid rgba(216, 173, 98, 0.15);
+    border-radius: 7px;
+    background: #130e1b;
+}
+
+.chart-mode-btn,
+.timeframe-btn {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    color: #aaa2b7;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.chart-mode-btn {
+    padding: 9px 13px;
+    font-size: 12px;
+}
+
+.chart-mode-btn:hover,
+.timeframe-btn:hover {
+    color: #f5f1fa;
+}
+
+.chart-mode-btn.active,
+.timeframe-btn.active {
+    border-color: rgba(216, 173, 98, 0.35);
+    background: rgba(216, 173, 98, 0.12);
+    color: #e5bd73;
+}
+
+/* =========================================
+   PART 2 — TIMEFRAMES
+========================================= */
+
+.terminal-timeframes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.timeframe-btn {
+    min-width: 46px;
+    padding: 8px 12px;
+    border-color: rgba(216, 173, 98, 0.12);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================================
+   PART 2 — INDICATOR TOGGLES
+========================================= */
+
+.terminal-indicator-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    margin-top: 22px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(216, 173, 98, 0.12);
+}
+
+.terminal-indicator-controls label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #c5bdcf;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.terminal-indicator-controls input {
+    width: 15px;
+    height: 15px;
+    accent-color: #d8ad62;
+    cursor: pointer;
+}
+
+/* =========================================
+   PART 2 — CHART CANVAS CONTAINER
+========================================= */
+
+.terminal-price-chart {
+    width: 100%;
+    height: 430px;
+    min-width: 0;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #100b18;
+}
+
+.terminal-price-chart canvas,
+.terminal-indicator-chart canvas,
+.technology-market-chart canvas {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .market-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .terminal-price-chart {
+        height: 370px;
+    }
+}
+
+@media (max-width: 560px) {
+    .market-overview-grid {
+        gap: 12px;
+    }
+
+    .terminal-main .market-stat-card {
+        padding: 17px 14px;
+    }
+
+    .terminal-main .stat-label {
+        font-size: 9px;
+    }
+
+    .terminal-main .market-stat-card h3 {
+        font-size: 19px;
+    }
+
+    .terminal-asset-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 22px;
+        padding: 17px;
+    }
+
+    .terminal-current-price {
+        text-align: left;
+    }
+
+    .terminal-chart-panel,
+    .technology-market-panel {
+        padding: 15px;
+    }
+
+    .terminal-chart-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .terminal-price-chart {
+        height: 320px;
+    }
+
+    .terminal-indicator-controls {
+        gap: 13px;
+    }
+}
+/* =========================================
+   PART 3 — TECHNICAL INDICATORS
+========================================= */
+
+.technical-indicators-section {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.technical-indicators-section > .section-header {
+    margin-bottom: 5px;
+}
+
+.terminal-indicator-panel {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid rgba(216, 173, 98, 0.17);
+    border-radius: 10px;
+    background: linear-gradient(
+        145deg,
+        rgba(29, 22, 40, 0.97),
+        rgba(17, 12, 25, 0.99)
+    );
+}
+
+.terminal-indicator-panel:hover {
+    border-color: rgba(216, 173, 98, 0.35);
+}
+
+.indicator-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.indicator-panel-header h3 {
+    margin: 0;
+    color: #f5f1fa;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.indicator-panel-header p {
+    margin: 7px 0 0;
+    color: #a8a0b5;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.indicator-tag {
+    flex-shrink: 0;
+    padding: 8px 11px;
+    border: 1px solid rgba(216, 173, 98, 0.23);
+    border-radius: 5px;
+    background: rgba(216, 173, 98, 0.07);
+    color: #d8ad62;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.indicator-scale {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #a8a0b5;
+    font-size: 11px;
+}
+
+.terminal-indicator-chart {
+    width: 100%;
+    height: 230px;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #100b18;
+}
+
+.indicator-reading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 15px;
+    border: 1px solid rgba(216, 173, 98, 0.12);
+    border-radius: 6px;
+    background: rgba(12, 9, 19, 0.6);
+}
+
+.indicator-reading > span:first-child {
+    color: #a8a0b5;
+    font-size: 12px;
+}
+
+.indicator-reading strong {
+    color: #e5bd73;
+    font-size: 17px;
+}
+
+.indicator-reading > span:last-child {
+    margin-left: auto;
+    color: #c5bdcf;
+    font-size: 12px;
+    text-align: right;
+}
+
+/* =========================================
+   PART 3 — ANALYSIS SUMMARY
+========================================= */
+
+.terminal-analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.terminal-main .terminal-analysis-card {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid rgba(216, 173, 98, 0.16);
+    border-radius: 10px;
+    background: linear-gradient(
+        145deg,
+        rgba(37, 27, 49, 0.94),
+        rgba(19, 14, 28, 0.98)
+    );
+}
+
+.terminal-main .terminal-analysis-card:hover {
+    border-color: rgba(216, 173, 98, 0.4);
+}
+
+.analysis-card-label {
+    display: block;
+    margin-bottom: 17px;
+    color: #d8ad62;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.terminal-analysis-card h3 {
+    margin: 0 0 12px;
+    color: #f5f1fa;
+    font-size: 21px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.terminal-analysis-card p {
+    margin: 0;
+    color: #a8a0b5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Dynamic signal states for JavaScript */
+
+.signal-positive {
+    color: #4bd6a0 !important;
+}
+
+.signal-negative {
+    color: #ff7185 !important;
+}
+
+.signal-neutral {
+    color: #e5bd73 !important;
+}
+
+.terminal-disclaimer {
+    margin-top: 22px;
+    padding: 15px 17px;
+    border-left: 3px solid #d8ad62;
+    background: rgba(216, 173, 98, 0.05);
+    color: #a8a0b5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   PART 3 — RESPONSIVE LAYOUT
+========================================= */
+
+@media (max-width: 900px) {
+    .terminal-analysis-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .terminal-indicator-chart {
+        height: 210px;
+    }
+}
+
+@media (max-width: 560px) {
+    .terminal-indicator-panel {
+        padding: 16px;
+    }
+
+    .indicator-panel-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .indicator-tag {
+        align-self: flex-start;
+    }
+
+    .terminal-indicator-chart {
+        height: 190px;
+    }
+
+    .terminal-analysis-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .terminal-main .terminal-analysis-card {
+        padding: 19px;
+    }
+
+    .indicator-reading {
+        align-items: flex-start;
+    }
+
+    .indicator-reading > span:last-child {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+}
+/* =========================================
+   PART 4 — TECHNOLOGY STOCK CARDS
+========================================= */
+
+.technology-stock-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+    margin-bottom: 25px;
+}
+
+.technology-stock-card {
+    min-width: 0;
+    padding: 22px 19px;
+    border: 1px solid rgba(216, 173, 98, 0.17);
+    border-radius: 9px;
+    background: linear-gradient(
+        145deg,
+        rgba(37, 27, 49, 0.96),
+        rgba(19, 14, 28, 0.98)
+    );
+}
+
+.technology-stock-card:hover {
+    border-color: rgba(216, 173, 98, 0.42);
+}
+
+.technology-stock-symbol {
+    display: inline-block;
+    margin-bottom: 17px;
+    padding: 6px 9px;
+    border: 1px solid rgba(216, 173, 98, 0.22);
+    border-radius: 4px;
+    background: rgba(216, 173, 98, 0.07);
+    color: #d8ad62;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.technology-stock-card h3 {
+    margin: 0 0 13px;
+    color: #c5bdcf;
+    font-size: 14px;
+}
+
+.technology-stock-card > strong {
+    display: block;
+    color: #f5f1fa;
+    font-size: clamp(16px, 1.8vw, 23px);
+    overflow-wrap: anywhere;
+}
+
+.technology-stock-card > p {
+    margin: 10px 0 0;
+    color: #a8a0b5;
+    font-size: 12px;
+}
+
+/* =========================================
+   PART 4 — TECHNOLOGY MARKET CHART
+========================================= */
+
+.technology-market-panel {
+    margin-bottom: 28px;
+}
+
+.technology-market-badge {
+    padding: 9px 11px;
+    border: 1px solid rgba(216, 173, 98, 0.2);
+    border-radius: 5px;
+    color: #d8ad62;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.technology-market-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 15px;
+    border: 1px solid rgba(216, 173, 98, 0.12);
+    border-radius: 7px;
+    background: rgba(12, 9, 19, 0.55);
+}
+
+.technology-market-controls label {
+    margin-right: 2px;
+}
+
+.technology-market-controls select {
+    min-width: 130px;
+}
+
+.technology-market-chart {
+    width: 100%;
+    height: 360px;
+    min-width: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #100b18;
+}
+
+/* =========================================
+   PART 4 — TECHNOLOGY TOPICS
+========================================= */
+
+.technology-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.technology-topic-card {
+    position: relative;
+    min-width: 0;
+    padding: 23px 20px;
+    overflow: hidden;
+    border: 1px solid rgba(216, 173, 98, 0.15);
+    border-radius: 9px;
+    background: linear-gradient(
+        145deg,
+        rgba(30, 22, 42, 0.96),
+        rgba(16, 11, 24, 0.98)
+    );
+}
+
+.technology-topic-card:hover {
+    border-color: rgba(216, 173, 98, 0.4);
+}
+
+.topic-number {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: rgba(216, 173, 98, 0.75);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.technology-topic-card h3 {
+    margin: 0 0 13px;
+    color: #f5f1fa;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.technology-topic-card p {
+    margin: 0;
+    color: #a8a0b5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.topic-status {
+    display: inline-block;
+    margin-top: 21px;
+    padding-top: 11px;
+    border-top: 1px solid rgba(216, 173, 98, 0.18);
+    color: #d8ad62;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   PART 4 — RESPONSIVE TECHNOLOGY LAYOUT
+========================================= */
+
+@media (max-width: 1000px) {
+    .technology-stock-grid,
+    .technology-topics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .technology-stock-grid,
+    .technology-topics-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .technology-stock-card,
+    .technology-topic-card {
+        padding: 19px;
+    }
+
+    .technology-market-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .technology-market-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .technology-market-controls select {
+        width: 100%;
+    }
+
+    .technology-market-chart {
+        height: 300px;
+    }
+}
+/* =========================================
+   PART 5 — MARKET WATCHLIST
+========================================= */
+
+.terminal-watchlist-panel {
+    min-width: 0;
+    padding: 10px 22px;
+    border: 1px solid rgba(216, 173, 98, 0.17);
+    border-radius: 10px;
+    background: linear-gradient(
+        145deg,
+        rgba(29, 22, 40, 0.97),
+        rgba(17, 12, 25, 0.99)
+    );
+}
+
+.watchlist-header,
+.watchlist-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(100px, 1fr) minmax(95px, 0.8fr);
+    align-items: center;
+    gap: 16px;
+}
+
+.watchlist-header {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(216, 173, 98, 0.18);
+    color: #a8a0b5;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.watchlist-row {
+    min-height: 78px;
+    border-bottom: 1px solid rgba(216, 173, 98, 0.09);
+}
+
+.watchlist-row:last-of-type {
+    border-bottom: none;
+}
+
+.watchlist-asset {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.watchlist-coin-icon {
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    border: 1px solid rgba(216, 173, 98, 0.25);
+    border-radius: 50%;
+    background: rgba(216, 173, 98, 0.08);
+    color: #e5bd73;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.watchlist-asset strong,
+.watchlist-asset small {
+    display: block;
+}
+
+.watchlist-asset strong {
+    color: #f5f1fa;
+    font-size: 13px;
+}
+
+.watchlist-asset small {
+    margin-top: 5px;
+    color: #a8a0b5;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.watchlist-row > strong {
+    color: #f5f1fa;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.watchlist-row > span:last-child {
+    color: #c5bdcf;
+    font-size: 12px;
+}
+
+/* =========================================
+   PART 5 — TERMINAL FOOTER
+========================================= */
+
+.terminal-footer-panel {
+    margin-top: 65px;
+    padding: 30px;
+    border: 1px solid rgba(216, 173, 98, 0.17);
+    border-radius: 10px;
+    background: linear-gradient(
+        145deg,
+        rgba(31, 23, 43, 0.97),
+        rgba(16, 11, 24, 0.99)
+    );
+}
+
+.terminal-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.terminal-footer-brand .brand-mark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 1px solid rgba(216, 173, 98, 0.5);
+    border-radius: 7px;
+    background: rgba(216, 173, 98, 0.1);
+    color: #e5bd73;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.terminal-footer-brand strong {
+    color: #f5f1fa;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.terminal-footer-brand p {
+    margin: 7px 0 0;
+    color: #a8a0b5;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.terminal-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 28px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(216, 173, 98, 0.13);
+    border-bottom: 1px solid rgba(216, 173, 98, 0.13);
+}
+
+.terminal-footer-links a {
+    color: #c5bdcf;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.terminal-footer-links a:hover {
+    color: #e5bd73;
+}
+
+.terminal-footer-note {
+    max-width: 800px;
+    margin: 22px 0 0;
+    color: #a8a0b5;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.terminal-copyright {
+    margin: 18px 0 0;
+    color: #81778f;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   PART 5 — CONNECTION STATUS STATES
+========================================= */
+
+.terminal-status.is-connected .terminal-status-dot {
+    background: #4bd6a0;
+    box-shadow: 0 0 10px rgba(75, 214, 160, 0.55);
+}
+
+.terminal-status.is-error .terminal-status-dot {
+    background: #ff7185;
+    box-shadow: 0 0 10px rgba(255, 113, 133, 0.45);
+}
+
+.terminal-status.is-loading .terminal-status-dot {
+    animation: terminalPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes terminalPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+/* =========================================
+   PART 5 — FINAL RESPONSIVE REFINEMENTS
+========================================= */
+
+@media (max-width: 700px) {
+    .terminal-main .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .terminal-main .market-status-badge {
+        align-self: flex-start;
+    }
+
+    .terminal-footer-panel {
+        margin-top: 45px;
+        padding: 21px;
+    }
+
+    .terminal-footer-links {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .watchlist-header,
+    .watchlist-row {
+        grid-template-columns: minmax(0, 1.2fr) minmax(85px, 1fr) minmax(75px, 0.8fr);
+        gap: 8px;
+    }
+
+    .terminal-watchlist-panel {
+        padding: 8px 12px;
+    }
+
+    .watchlist-header {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .watchlist-coin-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .watchlist-asset {
+        gap: 8px;
+    }
+
+    .watchlist-asset strong,
+    .watchlist-row > strong {
+        font-size: 11px;
+    }
+
+    .watchlist-row > span:last-child {
+        font-size: 10px;
+    }
+
+    .terminal-footer-brand strong {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .terminal-footer-links {
+        flex-direction: column;
+        gap: 14px;
+    }
+}
+/* ==========================================
+PART 12: TERMINAL CONTROL BAR
+========================================== */
+
+.terminal-controls-section {
+margin: 28px 0;
+padding: 24px;
+background: linear-gradient(145deg, #191124, #100b18);
+border: 1px solid rgba(216, 173, 98, 0.2);
+border-radius: 18px;
+}
+
+.terminal-controls-heading {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 18px;
+margin-bottom: 22px;
+}
+
+.terminal-controls-heading h2 {
+margin: 8px 0;
+color: #f5edf9;
+font-size: clamp(1.25rem, 3vw, 1.7rem);
+}
+
+.terminal-controls-heading p {
+margin: 0;
+color: #b7adc5;
+line-height: 1.6;
+}
+
+.terminal-controls-bar {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 18px;
+padding-top: 18px;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-control-button {
+padding: 12px 18px;
+border: 1px solid #d8ad62;
+border-radius: 10px;
+background: #d8ad62;
+color: #100b18;
+font-weight: 700;
+cursor: pointer;
+transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.terminal-control-button:hover {
+transform: translateY(-2px);
+}
+
+.terminal-control-button:disabled {
+opacity: 0.6;
+cursor: wait;
+transform: none;
+}
+
+.terminal-auto-refresh-control {
+display: inline-flex;
+align-items: center;
+gap: 9px;
+color: #e7dff0;
+cursor: pointer;
+}
+
+.terminal-auto-refresh-control input {
+width: 17px;
+height: 17px;
+accent-color: #d8ad62;
+cursor: pointer;
+}
+
+.terminal-last-updated {
+margin-left: auto;
+color: #b7adc5;
+font-size: 0.85rem;
+}
+
+.terminal-status-badge {
+display: inline-flex;
+align-items: center;
+padding: 8px 12px;
+border: 1px solid rgba(75, 214, 160, 0.25);
+border-radius: 999px;
+background: rgba(75, 214, 160, 0.08);
+color: #4bd6a0;
+font-size: 0.8rem;
+font-weight: 700;
+}
+
+@media (max-width: 600px) {
+.terminal-controls-section {
+padding: 17px;
+}
+
+.terminal-controls-heading {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.terminal-controls-bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.terminal-last-updated {
+    margin-left: 0;
+}
+
+}

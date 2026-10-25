@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b1d">
+    <meta name="description" content="Sign in to your DESCOP Intelligence Network account.">
+
+    <title>Sign In | DESCOP Intelligence Network</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="login" class="auth-page">
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-brand">DESCOP<span>.</span></div>
+        <div class="loader-line"></div>
+        <p>Preparing your workspace...</p>
+    </div>
+
+    <div class="ambient" aria-hidden="true"></div>
+
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span class="live-indicator">
+                <span class="live-dot"></span>
+                YOUR INTELLIGENCE NETWORK
+            </span>
+
+            <span class="announcement-date" id="currentDate">
+                Welcome to DESCOP
+            </span>
+        </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container header-main">
+
+            <a href="index.html" class="brand" aria-label="DESCOP home">
+                <span class="brand-symbol">D</span>
+
+                <span class="brand-copy">
+                    <strong>DESCOP<span>.</span></strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <form class="header-search" id="searchForm" role="search">
+                <span aria-hidden="true">⌕</span>
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search news, topics..."
+                    aria-label="Search news and topics"
+                >
+
+                <button type="submit" aria-label="Submit search">↗</button>
+            </form>
+
+            <div class="header-actions">
+
+                <a href="saved.html" class="header-icon-button" aria-label="Saved articles">
+                    ♧
+                    <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a href="register.html" class="login-button">
+                    Create account <span>↗</span>
+                </a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+        </div>
+
+        <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="world.html" class="nav-link">World</a>
+                <a href="africa.html" class="nav-link">Africa</a>
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+                <a href="business.html" class="nav-link">Business</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="entertainment.html" class="nav-link">Entertainment</a>
+                <a href="sports.html" class="nav-link">Sports</a>
+                <a href="crypto.html" class="nav-link">Crypto</a>
+                <a href="weather.html" class="nav-link">Weather</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="auth-section section-spacing">
+            <div class="container">
+
+                <div class="auth-layout">
+
+                    <!-- LEFT SIDE: BRANDING -->
+                    <aside class="auth-showcase">
+
+                        <div class="auth-showcase-content">
+
+                            <span class="section-eyebrow">
+                                <span class="live-dot"></span>
+                                ACCESS YOUR WORLD
+                            </span>
+
+                            <h1>
+                                Your world.<br>
+                                Your insights.<br>
+                                <span class="gold-text">Your DESCOP.</span>
+                            </h1>
+
+                            <p>
+                                Return to your reading list, follow important
+                                developments and personalise your news experience.
+                            </p>
+
+                            <div class="auth-benefits">
+
+                                <div class="auth-benefit">
+                                    <span class="auth-benefit-icon" aria-hidden="true">♧</span>
+
+                                    <div>
+                                        <h3>Your saved stories</h3>
+                                        <p>Keep track of articles you want to revisit.</p>
+                                    </div>
+                                </div>
+
+                                <div class="auth-benefit">
+                                    <span class="auth-benefit-icon" aria-hidden="true">◎</span>
+
+                                    <div>
+                                        <h3>Your reading experience</h3>
+                                        <p>Build a more organised way to follow the news.</p>
+                                    </div>
+                                </div>
+
+                                <div class="auth-benefit">
+                                    <span class="auth-benefit-icon" aria-hidden="true">✦</span>
+
+                                    <div>
+                                        <h3>Your conversations</h3>
+                                        <p>Prepare to participate in reader discussions.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="auth-showcase-footer">
+                            <span class="auth-orbit auth-orbit-one"></span>
+                            <span class="auth-orbit auth-orbit-two"></span>
+                            <span class="auth-orbit auth-orbit-three"></span>
+
+                            <div class="auth-orbit-center">
+                                <span>D.</span>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                    <!-- RIGHT SIDE: SIGN-IN FORM -->
+                    <section class="auth-form-panel">
+
+                        <div class="auth-form-heading">
+                            <a href="index.html" class="auth-back-link">
+                                ← Back to newsroom
+                            </a>
+
+                            <span class="section-eyebrow">MEMBER ACCESS</span>
+
+                            <h2>Welcome <span class="gold-text">back.</span></h2>
+
+                            <p>
+                                Sign in to continue your DESCOP experience.
+                            </p>
+                        </div>
+
+                        <!-- FORM STATUS -->
+                        <div
+                            class="auth-message"
+                            id="loginMessage"
+                            role="status"
+                            aria-live="polite"
+                            hidden
+                        ></div>
+
+                        <form class="auth-form" id="loginForm">
+
+                            <div class="form-field">
+                                <label for="loginEmail">Email address</label>
+
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    maxlength="254"
+                                    required
+                                >
+
+                                <small class="form-field-hint">
+                                    Enter the email address associated with your account.
+                                </small>
+                            </div>
+
+                            <div class="form-field">
+                                <div class="form-label-row">
+                                    <label for="loginPassword">Password</label>
+
+                                    <a href="#forgotPassword" id="forgotPasswordLink">
+                                        Forgot password?
+                                    </a>
+                                </div>
+
+                                <div class="password-input-wrap">
+                                    <input
+                                        type="password"
+                                        id="loginPassword"
+                                        name="password"
+                                        placeholder="Enter your password"
+                                        autocomplete="current-password"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-password-target="loginPassword"
+                                        aria-label="Show password"
+                                        aria-pressed="false"
+                                    >
+                                        Show
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="auth-options">
+
+                                <label class="checkbox-label" for="rememberMe">
+                                    <input
+                                        type="checkbox"
+                                        id="rememberMe"
+                                        name="rememberMe"
+                                    >
+
+                                    <span class="custom-checkbox" aria-hidden="true"></span>
+
+                                    <span>Remember me</span>
+                                </label>
+
+                            </div>
+
+                            <button type="submit" class="auth-submit-button" id="loginSubmitButton">
+                                <span>Sign in to DESCOP</span>
+                                <span aria-hidden="true">↗</span>
+                            </button>
+
+                            <p class="auth-terms">
+                                By signing in, you agree to follow the platform's
+                                terms and community guidelines when these are published.
+                            </p>
+
+                        </form>
+
+                        <div class="auth-divider">
+                            <span>NEW TO DESCOP?</span>
+                        </div>
+
+                        <p class="auth-switch-text">
+                            Don't have an account?
+                            <a href="register.html">Create one here <span>↗</span></a>
+                        </p>
+
+                        <div class="auth-security-note">
+                            <span aria-hidden="true">◈</span>
+
+                            <p>
+                                Account authentication will be handled by the backend
+                                once it is implemented. This page alone does not verify
+                                credentials or create a secure login session.
+                            </p>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PASSWORD RECOVERY PANEL -->
+        <section class="forgot-password-section section-spacing" id="forgotPassword">
+            <div class="container">
+
+                <div class="forgot-password-panel">
+
+                    <div>
+                        <span class="section-eyebrow">ACCOUNT RECOVERY</span>
+
+                        <h2>Forgot your password?</h2>
+
+                        <p>
+                            Enter your account email to request a password-reset link
+                            after the authentication backend is connected.
+                        </p>
+                    </div>
+
+                    <form class="forgot-password-form" id="forgotPasswordForm">
+
+                        <label for="forgotPasswordEmail">Email address</label>
+
+                        <input
+                            type="email"
+                            id="forgotPasswordEmail"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            maxlength="254"
+                            required
+                        >
+
+                        <button type="submit" class="primary-button">
+                            Request reset link <span>↗</span>
+                        </button>
+
+                        <p id="forgotPasswordMessage" role="status" aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand-column">
+                    <a href="index.html" class="brand" aria-label="DESCOP home">
+                        <span class="brand-symbol">D</span>
+
+                        <span class="brand-copy">
+                            <strong>DESCOP<span>.</span></strong>
+                            <small>INTELLIGENCE NETWORK</small>
+                        </span>
+                    </a>
+
+                    <p>
+                        A modern intelligence platform covering global affairs,
+                        African developments, business, technology and digital markets.
+                    </p>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3>Explore</h3>
+                    <a href="world.html">World News</a>
+                    <a href="africa.html">Africa</a>
+                    <a href="nigeria.html">Nigeria</a>
+                    <a href="business.html">Business</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3>Discover</h3>
+                    <a href="technology.html">Technology</a>
+                    <a href="entertainment.html">Entertainment</a>
+                    <a href="sports.html">Sports</a>
+                    <a href="crypto.html">Cryptocurrency</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3>Your DESCOP</h3>
+                    <a href="weather.html">Weather</a>
+                    <a href="saved.html">Saved Articles</a>
+                    <a href="login.html">Sign In</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="footerYear">2026</span> DESCOP Intelligence Network.</p>
+                <p>Built for clarity. Designed for insight.</p>
+                <a href="index.html">Back to top ↑</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+</body>
+</html>

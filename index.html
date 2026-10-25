@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+
+    <meta name="description" content="DESCOP Intelligence Network — global news, African intelligence, business, technology, crypto markets, sports and weather.">
+
+    <title>DESCOP | Intelligence Network</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="home">
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">D<span>.</span></div>
+        <div class="loader-line"></div>
+        <p>INITIALIZING DESCOP</p>
+    </div>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="ambient ambient-purple"></div>
+    <div class="ambient ambient-gold"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span class="live-indicator"></span>
+            <span class="announcement-label">DESCOP INTELLIGENCE</span>
+            <span class="announcement-divider">/</span>
+            <span class="announcement-text">
+                Global perspectives. African intelligence. Real-time markets.
+            </span>
+            <span class="announcement-date" id="currentDate"></span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+
+        <div class="container header-main">
+
+            <!-- BRAND -->
+            <a href="index.html" class="brand" aria-label="DESCOP homepage">
+                <span class="brand-symbol">D<span>.</span></span>
+
+                <span class="brand-copy">
+                    <strong>DESCOP</strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <!-- DESKTOP SEARCH -->
+            <form class="header-search" id="searchForm" role="search">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search news, markets, topics..."
+                    aria-label="Search DESCOP"
+                    autocomplete="off"
+                >
+
+                <button type="submit" aria-label="Submit search">
+                    Search
+                </button>
+            </form>
+
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+
+                <a href="saved.html" class="header-icon-button" aria-label="Saved articles" title="Saved articles">
+                    ♡
+                    <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a href="login.html" class="login-button">
+                    Sign in <span>↗</span>
+                </a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+            <div class="container nav-inner">
+
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="world.html" class="nav-link">World</a>
+                <a href="africa.html" class="nav-link">Africa</a>
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+                <a href="business.html" class="nav-link">Business</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+                <a href="entertainment.html" class="nav-link">Entertainment</a>
+                <a href="sports.html" class="nav-link">Sports</a>
+                <a href="crypto.html" class="nav-link crypto-nav-link">Crypto <span>↗</span></a>
+                <a href="weather.html" class="nav-link">Weather</a>
+                <a href="terminal.html" class="nav-link">terminal</a>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- BREAKING NEWS TICKER -->
+    <section class="breaking-bar" aria-label="Breaking news">
+
+        <div class="container breaking-inner">
+
+            <span class="breaking-label">
+                <span class="breaking-pulse"></span>
+                BREAKING
+            </span>
+
+            <div class="breaking-track-window">
+                <div class="breaking-track" id="breakingNewsTrack">
+                    <span>Loading the latest headlines...</span>
+                </div>
+            </div>
+
+            <a href="world.html" class="breaking-more">
+                All headlines <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section section-spacing">
+
+            <div class="container">
+
+                <div class="section-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    THE WORLD, IN CONTEXT
+                </div>
+
+                <div class="hero-heading-row">
+
+                    <div>
+                        <h1>
+                            Intelligence for<br>
+                            <span class="gradient-text">a changing world.</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Stay informed with global reporting, African perspectives,
+                            market intelligence and the stories shaping tomorrow.
+                        </p>
+                    </div>
+
+                    <div class="hero-side-note">
+                        <span class="hero-side-symbol">✳</span>
+                        <p>
+                            INFORMATION<br>
+                            <strong>WITHOUT BORDERS.</strong>
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- HERO FEATURE GRID -->
+                <div class="hero-grid">
+
+                    <!-- MAIN FEATURE -->
+                    <article class="hero-feature-card">
+
+                        <div class="hero-feature-visual">
+
+                            <div class="visual-grid"></div>
+                            <div class="visual-orbit orbit-one"></div>
+                            <div class="visual-orbit orbit-two"></div>
+                            <div class="visual-orbit orbit-three"></div>
+
+                            <span class="visual-coordinate coordinate-one">
+                                GLOBAL / 001
+                            </span>
+
+                            <span class="visual-coordinate coordinate-two">
+                                INTELLIGENCE NETWORK
+                            </span>
+
+                            <div class="visual-center-mark">D<span>.</span></div>
+
+                            <div class="visual-caption">
+                                <span class="live-indicator"></span>
+                                CONNECTED PERSPECTIVES
+                            </div>
+
+                        </div>
+
+                        <div class="hero-feature-content">
+
+                            <div class="article-meta">
+                                <span class="category-tag">TOP STORY</span>
+                                <span class="meta-separator">•</span>
+                                <span>DESCOP EDITORIAL</span>
+                            </div>
+
+                            <h2 id="heroHeadline">
+                                Stories that shape our understanding of the world.
+                            </h2>
+
+                            <p id="heroSummary">
+                                Explore developing stories, important developments
+                                and perspectives across international affairs,
+                                Africa, technology and the global economy.
+                            </p>
+
+                            <a href="world.html" class="text-link">
+                                Explore the coverage <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- SIDE FEATURES -->
+                    <div class="hero-side-grid">
+
+                        <article class="side-feature-card side-feature-purple">
+
+                            <div class="side-feature-top">
+                                <span class="category-tag">AFRICA</span>
+                                <span class="side-feature-icon">◎</span>
+                            </div>
+
+                            <div>
+                                <span class="side-feature-number">01 / REGION</span>
+
+                                <h3>
+                                    The continent's stories.
+                                    <span>Beyond the headlines.</span>
+                                </h3>
+
+                                <a href="africa.html" class="text-link">
+                                    Explore Africa <span>↗</span>
+                                </a>
+                            </div>
+
+                            <div class="side-decoration side-decoration-circle"></div>
+
+                        </article>
+
+                        <article class="side-feature-card side-feature-gold">
+
+                            <div class="side-feature-top">
+                                <span class="category-tag">MARKETS</span>
+                                <span class="side-feature-icon">↗</span>
+                            </div>
+
+                            <div>
+                                <span class="side-feature-number">02 / FINANCE</span>
+
+                                <h3>
+                                    Follow the numbers.
+                                    <span>Understand the movement.</span>
+                                </h3>
+
+                                <a href="crypto.html" class="text-link">
+                                    Explore markets <span>↗</span>
+                                </a>
+                            </div>
+
+                            <div class="side-decoration side-decoration-diamond"></div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MARKET PULSE -->
+        <section class="market-section section-spacing">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            THE MARKET PULSE
+                        </div>
+
+                        <h2 class="section-title">
+                            Numbers that <span class="gold-text">move.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            A snapshot of selected cryptocurrency markets.
+                        </p>
+                    </div>
+
+                    <a href="crypto.html" class="outline-button">
+                        Full market dashboard <span>↗</span>
+                    </a>
+
+                </div>
+
+                <!-- MARKET SUMMARY STATISTICS -->
+                <div class="market-summary-grid">
+
+                    <div class="market-summary-card">
+
+                        <span class="market-summary-label">TOTAL MARKET CAP</span>
+
+                        <strong id="marketCapValue">--</strong>
+
+                        <span class="market-summary-note" id="marketCapChange">
+                            Awaiting market data
+                        </span>
+
+                    </div>
+
+                    <div class="market-summary-card">
+
+                        <span class="market-summary-label">24H TRADING VOLUME</span>
+
+                        <strong id="marketVolumeValue">--</strong>
+
+                        <span class="market-summary-note">
+                            Global crypto activity
+                        </span>
+
+                    </div>
+
+                    <div class="market-summary-card">
+
+                        <span class="market-summary-label">BTC DOMINANCE</span>
+
+                        <strong id="btcDominanceValue">--</strong>
+
+                        <span class="market-summary-note">
+                            Bitcoin share of market cap
+                        </span>
+
+                    </div>
+
+                    <div class="market-summary-card">
+
+                        <span class="market-summary-label">MARKET STATUS</span>
+
+                        <strong class="market-status-value" id="marketStatusValue">
+                            Checking
+                        </strong>
+
+                        <span class="market-summary-note">
+                            Data connection status
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- CRYPTO COIN CARDS -->
+                <div class="market-coin-grid">
+
+                    <article class="coin-card" data-market="bitcoin">
+
+                        <div class="coin-card-top">
+                            <div class="coin-identity">
+                                <div class="coin-icon bitcoin-icon">₿</div>
+
+                                <div>
+                                    <h3>Bitcoin</h3>
+                                    <span>BTC</span>
+                                </div>
+                            </div>
+
+                            <span class="coin-rank">#01</span>
+                        </div>
+
+                        <div class="coin-price" data-price>Loading...</div>
+
+                        <div class="coin-change" data-change>
+                            Awaiting data
+                        </div>
+
+                        <div class="coin-chart-placeholder" aria-hidden="true">
+                            <span>BTC</span>
+                            <div class="mini-chart-line"></div>
+                        </div>
+
+                        <a href="crypto.html" class="coin-card-link">
+                            View market <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="coin-card" data-market="ethereum">
+
+                        <div class="coin-card-top">
+                            <div class="coin-identity">
+                                <div class="coin-icon ethereum-icon">◆</div>
+
+                                <div>
+                                    <h3>Ethereum</h3>
+                                    <span>ETH</span>
+                                </div>
+                            </div>
+
+                            <span class="coin-rank">#02</span>
+                        </div>
+
+                        <div class="coin-price" data-price>Loading...</div>
+
+                        <div class="coin-change" data-change>
+                            Awaiting data
+                        </div>
+
+                        <div class="coin-chart-placeholder" aria-hidden="true">
+                            <span>ETH</span>
+                            <div class="mini-chart-line"></div>
+                        </div>
+
+                        <a href="crypto.html" class="coin-card-link">
+                            View market <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="coin-card" data-market="solana">
+
+                        <div class="coin-card-top">
+                            <div class="coin-identity">
+                                <div class="coin-icon solana-icon">◎</div>
+
+                                <div>
+                                    <h3>Solana</h3>
+                                    <span>SOL</span>
+                                </div>
+                            </div>
+
+                            <span class="coin-rank">#03</span>
+                        </div>
+
+                        <div class="coin-price" data-price>Loading...</div>
+
+                        <div class="coin-change" data-change>
+                            Awaiting data
+                        </div>
+
+                        <div class="coin-chart-placeholder" aria-hidden="true">
+                            <span>SOL</span>
+                            <div class="mini-chart-line"></div>
+                        </div>
+
+                        <a href="crypto.html" class="coin-card-link">
+                            View market <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+                <p class="data-disclaimer">
+                    Market figures depend on the availability of the connected
+                    data provider. Values are informational and may be delayed.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- LATEST NEWS -->
+        <section class="news-section section-spacing">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            STAY AHEAD
+                        </div>
+
+                        <h2 class="section-title">
+                            The latest <span class="gradient-text">briefing.</span>
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Reporting and developments across the stories that matter.
+                        </p>
+                    </div>
+
+                    <a href="world.html" class="outline-button">
+                        All stories <span>↗</span>
+                    </a>
+
+                </div>
+
+                <!-- CATEGORY FILTERS -->
+                <div class="news-filter-bar" id="newsFilters">
+
+                    <button class="filter-button active" data-filter="all" type="button">
+                        All stories
+                    </button>
+
+                    <button class="filter-button" data-filter="world" type="button">
+                        World
+                    </button>
+
+                    <button class="filter-button" data-filter="africa" type="button">
+                        Africa
+                    </button>
+
+                    <button class="filter-button" data-filter="nigeria" type="button">
+                        Nigeria
+                    </button>
+
+                    <button class="filter-button" data-filter="business" type="button">
+                        Business
+                    </button>
+
+                    <button class="filter-button" data-filter="technology" type="button">
+                        Technology
+                    </button>
+
+                    <button class="filter-button" data-filter="sports" type="button">
+                        Sports
+                    </button>
+
+                </div>
+
+                <!-- NEWS CARDS WILL BE RENDERED BY app.js -->
+                <div class="news-grid" id="latestGrid">
+
+                    <article class="news-card news-card-loading">
+                        <div class="news-card-image image-placeholder">
+                            <span>01</span>
+                        </div>
+
+                        <div class="news-card-body">
+                            <span class="skeleton-line skeleton-short"></span>
+                                                          <span class="skeleton-line skeleton-medium"></span>
+                            <span class="skeleton-line skeleton-long"></span>
+
+                            <div class="news-card-meta">
+                                <span class="skeleton-line skeleton-short"></span>
+                                <span class="skeleton-line skeleton-short"></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card news-card-loading">
+                        <div class="news-card-image image-placeholder">
+                            <span>02</span>
+                        </div>
+
+                        <div class="news-card-body">
+                            <span class="skeleton-line skeleton-short"></span>
+                            <span class="skeleton-line skeleton-medium"></span>
+                            <span class="skeleton-line skeleton-long"></span>
+
+                            <div class="news-card-meta">
+                                <span class="skeleton-line skeleton-short"></span>
+                                <span class="skeleton-line skeleton-short"></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card news-card-loading">
+                        <div class="news-card-image image-placeholder">
+                            <span>03</span>
+                        </div>
+
+                        <div class="news-card-body">
+                            <span class="skeleton-line skeleton-short"></span>
+                            <span class="skeleton-line skeleton-medium"></span>
+                            <span class="skeleton-line skeleton-long"></span>
+
+                            <div class="news-card-meta">
+                                <span class="skeleton-line skeleton-short"></span>
+                                <span class="skeleton-line skeleton-short"></span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="section-footer">
+                    <a href="world.html" class="btn btn-outline">
+                        Explore All News
+                        <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- COVERAGE CATEGORIES -->
+            <section class="section coverage-section" id="coverage">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-eyebrow">EXPLORE DESCOP</span>
+                        <h2>News Across Every <span class="text-gradient">Frontier</span></h2>
+                        <p>Explore the stories shaping our world.</p>
+                    </div>
+                </div>
+
+                <div class="coverage-grid">
+
+                    <a href="world.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#127758;</span>
+                        <h3>World News</h3>
+                        <p>Major developments from across the globe.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                    <a href="africa.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#127757;</span>
+                        <h3>Africa</h3>
+                        <p>Stories, people and events shaping Africa.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                    <a href="nigeria.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#127475;&#127468;</span>
+                        <h3>Nigeria</h3>
+                        <p>News and developments from Nigeria.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                    <a href="business.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#128188;</span>
+                        <h3>Business</h3>
+                        <p>Markets, companies and the global economy.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                    <a href="technology.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#128187;</span>
+                        <h3>Technology</h3>
+                        <p>Innovation, digital culture and emerging tech.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                    <a href="entertainment.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#127925;</span>
+                        <h3>Entertainment</h3>
+                        <p>Music, film, celebrities and pop culture.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                    <a href="sports.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#9917;</span>
+                        <h3>Sports</h3>
+                        <p>Competitions, teams and sporting highlights.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                    <a href="crypto.html" class="coverage-card">
+                        <span class="coverage-icon" aria-hidden="true">&#8383;</span>
+                        <h3>Crypto</h3>
+                        <p>Cryptocurrency markets and blockchain news.</p>
+                        <span class="coverage-link">Explore &rarr;</span>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- AFRICA SPOTLIGHT -->
+            <section class="section africa-spotlight">
+                <div class="spotlight-content">
+                    <span class="section-eyebrow">THE AFRICA SPOTLIGHT</span>
+
+                    <h2>A Continent Full of <span class="text-gradient">Stories.</span></h2>
+
+                    <p>
+                        From innovation and entrepreneurship to culture,
+                        leadership and sport, discover the developments
+                        influencing Africa and its place in the world.
+                    </p>
+
+                    <a href="africa.html" class="btn btn-primary">
+                        Explore Africa
+                        <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="spotlight-decoration" aria-hidden="true">
+                    <span class="spotlight-orb"></span>
+                    <span class="spotlight-ring"></span>
+                    <span class="spotlight-ring spotlight-ring-two"></span>
+                </div>
+            </section>
+
+            <!-- WEATHER PREVIEW -->
+            <section class="section weather-preview" id="weatherPreview">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-eyebrow">WEATHER & CONDITIONS</span>
+                        <h2>Know Before You <span class="text-gradient">Go</span></h2>
+                        <p>Check current weather conditions and forecasts.</p>
+                    </div>
+
+                    <a href="weather.html" class="btn btn-outline">
+                        Full Weather Report
+                        <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="weather-preview-card">
+                    <div class="weather-preview-info">
+                        <span class="weather-preview-icon" aria-hidden="true">
+                            &#9728;
+                        </span>
+
+                        <div>
+                            <h3>Weather Around You</h3>
+                            <p>Search a city to see its latest available conditions.</p>
+                        </div>
+                    </div>
+
+                    <a href="weather.html" class="btn btn-primary">
+                        Check Weather
+                    </a>
+                </div>
+            </section>
+
+            <!-- NEWSLETTER -->
+            <section class="section newsletter-section" id="newsletter">
+                <div class="newsletter-card">
+                    <div class="newsletter-content">
+                        <span class="section-eyebrow">STAY INFORMED</span>
+
+                        <h2>Important Stories. <span class="text-gradient">One Inbox.</span></h2>
+
+                        <p>
+                            Get updates on important developments across
+                            world news, Africa, business and technology.
+                        </p>
+                    </div>
+
+                    <form class="newsletter-form" id="newsletterForm">
+                        <label for="newsletterEmail" class="sr-only">
+                            Your email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <button type="submit" class="btn btn-primary">
+                            Subscribe
+                        </button>
+
+                        <p class="form-feedback" id="newsletterFeedback"
+                           aria-live="polite"></p>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="brand" aria-label="DESCOP Home">
+                        <span class="brand-mark">D</span>
+                        <span class="brand-text">
+                            DESCOP
+                            <small>INTELLIGENCE NETWORK</small>
+                        </span>
+                    </a>
+
+                    <p>
+                        Connecting the dots between today's headlines
+                        and tomorrow's world.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <a href="world.html">World</a>
+                    <a href="africa.html">Africa</a>
+                    <a href="nigeria.html">Nigeria</a>
+                    <a href="business.html">Business</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Discover</h3>
+                    <a href="technology.html">Technology</a>
+                    <a href="entertainment.html">Entertainment</a>
+                    <a href="sports.html">Sports</a>
+                    <a href="crypto.html">Crypto</a>
+                    <a href="weather.html">Weather</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Your DESCOP</h3>
+                    <a href="saved.html">Saved Articles</a>
+                    <a href="login.html">Sign In</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="currentYear"></span> DESCOP Intelligence Network.
+                    All rights reserved.
+                </p>
+
+                <a href="#top" class="footer-back-top">
+                    Back to top &uarr;
+                </a>
+            </div>
+        </footer>
+
+        <!-- TOAST NOTIFICATIONS -->
+        <div
+            class="toast-container"
+            id="toastContainer"
+            aria-live="polite"
+            aria-atomic="true"
+        ></div>
+
+        <!-- BACK TO TOP BUTTON -->
+        <button
+            class="scroll-to-top"
+            id="scrollToTop"
+            type="button"
+            aria-label="Scroll to top"
+        >
+            &uarr;
+        </button>
+
+        <!-- JAVASCRIPT -->
+        
+
+    </body>
+</html>                          

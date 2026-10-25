@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+
+    <meta name="description" content="DESCOP Africa Intelligence — African politics, business, technology, culture, regional affairs and development.">
+
+    <meta name="keywords" content="Africa news, African politics, African business, African technology, African culture, DESCOP">
+
+    <meta name="author" content="DESCOP Intelligence Network">
+
+    <title>Africa Intelligence | DESCOP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body data-page="africa" id="top">
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">D<span>.</span></div>
+            <div class="loader-line"></div>
+            <p>AFRICA INTELLIGENCE</p>
+        </div>
+    </div>
+
+    <!-- AMBIENT BACKGROUND -->
+    <div class="ambient-background" aria-hidden="true">
+        <div class="ambient-orb ambient-orb-one"></div>
+        <div class="ambient-orb ambient-orb-two"></div>
+    </div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <div class="announcement-label">
+                <span class="status-dot"></span>
+                <span>DESCOP INTELLIGENCE NETWORK</span>
+            </div>
+
+            <div class="announcement-message">
+                African stories. Global perspective.
+            </div>
+
+            <div class="announcement-date" id="currentDate">
+                AFRICA EDITION
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-main">
+
+            <!-- BRAND -->
+            <a href="index.html" class="brand" aria-label="DESCOP homepage">
+                <span class="brand-mark">D<span>.</span></span>
+
+                <span class="brand-text">
+                    <strong>DESCOP</strong>
+                    <small>INTELLIGENCE NETWORK</small>
+                </span>
+            </a>
+
+            <!-- SEARCH -->
+            <form class="header-search" id="searchForm" role="search">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    name="q"
+                    placeholder="Search African intelligence..."
+                    aria-label="Search African news"
+                >
+
+                <button type="submit" aria-label="Submit search">
+                    Search
+                </button>
+            </form>
+
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+
+                <a href="saved.html" class="header-action" aria-label="Saved articles">
+                    <span aria-hidden="true">♡</span>
+                    <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+                <a href="login.html" class="header-login">
+                    Sign In
+                </a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="mainNavigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+            <div class="container navigation-inner">
+
+                <a href="index.html" class="nav-link">Home</a>
+
+                <a href="world.html" class="nav-link">World</a>
+
+                <a href="africa.html" class="nav-link active" aria-current="page">
+                    Africa
+                </a>
+
+                <a href="nigeria.html" class="nav-link">Nigeria</a>
+
+                <a href="business.html" class="nav-link">Business</a>
+
+                <a href="technology.html" class="nav-link">Technology</a>
+
+                <a href="entertainment.html" class="nav-link">Entertainment</a>
+
+                <a href="sports.html" class="nav-link">Sports</a>
+
+                <a href="crypto.html" class="nav-link">Crypto</a>
+
+                <a href="weather.html" class="nav-link">Weather</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- BREAKING NEWS -->
+    <section class="breaking-bar" aria-label="Breaking news">
+        <div class="container breaking-inner">
+
+            <div class="breaking-label">
+                <span class="breaking-pulse"></span>
+                <strong>AFRICA BRIEFING</strong>
+            </div>
+
+            <div class="breaking-track-wrapper">
+                <div class="breaking-track" id="breakingNewsTrack">
+                    <span>
+                        African politics, markets, innovation and regional affairs.
+                    </span>
+                </div>
+            </div>
+
+            <a href="#africaLatest" class="breaking-more">
+                Explore Africa →
+            </a>
+
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main id="mainContent">
+
+        <!-- AFRICA HERO -->
+        <section class="category-hero africa-hero">
+            <div class="container">
+
+                <div class="category-hero-content">
+
+                    <div class="section-eyebrow">
+                        <span class="eyebrow-line"></span>
+                        THE AFRICA DESK
+                    </div>
+
+                    <h1>
+                        Africa in
+                        <span>Focus.</span>
+                    </h1>
+
+                    <p class="category-hero-description">
+                        Independent perspectives on Africa's politics,
+                        economies, technology, culture and changing place
+                        in the world.
+                    </p>
+
+                    <div class="category-hero-meta">
+                        <span>REGIONAL INTELLIGENCE</span>
+                        <span class="meta-divider">/</span>
+                        <span>CONTINENTAL PERSPECTIVES</span>
+                    </div>
+
+                </div>
+
+                <!-- AFRICA TOPIC LINKS -->
+                <div class="category-topic-links">
+
+                    <a href="#africaLatest">Latest Stories</a>
+
+                    <a href="#africaPolitics">Politics</a>
+
+                    <a href="#africaBusiness">Business & Trade</a>
+
+                    <a href="#africaTechnology">Technology</a>
+
+                    <a href="#africaCulture">Culture</a>
+
+                    <a href="#africaRegions">Regional Affairs</a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURED AFRICA STORY -->
+        <section class="world-lead-section section-spacing">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            THE CONTINENTAL PICTURE
+                        </div>
+
+                        <h2>Across Africa</h2>
+                    </div>
+
+                    <span class="section-caption">
+                        THE BIGGER STORY
+                    </span>
+                </div>
+
+                <div class="world-lead-grid">
+
+                    <!-- MAIN FEATURE -->
+                    <article class="world-lead-card">
+
+                        <a
+                            href="article.html?id=africa-feature"
+                            class="world-lead-image-link"
+                            aria-label="Read the featured Africa story"
+                        >
+                            <img
+                                src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=1400&q=85"
+                                alt="Landscape representing the African continent"
+                                class="world-lead-image"
+                                loading="lazy"
+                            >
+
+                            <span class="image-category-tag">
+                                AFRICA FEATURE
+                            </span>
+                        </a>
+
+                        <div class="world-lead-content">
+
+                            <div class="article-meta">
+                                <span class="article-category">CONTINENTAL AFFAIRS</span>
+                                <span class="meta-divider">•</span>
+                                <span>AFRICA DESK</span>
+                            </div>
+
+                            <h2 id="africaLeadHeadline">
+                                Africa's Changing Landscape: The Forces Shaping the Continent
+                            </h2>
+
+                            <p id="africaLeadSummary">
+                                Explore the political, economic and technological
+                                developments influencing Africa's future, from
+                                regional cooperation to innovation and investment.
+                            </p>
+
+                            <div class="article-card-footer">
+                                <a
+                                    href="article.html?id=africa-feature"
+                                    class="read-story-link"
+                                >
+                                    Read the Analysis <span>→</span>
+                                </a>
+
+                                <span class="article-read-time">
+                                    FEATURED REPORT
+                                </span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- QUICK BRIEFINGS -->
+                    <aside class="world-lead-sidebar">
+
+                        <div class="sidebar-heading">
+                            <h3>Continental Briefings</h3>
+                            <span>THE ESSENTIALS</span>
+                        </div>
+
+                        <article class="briefing-card">
+                            <span class="briefing-number">01</span>
+
+                            <div>
+                                <span class="briefing-category">POLITICS</span>
+
+                                <h4>
+                                    Governance, elections and the future
+                                    of African institutions
+                                </h4>
+
+                                <a href="#africaPolitics">
+                                    Explore political affairs →
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="briefing-card">
+                            <span class="briefing-number">02</span>
+
+                            <div>
+                                <span class="briefing-category">ECONOMY</span>
+
+                                <h4>
+                                    Trade, investment and opportunities
+                                    across African markets
+                                </h4>
+
+                                <a href="#africaBusiness">
+                                    Explore African markets →
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="briefing-card">
+                            <span class="briefing-number">03</span>
+
+                            <div>
+                                <span class="briefing-category">INNOVATION</span>
+
+                                <h4>
+                                    Technology and the next generation
+                                    of African innovators
+                                </h4>
+
+                                <a href="#africaTechnology">
+                                    Explore innovation →
+                                </a>
+                            </div>
+                        </article>
+
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 2 CONTINUES BELOW -->
+                <!-- LATEST AFRICA NEWS -->
+        <section class="news-section section-spacing" id="africaLatest">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            THE LATEST
+                        </div>
+
+                        <h2>Africa Newsroom</h2>
+
+                        <p class="section-description">
+                            Stories, developments and perspectives from across Africa.
+                        </p>
+                    </div>
+
+                    <span class="section-caption">AFRICA DESK</span>
+                </div>
+
+                <!-- NEWS FILTERS -->
+                <div class="news-filter-bar" id="africaNewsFilters">
+                    <button
+                        class="filter-button active"
+                        type="button"
+                        data-africa-filter="all"
+                        aria-pressed="true"
+                    >
+                        All Stories
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-africa-filter="politics"
+                        aria-pressed="false"
+                    >
+                        Politics
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-africa-filter="business"
+                        aria-pressed="false"
+                    >
+                        Business
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-africa-filter="technology"
+                        aria-pressed="false"
+                    >
+                        Technology
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-africa-filter="culture"
+                        aria-pressed="false"
+                    >
+                        Culture
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-africa-filter="security"
+                        aria-pressed="false"
+                    >
+                        Security
+                    </button>
+                </div>
+
+                <!-- NEWS CARDS ARE GENERATED BY AFRICA JAVASCRIPT -->
+                <div class="news-grid" id="africaNewsGrid">
+
+                    <article class="news-card news-card-skeleton">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line skeleton-line-short"></div>
+                    </article>
+
+                    <article class="news-card news-card-skeleton">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line skeleton-line-short"></div>
+                    </article>
+
+                    <article class="news-card news-card-skeleton">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line skeleton-line-short"></div>
+                    </article>
+
+                </div>
+
+                <div class="load-more-wrapper">
+                    <button
+                        class="load-more-button"
+                        id="loadMoreAfricaNews"
+                        type="button"
+                    >
+                        Load More Stories
+                        <span aria-hidden="true">↓</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- AFRICAN POLITICS -->
+        <section
+            class="editorial-section section-spacing"
+            id="africaPolitics"
+        >
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            POWER & GOVERNANCE
+                        </div>
+
+                        <h2>African Politics</h2>
+
+                        <p class="section-description">
+                            Leadership, elections, public policy and the institutions
+                            shaping political life across the continent.
+                        </p>
+                    </div>
+
+                    <a href="#africaLatest" class="section-view-all">
+                        All Africa News →
+                    </a>
+                </div>
+
+                <div class="editorial-feature-grid">
+
+                    <!-- POLITICS FEATURE -->
+                    <article class="editorial-feature-card">
+
+                        <a
+                            href="article.html?id=africa-governance"
+                            class="editorial-feature-image"
+                        >
+                            <img
+                                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1100&q=85"
+                                alt="Government building representing public institutions"
+                                loading="lazy"
+                            >
+
+                            <span class="image-category-tag">
+                                GOVERNANCE
+                            </span>
+                        </a>
+
+                        <div class="editorial-feature-content">
+
+                            <div class="article-meta">
+                                <span class="article-category">POLITICS</span>
+                                <span class="meta-divider">•</span>
+                                <span>POLICY & GOVERNANCE</span>
+                            </div>
+
+                            <h3>
+                                <a href="article.html?id=africa-governance">
+                                    Governance and Institutional Reform Across Africa
+                                </a>
+                            </h3>
+
+                            <p>
+                                An overview of the institutions, public policies
+                                and political developments influencing governance
+                                across African countries.
+                            </p>
+
+                            <a
+                                href="article.html?id=africa-governance"
+                                class="read-story-link"
+                            >
+                                Read the Story <span>→</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <!-- POLITICS BRIEFINGS -->
+                    <div class="editorial-story-list">
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">01</span>
+
+                            <div class="editorial-list-content">
+                                <span class="article-category">
+                                    DEMOCRACY
+                                </span>
+
+                                <h3>
+                                    <a href="article.html?id=africa-elections">
+                                        Elections, Political Participation
+                                        and Democratic Accountability
+                                    </a>
+                                </h3>
+
+                                <p>
+                                    Key issues in electoral administration,
+                                    representation and public trust.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">02</span>
+
+                            <div class="editorial-list-content">
+                                <span class="article-category">
+                                    REGIONAL COOPERATION
+                                </span>
+
+                                <h3>
+                                    <a href="article.html?id=africa-regional-cooperation">
+                                        Regional Institutions and African Cooperation
+                                    </a>
+                                </h3>
+
+                                <p>
+                                    How regional partnerships address shared
+                                    political and economic challenges.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">03</span>
+
+                            <div class="editorial-list-content">
+                                <span class="article-category">
+                                    PUBLIC POLICY
+                                </span>
+
+                                <h3>
+                                    <a href="article.html?id=africa-public-policy">
+                                        Public Policy, Accountability and Service Delivery
+                                    </a>
+                                </h3>
+
+                                <p>
+                                    Examining the relationship between public
+                                    institutions and everyday life.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AFRICAN BUSINESS & TRADE -->
+        <section
+            class="editorial-section section-spacing"
+            id="africaBusiness"
+        >
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            TRADE, CAPITAL & INDUSTRY
+                        </div>
+
+                        <h2>Africa's Economic Frontiers</h2>
+
+                        <p class="section-description">
+                            Markets, investment, entrepreneurship, infrastructure
+                            and the businesses driving economic transformation.
+                        </p>
+                    </div>
+
+                    <a href="#africaLatest" class="section-view-all">
+                        Explore More →
+                    </a>
+                </div>
+
+                <div class="editorial-feature-grid">
+
+                    <!-- BUSINESS FEATURE -->
+                    <article class="editorial-feature-card">
+
+                        <a
+                            href="article.html?id=africa-economic-growth"
+                            class="editorial-feature-image"
+                        >
+                            <img
+                                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=85"
+                                alt="Modern commercial buildings representing African business"
+                                loading="lazy"
+                            >
+
+                            <span class="image-category-tag">
+                                ECONOMY
+                            </span>
+                        </a>
+
+                        <div class="editorial-feature-content">
+
+                            <div class="article-meta">
+                                <span class="article-category">BUSINESS</span>
+                                <span class="meta-divider">•</span>
+                                <span>MARKETS & INVESTMENT</span>
+                            </div>
+
+                            <h3>
+                                <a href="article.html?id=africa-economic-growth">
+                                    Investment, Infrastructure and Africa's Economic Future
+                                </a>
+                            </h3>
+
+                            <p>
+                                Explore the opportunities and challenges
+                                influencing investment, industrial development
+                                and regional trade across the continent.
+                            </p>
+
+                            <a
+                                href="article.html?id=africa-economic-growth"
+                                class="read-story-link"
+                            >
+                                Explore the Analysis <span>→</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <!-- BUSINESS BRIEFINGS -->
+                    <div class="editorial-story-list">
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">01</span>
+
+                            <div class="editorial-list-content">
+                                <span class="article-category">
+                                    TRADE
+                                </span>
+
+                                <h3>
+                                    <a href="article.html?id=africa-trade">
+                                        Intra-African Trade and Regional Market Access
+                                    </a>
+                                </h3>
+
+                                <p>
+                                    The opportunities and barriers affecting
+                                    commerce between African economies.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">02</span>
+
+                            <div class="editorial-list-content">
+                                <span class="article-category">
+                                    ENTREPRENEURSHIP
+                                </span>
+
+                                <h3>
+                                    <a href="article.html?id=africa-startups">
+                                        Startups, Small Businesses and New Industries
+                                    </a>
+                                </h3>
+
+                                <p>
+                                    A closer look at enterprise, funding and
+                                    business development opportunities.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">03</span>
+
+                            <div class="editorial-list-content">
+                                <span class="article-category">
+                                    INFRASTRUCTURE
+                                </span>
+
+                                <h3>
+                                    <a href="article.html?id=africa-infrastructure">
+                                        Infrastructure, Energy and Economic Connectivity
+                                    </a>
+                                </h3>
+
+                                <p>
+                                    Why transport, electricity and logistics
+                                    matter for long-term development.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AFRICAN TECHNOLOGY -->
+        <section class="editorial-section section-spacing" id="africaTechnology">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            INNOVATION & DIGITAL TRANSFORMATION
+                        </div>
+                        <h2>Africa's Tech Frontier</h2>
+                        <p class="section-description">
+                            Digital infrastructure, AI, fintech, startups
+                            and the people building Africa's technological future.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="editorial-feature-grid">
+
+                    <article class="editorial-feature-card">
+                        <a href="article.html?id=africa-technology"
+                           class="editorial-feature-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=85"
+                                alt="Electronic components representing technology"
+                                loading="lazy">
+                            <span class="image-category-tag">TECHNOLOGY</span>
+                        </a>
+
+                        <div class="editorial-feature-content">
+                            <div class="article-meta">
+                                <span class="article-category">INNOVATION</span>
+                                <span class="meta-divider">•</span>
+                                <span>DIGITAL AFRICA</span>
+                            </div>
+
+                            <h3>
+                                <a href="article.html?id=africa-technology">
+                                    Building Africa's Digital Future Through Innovation
+                                </a>
+                            </h3>
+
+                            <p>
+                                Explore the technologies and digital services
+                                creating new opportunities across African markets.
+                            </p>
+
+                            <a href="article.html?id=africa-technology"
+                               class="read-story-link">
+                                Explore the Story →
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="editorial-story-list">
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">01</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">FINTECH</span>
+                                <h3>
+                                    <a href="article.html?id=africa-fintech">
+                                        Digital Payments and Financial Inclusion
+                                    </a>
+                                </h3>
+                                <p>How financial technology can expand access to services.</p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">02</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">ARTIFICIAL INTELLIGENCE</span>
+                                <h3>
+                                    <a href="article.html?id=africa-ai">
+                                        Artificial Intelligence and African Innovation
+                                    </a>
+                                </h3>
+                                <p>AI opportunities, local research and digital adoption.</p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">03</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">CONNECTIVITY</span>
+                                <h3>
+                                    <a href="article.html?id=africa-connectivity">
+                                        Internet Access and the Digital Divide
+                                    </a>
+                                </h3>
+                                <p>Connectivity, affordability and digital skills.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- AFRICAN CULTURE -->
+        <section class="editorial-section section-spacing" id="africaCulture">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            CULTURE & CREATIVITY
+                        </div>
+                        <h2>Africa's Cultural Influence</h2>
+                        <p class="section-description">
+                            Music, film, fashion, art and African creativity
+                            reaching audiences around the world.
+                        </p>
+                    </div>
+                    <a href="entertainment.html" class="section-view-all">
+                        Entertainment Desk →
+                    </a>
+                </div>
+
+                <div class="editorial-feature-grid">
+
+                    <article class="editorial-feature-card">
+                        <a href="article.html?id=africa-creative-industries"
+                           class="editorial-feature-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1100&q=85"
+                                alt="Musician performing on stage"
+                                loading="lazy">
+                            <span class="image-category-tag">CULTURE</span>
+                        </a>
+
+                        <div class="editorial-feature-content">
+                            <div class="article-meta">
+                                <span class="article-category">CULTURE</span>
+                                <span class="meta-divider">•</span>
+                                <span>MUSIC & ENTERTAINMENT</span>
+                            </div>
+
+                            <h3>
+                                <a href="article.html?id=africa-creative-industries">
+                                    African Creativity and Its Expanding Global Audience
+                                </a>
+                            </h3>
+
+                            <p>
+                                Discover the artists, filmmakers and creators
+                                contributing to Africa's cultural influence.
+                            </p>
+
+                            <a href="article.html?id=africa-creative-industries"
+                               class="read-story-link">
+                                Discover More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="editorial-story-list">
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">01</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">MUSIC</span>
+                                <h3>
+                                    <a href="article.html?id=africa-music">
+                                        African Music and Its International Reach
+                                    </a>
+                                </h3>
+                                <p>Artists, genres and the growing music business.</p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">02</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">FILM</span>
+                                <h3>
+                                    <a href="article.html?id=africa-film">
+                                        African Film Industries and New Audiences
+                                    </a>
+                                </h3>
+                                <p>Film production, distribution and storytelling.</p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">03</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">HERITAGE</span>
+                                <h3>
+                                    <a href="article.html?id=africa-heritage">
+                                        Preserving African Languages and Heritage
+                                    </a>
+                                </h3>
+                                <p>Protecting cultural knowledge for future generations.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AFRICAN SPORTS -->
+        <section class="editorial-section section-spacing" id="africaSports">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            COMPETITION & ACHIEVEMENT
+                        </div>
+                        <h2>Africa in Sport</h2>
+                        <p class="section-description">
+                            Football, athletics, emerging talent and sporting
+                            developments across the continent.
+                        </p>
+                    </div>
+                    <a href="sports.html" class="section-view-all">
+                        Sports Desk →
+                    </a>
+                </div>
+
+                <div class="editorial-feature-grid">
+
+                    <article class="editorial-feature-card">
+                        <a href="article.html?id=africa-sport"
+                           class="editorial-feature-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1100&q=85"
+                                alt="Football on a sports field"
+                                loading="lazy">
+                            <span class="image-category-tag">AFRICAN SPORT</span>
+                        </a>
+
+                        <div class="editorial-feature-content">
+                            <div class="article-meta">
+                                <span class="article-category">SPORTS</span>
+                                <span class="meta-divider">•</span>
+                                <span>FOOTBALL & ATHLETICS</span>
+                            </div>
+
+                            <h3>
+                                <a href="article.html?id=africa-sport">
+                                    African Sporting Talent on the Continental Stage
+                                </a>
+                            </h3>
+
+                            <p>
+                                A look at athlete development, football structures
+                                and opportunities shaping African sport.
+                            </p>
+
+                            <a href="article.html?id=africa-sport"
+                               class="read-story-link">
+                                Read the Story →
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="editorial-story-list">
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">01</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">FOOTBALL</span>
+                                <h3>
+                                    <a href="article.html?id=africa-football">
+                                        African Football and Club Development
+                                    </a>
+                                </h3>
+                                <p>Player development and football opportunities.</p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">02</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">ATHLETICS</span>
+                                <h3>
+                                    <a href="article.html?id=africa-athletics">
+                                        African Athletes on the International Stage
+                                    </a>
+                                </h3>
+                                <p>Training, preparation and elite competition.</p>
+                            </div>
+                        </article>
+
+                        <article class="editorial-list-item">
+                            <span class="list-item-number">03</span>
+                            <div class="editorial-list-content">
+                                <span class="article-category">GRASSROOTS</span>
+                                <h3>
+                                    <a href="article.html?id=africa-grassroots-sport">
+                                        Grassroots Sport and Youth Development
+                                    </a>
+                                </h3>
+                                <p>Local clubs and programmes helping develop talent.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- REGIONAL AFRICA -->
+        <section class="editorial-section section-spacing" id="africaRegions">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            REGIONAL PERSPECTIVES
+                        </div>
+
+                        <h2>Across the Regions</h2>
+
+                        <p class="section-description">
+                            Discover developments across Africa's five major regions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="regional-grid">
+
+                    <a href="article.html?id=west-africa" class="regional-card">
+                        <span class="regional-number">01</span>
+                        <span class="regional-label">REGION 01</span>
+                        <h3>West Africa</h3>
+                        <p>Governance, trade, security and regional cooperation.</p>
+                        <span class="regional-link">Explore Region →</span>
+                    </a>
+
+                    <a href="article.html?id=east-africa" class="regional-card">
+                        <span class="regional-number">02</span>
+                        <span class="regional-label">REGION 02</span>
+                        <h3>East Africa</h3>
+                        <p>Innovation, agriculture, trade and development.</p>
+                        <span class="regional-link">Explore Region →</span>
+                    </a>
+
+                    <a href="article.html?id=central-africa" class="regional-card">
+                        <span class="regional-number">03</span>
+                        <span class="regional-label">REGION 03</span>
+                        <h3>Central Africa</h3>
+                        <p>Natural resources, infrastructure and conservation.</p>
+                        <span class="regional-link">Explore Region →</span>
+                    </a>
+
+                    <a href="article.html?id=north-africa" class="regional-card">
+                        <span class="regional-number">04</span>
+                        <span class="regional-label">REGION 04</span>
+                        <h3>North Africa</h3>
+                        <p>Diplomacy, energy, markets and cultural exchange.</p>
+                        <span class="regional-link">Explore Region →</span>
+                    </a>
+
+                    <a href="article.html?id=southern-africa" class="regional-card">
+                        <span class="regional-number">05</span>
+                        <span class="regional-label">REGION 05</span>
+                        <h3>Southern Africa</h3>
+                        <p>Industry, energy, mining and economic integration.</p>
+                        <span class="regional-link">Explore Region →</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section section-spacing" id="newsletter">
+            <div class="container">
+
+                <div class="newsletter-card">
+
+                    <div class="newsletter-content">
+                        <div class="section-eyebrow">
+                            <span class="eyebrow-line"></span>
+                            THE DESCOP BRIEFING
+                        </div>
+
+                        <h2>Africa's stories, delivered.</h2>
+
+                        <p>
+                            Get important African developments, business
+                            insights and technology stories in your inbox.
+                        </p>
+                    </div>
+
+                    <form class="newsletter-form" id="newsletterForm">
+                        <label for="newsletterEmail">
+                            Email address
+                        </label>
+
+                        <div class="newsletter-input-group">
+                            <input
+                                type="email"
+                                id="newsletterEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required
+                            >
+
+                            <button type="submit">
+                                Subscribe →
+                            </button>
+                        </div>
+
+                        <p id="newsletterFeedback" aria-live="polite">
+                            Stay informed. Unsubscribe whenever you wish.
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <span class="brand-mark">D<span>.</span></span>
+
+                        <span class="brand-text">
+                            <strong>DESCOP</strong>
+                            <small>INTELLIGENCE NETWORK</small>
+                        </span>
+                    </a>
+
+                    <p>
+                        African perspectives. Global intelligence.
+                        Stories that help you understand the world.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <a href="index.html">Home</a>
+                    <a href="world.html">World</a>
+                    <a href="africa.html">Africa</a>
+                    <a href="nigeria.html">Nigeria</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Discover</h3>
+                    <a href="business.html">Business</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="entertainment.html">Entertainment</a>
+                    <a href="sports.html">Sports</a>
+                    <a href="crypto.html">Crypto</a>
+                    <a href="weather.html">Weather</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Your DESCOP</h3>
+                    <a href="saved.html">Saved Articles</a>
+                    <a href="login.html">Sign In</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="currentYear"></span>
+                    DESCOP Intelligence Network. All rights reserved.
+                </p>
+
+                <a href="#top">Back to top ↑</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+    <!-- NOTIFICATIONS -->
+    <div
+        class="notification-container"
+        id="notificationContainer"
+        aria-live="polite"
+        aria-atomic="true"
+    ></div>
+
+</body>
+</html>

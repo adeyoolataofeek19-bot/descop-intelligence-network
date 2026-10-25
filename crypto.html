@@ -1,0 +1,947 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18"><meta name="description" content="DESCOP Crypto — cryptocurrency prices, market capitalisation, trading volume, market trends, and digital asset analysis.">
+
+<title>Crypto Markets | DESCOP Intelligence Network</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
+<script src="app.js" defer></script>
+
+</head><body data-page="crypto"><!-- PAGE LOADER -->
+<div class="page-loader" id="pageLoader" aria-label="Loading DESCOP">
+    <div class="brand-symbol">D</div>
+    <p>DESCOP <span>INTELLIGENCE NETWORK</span></p>
+</div>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+    <div class="container announcement-inner">
+
+        <div class="announcement-left">
+            <span class="live-indicator"></span>
+            <span>DESCOP DIGITAL ASSETS DESK</span>
+        </div>
+
+        <div class="announcement-date" id="currentDate">
+            Crypto market intelligence
+        </div>
+
+        <a href="index.html" class="announcement-link">
+            Main edition ↗
+        </a>
+
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+    <div class="container header-main">
+
+        <a href="index.html" class="brand" aria-label="DESCOP homepage">
+            <span class="brand-symbol">D</span>
+            <span class="brand-copy">
+                <strong>DESCOP</strong>
+                <small>INTELLIGENCE NETWORK</small>
+            </span>
+        </a>
+
+        <form class="header-search" id="searchForm" role="search">
+            <span aria-hidden="true">⌕</span>
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search crypto, assets, market news..."
+                aria-label="Search DESCOP"
+            >
+
+            <button type="submit" aria-label="Submit search">↵</button>
+        </form>
+
+        <div class="header-actions">
+
+            <a href="saved.html" class="header-icon-button" aria-label="Saved articles">
+                ♡ <span class="saved-count" id="savedCount">0</span>
+            </a>
+
+            <a href="login.html" class="login-button">
+                Sign in <span>↗</span>
+            </a>
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+        <div class="container nav-inner">
+
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="world.html" class="nav-link">World</a>
+            <a href="africa.html" class="nav-link">Africa</a>
+            <a href="nigeria.html" class="nav-link">Nigeria</a>
+            <a href="business.html" class="nav-link">Business</a>
+            <a href="technology.html" class="nav-link">Technology</a>
+            <a href="entertainment.html" class="nav-link">Entertainment</a>
+            <a href="sports.html" class="nav-link">Sports</a>
+            <a href="crypto.html" class="nav-link active" aria-current="page">Crypto</a>
+            <a href="weather.html" class="nav-link">Weather</a>
+
+        </div>
+    </nav>
+</header>
+
+<!-- MARKET TICKER -->
+<div class="breaking-bar">
+    <div class="container breaking-inner">
+
+        <span class="breaking-label">MARKET WATCH</span>
+
+        <div class="breaking-track-window">
+            <div class="breaking-track" id="breakingNewsTrack">
+                <span>Bitcoin</span>
+                <span>Ethereum</span>
+                <span>Altcoins</span>
+                <span>DeFi</span>
+                <span>Digital asset markets</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<main>
+
+    <!-- CRYPTO HERO -->
+    <section class="category-hero section-spacing">
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Crypto Markets</span>
+            </div>
+
+            <div class="category-hero-content">
+                <div>
+                    <p class="section-eyebrow">
+                        <span></span>
+                        DIGITAL ASSETS • MARKETS • DATA
+                    </p>
+
+                    <h1 class="category-hero-heading">
+                        Understand<br>
+                        <span>the market.</span>
+                    </h1>
+
+                    <p class="section-subtitle">
+                        Track cryptocurrency prices, market movements,
+                        trading activity, and developments shaping the
+                        digital asset economy.
+                    </p>
+                </div>
+
+                <div class="category-number">
+                    <span>SECTION</span>
+                    <strong>09</strong>
+                    <small>DIGITAL ASSETS</small>
+                </div>
+            </div>
+
+            <div class="topic-navigation">
+                <a href="#market-overview" class="topic-link">
+                    Market overview <span>↗</span>
+                </a>
+
+                <a href="#coins" class="topic-link">
+                    Cryptocurrencies <span>↗</span>
+                </a>
+
+                <a href="#market-movers" class="topic-link">
+                    Market movers <span>↗</span>
+                </a>
+
+                <a href="#market-analysis" class="topic-link">
+                    Analysis <span>↗</span>
+                </a>
+
+                <a href="#crypto-news" class="topic-link">
+                    Crypto news <span>↗</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PART 2 CONTINUES BELOW -->
+    <!-- CRYPTO MARKET OVERVIEW -->    <section class="news-section section-spacing" id="market-overview">
+        <div class="container">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">THE DIGITAL ASSET ECONOMY</span>
+                    <h2 class="section-title">Market Overview<span>.</span></h2>
+                    <p class="section-subtitle">
+                        Track cryptocurrency market performance, trading activity,
+                        and Bitcoin's share of the global market.
+                    </p>
+                </div>
+                <span class="section-index">01 / MARKETS</span>
+            </div>
+
+            <div class="analysis-panel">
+                <div class="analysis-panel-heading">
+                    <div>
+                        <span class="panel-kicker">GLOBAL CRYPTO MARKET</span>
+                        <h3>Market Snapshot</h3>
+                    </div>
+                    <span class="live-status">
+                        <span class="status-dot"></span>
+                        <span id="cryptoMarketStatus">Connecting to market data...</span>
+                    </span>
+                </div>
+
+                <div class="analysis-grid">
+
+                    <article class="market-stat-card">
+                        <span class="stat-label">Total Market Cap</span>
+                        <strong id="cryptoTotalMarketCap">—</strong>
+                        <span class="stat-change" id="cryptoMarketCapChange">Awaiting data</span>
+                    </article>
+
+                    <article class="market-stat-card">
+                        <span class="stat-label">24H Trading Volume</span>
+                        <strong id="cryptoTotalVolume">—</strong>
+                        <span class="stat-description">Global trading activity</span>
+                    </article>
+
+                    <article class="market-stat-card">
+                        <span class="stat-label">Bitcoin Dominance</span>
+                        <strong id="cryptoBtcDominance">—</strong>
+                        <span class="stat-description">Bitcoin's market share</span>
+                    </article>
+
+                    <article class="market-stat-card">
+                        <span class="stat-label">Market Coverage</span>
+                        <strong>Global</strong>
+                        <span class="stat-description">Digital asset markets</span>
+                    </article>
+
+                </div>
+
+                <div class="editorial-note">
+                    <span class="note-icon">i</span>
+                    <p>
+                        Cryptocurrency prices can change rapidly. Market figures
+                        will appear when the data provider responds successfully.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CRYPTOCURRENCY MARKET TABLE -->
+    <section class="news-section section-spacing" id="coins">
+        <div class="container">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">PRICES & PERFORMANCE</span>
+                    <h2 class="section-title">Crypto Markets<span>.</span></h2>
+                    <p class="section-subtitle">
+                        Compare leading digital assets by price, market
+                        capitalization, and daily performance.
+                    </p>
+                </div>
+                <span class="section-index">02 / ASSETS</span>
+            </div>
+
+            <div class="analysis-panel">
+
+                <div class="coin-market-toolbar">
+                    <div>
+                        <span class="panel-kicker">ASSET DIRECTORY</span>
+                        <h3>Leading Cryptocurrencies</h3>
+                    </div>
+
+                    <div class="header-search crypto-search">
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input
+                            type="search"
+                            id="cryptoSearch"
+                            placeholder="Search coins..."
+                            aria-label="Search cryptocurrencies"
+                            autocomplete="off"
+                        >
+                    </div>
+                </div>
+
+                <div class="crypto-table-wrapper">
+                    <table class="crypto-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Asset</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">24H Change</th>
+                                <th scope="col">Market Cap</th>
+                                <th scope="col">24H Volume</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="cryptoTableBody">
+                            <tr>
+                                <td colspan="6" class="table-placeholder">
+                                    Connecting to cryptocurrency market data...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-footer">
+                    <p id="cryptoTableStatus" aria-live="polite">
+                        Market data has not loaded yet.
+                    </p>
+                    <span class="table-source">Digital Assets / USD</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PART 3 CONTINUES BELOW -->
+    <!-- MARKET MOVERS -->    <section class="news-section section-spacing" id="market-movers">
+        <div class="container">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">DAILY MARKET ACTIVITY</span>
+                    <h2 class="section-title">Market Movers<span>.</span></h2>
+                    <p class="section-subtitle">
+                        Discover assets gaining momentum, assets under pressure,
+                        and cryptocurrencies attracting market attention.
+                    </p>
+                </div>
+                <span class="section-index">03 / MOVERS</span>
+            </div>
+
+            <div class="market-movers-grid">
+
+                <article class="analysis-panel mover-panel">
+                    <div class="analysis-panel-heading">
+                        <div>
+                            <span class="panel-kicker">POSITIVE PERFORMANCE</span>
+                            <h3>Top Gainers</h3>
+                        </div>
+                        <span class="mover-indicator positive">↗</span>
+                    </div>
+
+                    <div id="cryptoGainers" class="market-mover-list">
+                        <p class="panel-placeholder">
+                            Loading market performance...
+                        </p>
+                    </div>
+                </article>
+
+                <article class="analysis-panel mover-panel">
+                    <div class="analysis-panel-heading">
+                        <div>
+                            <span class="panel-kicker">NEGATIVE PERFORMANCE</span>
+                            <h3>Top Losers</h3>
+                        </div>
+                        <span class="mover-indicator negative">↘</span>
+                    </div>
+
+                    <div id="cryptoLosers" class="market-mover-list">
+                        <p class="panel-placeholder">
+                            Loading market performance...
+                        </p>
+                    </div>
+                </article>
+
+                <article class="analysis-panel mover-panel trending-panel">
+                    <div class="analysis-panel-heading">
+                        <div>
+                            <span class="panel-kicker">COMMUNITY ATTENTION</span>
+                            <h3>Trending Assets</h3>
+                        </div>
+                        <span class="mover-indicator trending">✦</span>
+                    </div>
+
+                    <div id="cryptoTrending" class="market-mover-list">
+                        <p class="panel-placeholder">
+                            Loading trending assets...
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- BITCOIN PRICE ANALYSIS -->
+    <section class="news-section section-spacing" id="market-analysis">
+        <div class="container">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">TECHNICAL MARKET WATCH</span>
+                    <h2 class="section-title">Bitcoin Analysis<span>.</span></h2>
+                    <p class="section-subtitle">
+                        Follow Bitcoin's historical price movement and explore
+                        different chart periods.
+                    </p>
+                </div>
+                <span class="section-index">04 / ANALYSIS</span>
+            </div>
+
+            <div class="analysis-panel bitcoin-chart-panel">
+
+                <div class="chart-panel-header">
+                    <div>
+                        <span class="panel-kicker">BTC / USD</span>
+                        <h3 id="btcChartHeading">Bitcoin Price History</h3>
+                        <p class="chart-description">
+                            Historical prices are for informational purposes only.
+                        </p>
+                    </div>
+
+                    <div class="chart-asset-symbol">₿</div>
+                </div>
+
+                <div class="chart-toolbar" role="group" aria-label="Bitcoin chart period">
+                    <button
+                        type="button"
+                        class="chart-period-button active"
+                        data-chart-period="1"
+                        aria-pressed="true"
+                    >1D</button>
+
+                    <button
+                        type="button"
+                        class="chart-period-button"
+                        data-chart-period="7"
+                        aria-pressed="false"
+                    >7D</button>
+
+                    <button
+                        type="button"
+                        class="chart-period-button"
+                        data-chart-period="30"
+                        aria-pressed="false"
+                    >30D</button>
+
+                    <button
+                        type="button"
+                        class="chart-period-button"
+                        data-chart-period="90"
+                        aria-pressed="false"
+                    >90D</button>
+                </div>
+
+                <div class="crypto-chart-container">
+                    <canvas
+                        id="btcPriceChart"
+                        role="img"
+                        aria-label="Bitcoin historical price chart"
+                    ></canvas>
+
+                    <p id="btcChartStatus" class="chart-status" aria-live="polite">
+                        Waiting for historical price data...
+                    </p>
+                </div>
+
+                <div class="chart-legend">
+                    <span class="legend-dot bitcoin-legend-dot"></span>
+                    <span>Bitcoin historical price</span>
+                    <span class="chart-unit">USD</span>
+                </div>
+
+            </div>
+
+
+            <!-- MARKET HEATMAP -->
+            <div class="analysis-panel crypto-heatmap-panel">
+
+                <div class="analysis-panel-heading">
+                    <div>
+                        <span class="panel-kicker">MARKET PERFORMANCE MAP</span>
+                        <h3>Crypto Heatmap</h3>
+                    </div>
+                    <span class="heatmap-label">24H PERFORMANCE</span>
+                </div>
+
+                <p class="panel-description">
+                    Compare daily performance across major cryptocurrencies.
+                    Colors and values will depend on the market data received.
+                </p>
+
+                <div id="cryptoHeatmap" class="crypto-heatmap">
+                    <div class="heatmap-placeholder">
+                        Market heatmap will appear when data is available.
+                    </div>
+                </div>
+
+                <div class="heatmap-legend">
+                    <span><i class="heatmap-negative"></i> Negative</span>
+                    <span><i class="heatmap-neutral"></i> Little change</span>
+                    <span><i class="heatmap-positive"></i> Positive</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PART 4 CONTINUES BELOW -->
+    <!-- PERSONAL CRYPTO WATCHLIST -->    <section class="news-section section-spacing" id="watchlist">
+        <div class="container">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">YOUR MARKET TRACKER</span>
+                    <h2 class="section-title">My Watchlist<span>.</span></h2>
+                    <p class="section-subtitle">
+                        Keep an eye on selected cryptocurrencies and follow
+                        their market performance in one place.
+                    </p>
+                </div>
+                <span class="section-index">05 / WATCHLIST</span>
+            </div>
+
+            <div class="analysis-panel watchlist-panel">
+
+                <div class="analysis-panel-heading">
+                    <div>
+                        <span class="panel-kicker">PERSONAL ASSET TRACKER</span>
+                        <h3>Saved Cryptocurrencies</h3>
+                    </div>
+
+                    <span class="watchlist-count" id="cryptoWatchlistCount">
+                        0 SAVED
+                    </span>
+                </div>
+
+                <p class="panel-description">
+                    Add assets from the market table to build your personal
+                    watchlist. Your selections are stored in this browser.
+                </p>
+
+                <div id="cryptoWatchlist" class="crypto-watchlist">
+                    <div class="watchlist-empty">
+                        <span class="empty-state-icon">☆</span>
+                        <h4>Your watchlist is empty</h4>
+                        <p>
+                            Browse the cryptocurrency table and save an asset
+                            to start tracking it here.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CRYPTO EDUCATION -->
+    <section class="news-section section-spacing" id="crypto-learning">
+        <div class="container">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">UNDERSTANDING DIGITAL ASSETS</span>
+                    <h2 class="section-title">Crypto Explained<span>.</span></h2>
+                    <p class="section-subtitle">
+                        Understand the technology, terminology, and risks
+                        behind the cryptocurrency market.
+                    </p>
+                </div>
+                <span class="section-index">06 / LEARNING</span>
+            </div>
+
+            <div class="crypto-learning-grid">
+
+                <article class="analysis-panel learning-card">
+                    <div class="learning-card-top">
+                        <span class="learning-icon">₿</span>
+                        <span class="learning-number">01</span>
+                    </div>
+
+                    <span class="panel-kicker">DIGITAL MONEY</span>
+                    <h3>What Is Cryptocurrency?</h3>
+
+                    <p>
+                        Cryptocurrency is a digital asset that can use
+                        cryptography and distributed ledger technology.
+                        Different projects have different designs, purposes,
+                        and risks.
+                    </p>
+
+                    <a href="#crypto-news" class="text-link">
+                        Explore market coverage <span>→</span>
+                    </a>
+                </article>
+
+
+                <article class="analysis-panel learning-card">
+                    <div class="learning-card-top">
+                        <span class="learning-icon">⛓</span>
+                        <span class="learning-number">02</span>
+                    </div>
+
+                    <span class="panel-kicker">BLOCKCHAIN TECHNOLOGY</span>
+                    <h3>How Does Blockchain Work?</h3>
+
+                    <p>
+                        A blockchain records transactions in linked data
+                        structures maintained according to a network's
+                        rules. Public blockchains can allow participants
+                        to independently verify transaction history.
+                    </p>
+
+                    <a href="#crypto-news" class="text-link">
+                        Explore market coverage <span>→</span>
+                    </a>
+                </article>
+
+
+                <article class="analysis-panel learning-card">
+                    <div class="learning-card-top">
+                        <span class="learning-icon">◈</span>
+                        <span class="learning-number">03</span>
+                    </div>
+
+                    <span class="panel-kicker">RISK MANAGEMENT</span>
+                    <h3>Understanding Crypto Risk</h3>
+
+                    <p>
+                        Crypto assets can experience extreme price
+                        fluctuations. Scams, exchange failures, lost
+                        private keys, and technical vulnerabilities can
+                        also lead to financial losses.
+                    </p>
+
+                    <a href="#crypto-risk-notice" class="text-link">
+                        Read the risk notice <span>→</span>
+                    </a>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PART 5 CONTINUES BELOW -->
+    <!-- CRYPTO NEWS -->    <section class="news-section section-spacing" id="crypto-news">
+        <div class="container">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-eyebrow">DIGITAL ASSET INTELLIGENCE</span>
+                    <h2 class="section-title">Crypto News & Insights<span>.</span></h2>
+                    <p class="section-subtitle">
+                        Explore the major themes shaping digital assets,
+                        blockchain development, and global crypto markets.
+                    </p>
+                </div>
+
+                <span class="section-index">07 / INTELLIGENCE</span>
+            </div>
+
+            <div class="crypto-news-grid">
+
+                <article class="analysis-panel crypto-news-card">
+                    <div class="crypto-news-visual bitcoin-visual">
+                        <span class="news-visual-label">MARKET WATCH</span>
+                        <span class="news-visual-symbol">₿</span>
+                        <span class="news-visual-caption">BITCOIN</span>
+                    </div>
+
+                    <div class="crypto-news-content">
+                        <div class="article-meta">
+                            <span>MARKET ANALYSIS</span>
+                            <span>•</span>
+                            <span>CRYPTOCURRENCY</span>
+                        </div>
+
+                        <h3>Bitcoin and the Wider Digital Asset Market</h3>
+
+                        <p>
+                            Understand how Bitcoin's price movements,
+                            investor sentiment, and trading activity can
+                            influence broader cryptocurrency markets.
+                        </p>
+
+                        <a href="#market-analysis" class="text-link">
+                            Explore Bitcoin data <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <article class="analysis-panel crypto-news-card">
+                    <div class="crypto-news-visual blockchain-visual">
+                        <span class="news-visual-label">TECHNOLOGY</span>
+                        <span class="news-visual-symbol">⛓</span>
+                        <span class="news-visual-caption">BLOCKCHAIN</span>
+                    </div>
+
+                    <div class="crypto-news-content">
+                        <div class="article-meta">
+                            <span>INNOVATION</span>
+                            <span>•</span>
+                            <span>WEB3</span>
+                        </div>
+
+                        <h3>Blockchain Innovation Beyond Cryptocurrency</h3>
+
+                        <p>
+                            Explore how distributed ledgers are being
+                            developed for payments, digital ownership,
+                            decentralized applications, and other use cases.
+                        </p>
+
+                        <a href="#crypto-learning" class="text-link">
+                            Learn the fundamentals <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <article class="analysis-panel crypto-news-card">
+                    <div class="crypto-news-visual regulation-visual">
+                        <span class="news-visual-label">POLICY & GOVERNANCE</span>
+                        <span class="news-visual-symbol">§</span>
+                        <span class="news-visual-caption">REGULATION</span>
+                    </div>
+
+                    <div class="crypto-news-content">
+                        <div class="article-meta">
+                            <span>POLICY</span>
+                            <span>•</span>
+                            <span>GLOBAL MARKETS</span>
+                        </div>
+
+                        <h3>Crypto Regulation and Investor Protection</h3>
+
+                        <p>
+                            Examine why regulatory decisions, compliance
+                            requirements, and consumer protection measures
+                            matter to digital asset markets.
+                        </p>
+
+                        <a href="#crypto-risk-notice" class="text-link">
+                            Understand the risks <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="crypto-editorial-note">
+                <span class="note-icon">i</span>
+                <p>
+                    These cards introduce key coverage topics. They are
+                    editorial placeholders, not verified breaking news
+                    articles. Current news content requires a connected
+                    news source.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CRYPTO RISK NOTICE -->
+    <section class="news-section section-spacing" id="crypto-risk-notice">
+        <div class="container">
+
+            <div class="crypto-risk-banner">
+                <div class="risk-banner-icon">!</div>
+
+                <div class="risk-banner-content">
+                    <span class="panel-kicker">IMPORTANT INFORMATION</span>
+                    <h3>Understand the Risks Before Investing</h3>
+
+                    <p>
+                        Cryptocurrency prices can rise or fall sharply.
+                        You may lose some or all of the money you invest.
+                        Research assets independently, protect your wallet
+                        credentials, and be cautious of guaranteed-return
+                        claims and unsolicited investment offers.
+                    </p>
+
+                    <p class="risk-disclaimer">
+                        DESCOP provides market information and educational
+                        content, not personalized financial advice.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PART 6 CONTINUES BELOW -->
+    <!-- NEWSLETTER -->    <section class="newsletter-section section-spacing" id="newsletter">
+        <div class="container">
+
+            <div class="newsletter-panel">
+                <div class="newsletter-copy">
+                    <span class="section-eyebrow">DESCOP INTELLIGENCE</span>
+                    <h2>Stay Ahead of the Market<span>.</span></h2>
+
+                    <p>
+                        Get updates on digital assets, blockchain innovation,
+                        and the developments shaping global crypto markets.
+                    </p>
+                </div>
+
+                <form id="newsletterForm" class="newsletter-form">
+                    <label for="newsletterEmail">Email address</label>
+
+                    <div class="newsletter-input-group">
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <button type="submit" class="btn-primary">
+                            Subscribe <span>→</span>
+                        </button>
+                    </div>
+
+                    <p id="newsletterMessage" class="newsletter-message" aria-live="polite">
+                        Newsletter subscriptions require a connected email service.
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <a href="index.html" class="brand-lockup">
+                    <span class="brand-symbol">D</span>
+
+                    <span class="brand-copy">
+                        <strong>DESCOP</strong>
+                        <small>INTELLIGENCE NETWORK</small>
+                    </span>
+                </a>
+
+                <p>
+                    Independent perspectives on markets, technology,
+                    business, and the forces shaping our world.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <a href="index.html">Home</a>
+                <a href="world.html">World</a>
+                <a href="africa.html">Africa</a>
+                <a href="nigeria.html">Nigeria</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Intelligence</h3>
+                <a href="business.html">Business</a>
+                <a href="technology.html">Technology</a>
+                <a href="entertainment.html">Entertainment</a>
+                <a href="sports.html">Sports</a>
+                <a href="crypto.html">Crypto</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Crypto Markets</h3>
+                <a href="#market-overview">Market Overview</a>
+                <a href="#coins">Cryptocurrency Prices</a>
+                <a href="#market-movers">Market Movers</a>
+                <a href="#market-analysis">Bitcoin Analysis</a>
+                <a href="#crypto-learning">Crypto Education</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear">2026</span> DESCOP Intelligence Network.
+                All rights reserved.
+            </p>
+
+            <p class="footer-disclaimer">
+                Cryptocurrency information is provided for educational
+                purposes and is not financial advice.
+            </p>
+
+            <a href="#top" class="footer-back-to-top">
+                Back to top ↑
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- NOTIFICATION -->
+<div
+    id="cryptoToast"
+    class="crypto-toast"
+    role="status"
+    aria-live="polite"
+    hidden
+></div>
+
+
+<!-- BACK TO TOP -->
+<button
+    type="button"
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Back to top"
+>
+    ↑
+</button>
+
+</body>
+</html>
